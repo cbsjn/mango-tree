@@ -1,0 +1,17 @@
+development:
+  :product_name: "QuickBook CRM"
+  :contact_email: "support@quickbook.com"
+  :title: "QuickBook CRM an online inventory management system."
+
+test:
+  :product_name: "QuickBook CRM"
+  :contact_email: "support@quickbook.com"
+  :title: "QuickBook CRM an online inventory management system."
+staging:
+  :product_name: "QuickBook CRM"
+  :contact_email: "support@quickbook.com"
+  :title: "QuickBook CRM an online inventory management system."
+production:
+  :product_name: "QuickBook CRM"
+  :contact_email: "support@quickbook.com"
+  :title: "QuickBook CRM an online inventory management system."

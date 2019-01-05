@@ -1,0 +1,6640 @@
+@media screen and (min-width: 980px) {
+    .popular-keywords-links a,
+    .popular-keywords-links a:visited,
+    .popular-search-links a,
+    .popular-search-links a:visited,
+    .popular-localities-links a,
+    .popular-localities-links a:visited,
+    .directory-container a,
+    .directory-container a:visited {
+        color: #818181;
+        line-height: 1.5;
+        text-decoration: none
+    }
+    .popular-keywords-links a:hover,
+    .popular-keywords-links a:focus,
+    .popular-search-links a:hover,
+    .popular-search-links a:focus,
+    .popular-localities-links a:hover,
+    .popular-localities-links a:focus,
+    .directory-container a:hover,
+    .directory-container a:focus {
+        text-decoration: underline
+    }
+    p.seo-info-head.open {
+        padding-left: 20px;
+        cursor: pointer;
+        background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAMgwAADIMBrFUoSgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADiSURBVCiRxZK9SsRQEIW/e2+asIUovo2FYOkTCHY2Nv40gRRJQA33phJ8AjtfI0UqS99AEERwCzsDKe6xWWHZXZfdNA6cZmY+zswwRhJjwo6i/gU0eZ7vpGlqtoH6vlfinDsbhuHeWjvd4FBO0l6SJBeu67rntm0jcADsA5M1+o4xnocQHi2A974GHoCvNW6fzrmTpmmeAMz8eFVV3Ui6AnYXoA9Jx977l9+EWdyrLMtb4HIGR+DNGHNU1/XrfN8SOHO+k3QNvMcYD0MI06UmSStVFMVplmWTv+orHTeJ0Z/zA/mjemkb04yqAAAAAElFTkSuQmCC') left center no-repeat
+    }
+    p.seo-info-head.fold {
+        padding-left: 20px;
+        background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAMgwAADIMBrFUoSgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADWSURBVCiRldAxasNAEIXheYsSkEu3gbhL5cpNape5gGtByB0EAsEUO5dJZ4yxAgYTX8GnUA4QkFY7aSSwZUVi/253+JZhoarUlef5q3PuUUTONJG5PqhqbIwpsixbBsG2BsAhTdPnYEhET1EUnZh5HgK7FnVdfzPzLBQaVX1xzn0xcxQCCcCDqq6qqvoMgm0xgHX/pychgNJ7n1hrL9f3d7v3Kpum+RCRbX8wBn+89+8ishsaDkG0KBGR/X+v3kFVjYloIyLFyDa3EMAvEb1Za49jiIjoD9hAUDXhQ90rAAAAAElFTkSuQmCC') left center no-repeat
+    }
+    .popular-keywords-container {
+        width: 460px;
+        line-height: 1.2;
+        padding: 20px 10px 10px 0;
+        float: left;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .popular-keywords-head,
+    .popular-localities-head,
+    .popular-search-head {
+        line-height: 28px;
+        font-size: 14px;
+        font-weight: bold
+    }
+    .popular-localities-container {
+        width: 460px;
+        line-height: 1.5;
+        padding: 20px 0 10px 10px;
+        float: left;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .popular-localities-container-clinics {
+        line-height: 1.5;
+        padding: 20px 0 10px 0;
+        float: left;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .popular-search-container {
+        width: 960px;
+        line-height: 1.5;
+        padding: 0;
+        float: left;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .directory-container {
+        padding-bottom: 10px;
+        border-bottom: 1px solid #e6e6e6;
+        width: 960px;
+        line-height: 1.5;
+        margin: 10px 0 10px 0
+    }
+    .seo-footer {
+        background: #FFF;
+        border-top: 1px solid #d6d6d6;
+        margin-top: 40px;
+        display: block
+    }
+    #seoInfoText .seo-info-body {
+        line-height: 20px;
+        padding-bottom: 20px;
+        margin: 0 0 0 20px
+    }
+    .seo-info-head {
+        line-height: 20px;
+        margin-bottom: 10px;
+        font-weight: bold
+    }
+    .popular-treatments-container {
+        margin-top: 10px
+    }
+    #seoInfoText.listing-page {
+        display: none
+    }
+}
+@media screen and (max-width: 979px) {
+    .seo-footer {
+        margin-top: 50px
+    }
+    .seo-footer .page-body-container {
+        width: auto
+    }
+    .popular-keywords-head,
+    .popular-search-head,
+    .popular-localities-head,
+    .seo-info-head {
+        background: #545454;
+        cursor: pointer;
+        color: #FFF;
+        border-bottom: 1px solid #686868
+    }
+    .seo-info-head {
+        border-bottom: 0
+    }
+    .popular-keywords-head:hover,
+    .popular-search-head:hover,
+    .popular-localities-head:hover {
+        background-color: #686868
+    }
+    .popular-keywords-links,
+    .popular-search-links,
+    .popular-localities-links,
+    .directory-container {
+        padding: 8px 0;
+        background: #3f3f3f
+    }
+    .popular-keywords-links span,
+    .popular-search-links span,
+    .directory-container span,
+    .popular-localities-links span {
+        display: none
+    }
+    .seo-info-body {
+        padding: 15px;
+        background: #3f3f3f;
+        color: #aaa;
+        line-height: 1.5;
+        font-size: 14px
+    }
+    .popular-keywords-links a,
+    .popular-keywords-links a:visited,
+    .popular-search-links a,
+    .popular-search-links a:visited,
+    .popular-localities-links a,
+    .popular-localities-links a:visited,
+    .directory-container a,
+    .directory-container a:visited {
+        margin: 0 15px;
+        display: block;
+        font-weight: normal;
+        text-decoration: none;
+        color: #FFF
+    }
+    .popular-keywords-links a:hover,
+    .popular-search-links a:hover,
+    .popular-localities-links a:hover,
+    .directory-container a:hover {
+        background-color: #686868;
+        text-decoration: none
+    }
+}
+@media screen and (min-width: 740px) and (max-width: 979px) {
+    .popular-keywords-head,
+    .popular-search-head,
+    .popular-localities-head,
+    .seo-info-head {
+        font-size: 18px;
+        line-height: 18px;
+        padding: 15px
+    }
+    .popular-keywords-head.collapsed,
+    .popular-localities-head.collapsed,
+    .popular-search-head.collapsed,
+    .seo-info-head.fold {
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAUCAYAAAAHpoRMAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAN1wAADdcBQiibeAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAACASURBVEiJ7ZYxDoAgDEW/hsE76ejqvbyPHkE3D8MoU13KWFshJA59CfnLD7w0hNAREQxMnIelXEow9mbOpjJ9y82/4jISLiPhMhIBwAhgUXr50RuU3gbgrJFJAKLSuzm1XioVyTIXrzfyRNaawzR+dWdcRsJlJFxGwvrT25taMA80kQ8h7tn3KgAAAABJRU5ErkJggg==');
+        background-position: right center;
+        background-repeat: no-repeat
+    }
+    .popular-keywords-head.expanded,
+    .popular-localities-head.expanded,
+    .popular-search-head.expanded,
+    .seo-info-head.open {
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAUCAYAAAAHpoRMAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAN1wAADdcBQiibeAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAABUSURBVEiJ7dWxDcAgDETRD2IvZsikzJBNMgMLmDbNVSDh4n5/1utcIoIs1duAf8aojFEZo0qFaUAHnkP3BvDuYCbwHcLMnXHxOxAZozJGZYwqFWYBNp8K6amm27cAAAAASUVORK5CYII=');
+        background-position: right center;
+        background-repeat: no-repeat
+    }
+    .popular-keywords-links a,
+    .popular-keywords-links a:visited,
+    .popular-search-links a,
+    .popular-search-links a:visited,
+    .popular-localities-links a,
+    .popular-localities-links a:visited,
+    .directory-container a,
+    .directory-container a:visited {
+        padding: 10px;
+        font-size: 15px;
+        line-height: 16px
+    }
+}
+@media screen and (min-width: 300px) and (max-width: 739px) {
+    .popular-keywords-head,
+    .popular-search-head,
+    .popular-localities-head,
+    .seo-info-head {
+        font-size: 14px;
+        line-height: 14px;
+        padding: 10px 15px
+    }
+    .popular-keywords-head.collapsed,
+    .popular-localities-head.collapsed,
+    .popular-search-head.collapsed,
+    .seo-info-head.fold {
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAQCAYAAADu+KTsAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAN1wAADdcBQiibeAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAABnSURBVDiN7ZTBCYAwDEVfJYKbeBC812kcy32cwUOniROYlErpoX3Xn/AIJAmqikEEBLitolImJ1+BrYY4R16VIe9PLsAB7B95BGaj/+HHGTadPDhP5gQW4Koh73fhhrwJ4uQpo6aYFwb0C4p/h/oiAAAAAElFTkSuQmCC');
+        background-position: right center;
+        background-repeat: no-repeat
+    }
+    .popular-keywords-head.expanded,
+    .popular-localities-head.expanded,
+    .popular-search-head.expanded,
+    .seo-info-head.open {
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAQCAYAAADu+KTsAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAN1wAADdcBQiibeAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAABDSURBVDiN7dSxCQAgDETRH3EeB3B/HMBpLAJxhwimud8frzuLCKpqZbJw4b/rwARGcr+B9YI7cJJ7z8IAppMRLvxHF6XVCw18+gzuAAAAAElFTkSuQmCC');
+        background-position: right center;
+        background-repeat: no-repeat
+    }
+    .popular-keywords-links a,
+    .popular-keywords-links a:visited,
+    .popular-search-links a,
+    .popular-search-links a:visited,
+    .popular-localities-links a,
+    .popular-localities-links a:visited,
+    .directory-container a,
+    .directory-container a:visited {
+        padding: 10px 8px;
+        font-size: 13px;
+        color: #fff
+    }
+    .popular-keywords-links a.link.grey,
+    .popular-keywords-links a.link.grey:visited,
+    .popular-search-links a.link.grey,
+    .popular-search-links a.link.grey:visited,
+    .popular-localities-links a.link.grey,
+    .popular-localities-links a.link.grey:visited,
+    .directory-container a.link.grey,
+    .directory-container a.link.grey:visited {
+        color: #fff
+    }
+    .popular-keywords-head div:first-child,
+    .popular-localities-head div:first-child,
+    .popular-search-head div:first-child {
+        width: 95%;
+        word-wrap: break-word;
+        display: block
+    }
+}
+body {
+    background: #f1f1f1
+}
+.doctor-tab-container {
+    position: relative
+}
+.results-refresh-overlay {
+    position: absolute;
+    background: #FFF;
+    z-index: 1000;
+    opacity: .75;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: none
+}
+.results-refresh-loader {
+    display: none;
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    top: 50%;
+    left: 50%;
+    margin-top: -32px;
+    margin-left: -32px;
+    z-index: 1001;
+    background-position: 0 0
+}
+.results-refresh-loader .spinner {
+    width: 61px;
+    height: 61px;
+    border-top: 2px solid #ebebeb;
+    border-right: 2px solid #ebebeb;
+    border-bottom: 2px solid #3bb9df;
+    border-left: 2px solid #3bb9df;
+    border-radius: 50%;
+    display: inline-block;
+    animation: rotate360 1.25s linear infinite;
+    -moz-animation: rotate360 1.25s linear infinite;
+    -webkit-animation: rotate360 1.25s linear infinite;
+    -o-animation: rotate360 1.25s linear infinite
+}
+@-o-keyframes rotate360 {
+    from {
+        -o-transform: rotate(0)
+    }
+    to {
+        -o-transform: rotate(360deg)
+    }
+}
+@-ms-keyframes rotate360 {
+    from {
+        -ms-transform: rotate(0)
+    }
+    to {
+        -ms-transform: rotate(360deg)
+    }
+}
+@-moz-keyframes rotate360 {
+    from {
+        -moz-transform: rotate(0)
+    }
+    to {
+        -moz-transform: rotate(360deg)
+    }
+}
+@-webkit-keyframes rotate360 {
+    from {
+        -webkit-transform: rotate(0)
+    }
+    to {
+        -webkit-transform: rotate(360deg)
+    }
+}
+@keyframes rotate360 {
+    from {
+        transform: rotate(0)
+    }
+    to {
+        transform: rotate(360deg)
+    }
+}
+.clinic-sprites {
+    background: url('lab/clinic-sprites.png') no-repeat
+}
+.paginator {
+    border: 1px solid #d6d6d6;
+    border-top: 0;
+    background: #fff
+}
+.paginator .page_link {
+    margin: 10px 15px 10px 0;
+    font-size: 14px;
+    color: #7f7f7f;
+    text-decoration: none;
+    display: inline-block
+}
+.paginator .page-link-container {
+    float: right;
+    text-align: right;
+    width: 438px
+}
+.paginator .page_link.selected,
+.paginator .page_link:hover {
+    font-weight: bold;
+    color: #333
+}
+.results-found-text {
+    float: left;
+    margin-top: 20px;
+    padding-left: 15px;
+    font-size: 13px
+}
+.doctor-search-container .bold {
+    font-weight: bold
+}
+.doctor-search-container,
+.seg-service-container {
+    height: 50px;
+    border: 1px solid #d6d6d6;
+    border-top: 0;
+    border-bottom: 0;
+    position: relative
+}
+.doctor-search-container input,
+.seg-service-container input {
+    margin-top: 12px;
+    float: right;
+    margin-right: 20px;
+    height: 25px;
+    width: 221px;
+    padding-left: 10px;
+    font-size: 13px
+}
+.refresh-specialty-filter,
+.refresh-test-filter {
+    position: absolute;
+    right: 20px;
+    top: 14px;
+    width: 23px;
+    height: 26px;
+    background-position: 0 -62px;
+    z-index: 1
+}
+.report-error-row {
+    height: 45px;
+    border: 1px solid #dcdcdc;
+    border-top: 0;
+    background-color: #fff
+}
+.profile-container .services-block,
+.profile-container .photos-block,
+.profile-container .map-block,
+.profile-container .centers-block,
+.profile-container .therapists-block,
+.profile-container .reviews-block {
+    display: none
+}
+
+.slotviewer-container {
+    display: none;
+    border-left: 1px solid #dcdcdc;
+    border-right: 1px solid #dcdcdc
+}
+.doc-suggestion .doc_avatar {
+    max-width: 70px;
+    max-height: auto;
+    border-radius: 3px
+}
+.tooltip {
+    display: none;
+    position: absolute;
+    background: #000;
+    opacity: .75;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 6px 10px
+}
+.tooltip-notch {
+    position: absolute;
+    left: 50%;
+    left-margin: -5px;
+    bottom: -12px;
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 7px solid #000
+}
+.tooltip-notch.left {
+    position: absolute;
+    left: 0;
+    margin-left: -24px;
+    bottom: 45%;
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-right: 7px solid #000;
+    border-top: 7px solid transparent
+}
+.breadcrum-container {
+    font-size: 12px;
+    background: #f1f1f1;
+    padding: 6px 0;
+    color: #999
+}
+.breadcrum-container a {
+    color: #287792;
+    text-decoration: none
+}
+.breadcrum-container a:hover {
+    text-decoration: underline
+}
+.breadcrum-container h5 {
+    display: inline
+}
+.profile-container .doc_avatar {
+    width: 100px;
+    max-height: auto;
+    border-radius: 3px
+}
+.black {
+    color: #000
+}
+.service-name,
+.service-price,
+.service-price-fitness,
+.service-price-fitness-nested,
+.profile-container,
+.profile-container .profile-nav-container,
+.profile-container .profile-summary,
+.profile-container .overview-block,
+.profile-container .doctors-block,
+.profile-container .photos-block,
+.profile-container .services-block,
+.profile-container .map-block,
+.profile-container .centers-block {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box
+}
+.view-all {
+    font-size: 11px;
+    float: right;
+    padding-top: 10px;
+    padding-bottom: 5px
+}
+.bold-font {
+    font-weight: bold
+}
+.profile-summary h2 {
+    font-size: 14px;
+    line-height: 1.3;
+    color: #818181;
+    font-weight: normal;
+    margin-bottom: 3px;
+    display: none
+}
+.clinicSummaryFixedText {
+    font-style: italic;
+    font-size: 12px
+}
+.marketing-app-banner-link {
+    display: none
+}
+.doctor-block .reviews-count {
+    line-height: 16px;
+    margin-bottom: 8px;
+    padding-left: 25px;
+    background: url('lab/reviews-listing-blue.png') no-repeat
+}
+.doctor-block .reviews-count a {
+    color: #444
+}
+.doctor-block .reviews-count a:hover {
+    text-decoration: underline
+}
+.centers-block .listing-row.estab-row:not(:last-child) {
+    border-bottom: 1px solid #dcdcdc
+}
+.estab-row.listing-row h2 {
+    font-size: 16px;
+    line-height: 20px
+}
+.centers-block .listing-row.estab-row {
+    padding: 10px
+}
+.review-card .estab-empty-star,
+.review-card .estab-full-star,
+.review-card .estab-half-star {
+    font-size: 19px;
+    color: #02a6d8;
+    margin-left: -4px
+}
+.profile-summary-wrapper .rating-number .estab-empty-star,
+.profile-summary-wrapper .rating-number .estab-full-star,
+.profile-summary-wrapper .rating-number .estab-half-star {
+    font-size: 27px;
+    line-height: 20px;
+    color: #02a6d8
+}
+.profile-container .profile-summary .share-button {
+    font-size: 13px;
+    vertical-align: middle;
+    color: #fff;
+    display: inline-block;
+    padding: 3px 4px;
+    background-color: #02a6d8;
+    border-radius: 5px;
+    min-width: 45px;
+    text-align: center;
+    cursor: pointer
+}
+.profile-container .profile-summary .share-button.mobile {
+    display: none
+}
+.profile-container .profile-summary .practice-info {
+    display: inline-block;
+    margin-left: 0
+}
+.review-card .recommended-icon {
+    display: inline-block;
+    width: 17px;
+    height: 15px;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAPCAMAAAA1b9QjAAAAaVBMVEUAAADAwMC/v7+7u7u/v7+xsbGAgIDAwMC9vb3AwMC/v7/AwMDAwMC/v7/AwMC+vr6+vr65ubm/v7/AwMDAwMC/v7+/v7+/v7/AwMC/v7/AwMC8vLzAwMDAwMC+vr6+vr6+vr6/v7/AwMBUX6sTAAAAInRSTlMA5qQaXAkCtE313dTHhHJALBYN7b6vm5V6aWIpuaVWSjc0XUSCYgAAAH1JREFUGNNdy0cOhDAMQFEnIZNe6TDV9z/kBIQQ5C8s+VmGM9/DPaow38BZbuIV3jplxS/wayM04li4lDIQCYBicoNhAAMKgXM5hdFNnuIKtCnnx/lvv5VwxSv5dFDJ6GvR6y4Z0wFRl/FaGEMMbCv1zyILEmJmS7bajgP8Af6OBosr8tIKAAAAAElFTkSuQmCC')
+}
+.review-card .recommended-label {
+    display: inline-block;
+    vertical-align: 2px;
+    margin-left: 2px
+}
+.doc-specs-ac {
+    max-height: 290px
+}
+.profile-container .service-row .service-cell a {
+    color: #818181;
+    text-decoration: none
+}
+.profile-summary .estab-empty-star .icon-star,
+.profile-summary .estab-full-star .icon-star_fill,
+.profile-summary .estab-half-star .icon-star_half-fill {
+    font-size: 28px
+}
+.profile-summary .estab-empty-star,
+.profile-summary .estab-full-star,
+.profile-summary .estab-half-star {
+    width: 24px
+}
+@media screen and (min-width: 980px) {
+    .profile-col {
+        width: 33.33333333%;
+        float: left;
+        min-height: 1px;
+        margin-bottom: 15px
+    }
+    .profile-col-half {
+        width: 50%;
+        float: left;
+        min-height: 1px;
+        margin-bottom: 15px;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .profile-col .practice-address {
+        margin-right: 30px;
+        line-height: 16px
+    }
+    .clinic-vn-container {
+        position: relative
+    }
+    .clinic-nav {
+        margin-top: 10px
+    }
+    .vn-button {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin-bottom: 19px;
+        margin-right: 19px;
+        float: right;
+        margin-left: 26px
+    }
+    .centers-block .estab-status-button {
+        margin-right: 10px
+    }
+    .more-tab {
+        display: none
+    }
+    .centers-block .diag_avatar,
+    .estab-avatar {
+        max-width: 100%
+    }
+    .centers-block .estab-col-1 {
+        width: 27.532967%;
+        padding-right: 5px
+    }
+    .clinic-summary-text {
+        margin-bottom: 20px;
+        line-height: 1.5
+    }
+    .doctor-block .reviews-count {
+        background: url('lab/reviews-listing-grey.png') no-repeat
+    }
+    .profile-container {
+        background: #FFF
+    }
+
+    .profile-container {
+        width: 710px;
+        float: left;
+        margin-right: 10px
+    }
+    .profile-container .profile-summary-wrapper {
+        border-left: 1px solid #dcdcdc;
+        border-top: 1px solid #dcdcdc;
+        border-right: 1px solid #dcdcdc;
+        padding: 19px
+    }
+    .profile-container .profile-summary {
+        display: inline-block
+    }
+    .profile-summary.rating-number {
+        width: 50%
+    }
+    .profile-container .profile-summary.rating-number,
+    .profile-container .rating-number .estab-col-sm-half.estab-col-xs-full {
+        float: right;
+        width: 121px
+    }
+    .profile-container .rating-number .estab-vote-count {
+        display: block;
+        color: #818181;
+        text-align: right;
+        margin-right: 5px
+    }
+    .profile-container .profile-nav-container {
+        border-right: 1px solid #dcdcdc;
+        border-left: 1px solid #dcdcdc
+    }
+    .profile-container .practice-timings {
+        display: none
+    }
+    .profile-container .profile-nav-tab-marker {
+        height: 2px;
+        display: inline-block;
+        background: #00afef;
+        position: absolute;
+        bottom: 0;
+        left: 20px;
+        transition: .4s;
+        -moz-transition: .4s;
+        -o-transition: .4s;
+        -webkit-transition: .4s;
+        -ms-transition: .4s
+    }
+    .profile-container .profile-nav-container {
+        position: relative;
+        border-bottom: 1px solid #dcdcdc;
+        padding: 0 19px 9px 19px
+    }
+    .profile-container .profile-nav-tab {
+        padding: 5px 3px;
+        margin-right: 20px;
+        font-size: 14px;
+        color: #999;
+        text-decoration: none
+    }
+    .profile-container .profile-nav-tab:hover,
+    .profile-container .profile-nav-tab:focus {
+        color: #818181;
+        text-decoration: none;
+        transition: .5s;
+        -moz-transition: .5s;
+        -o-transition: .5s;
+        -webkit-transition: .5s;
+        -ms-transition: .5s
+    }
+    .profile-container .profile-nav-tab.selected,
+    .profile-container .profile-nav-tab.selected:hover,
+    .profile-container .profile-nav-tab.selected:focus {
+        color: #02a6d8
+    }
+    .profile-container .overview-block,
+    .profile-container .doctors-block,
+    .profile-container .photos-block,
+    .profile-container .services-block,
+    .profile-container .map-block,
+    .profile-container .centers-block {
+        margin-top: -1px;
+        border: 1px solid #dcdcdc;
+        color: #818181;
+        font-size: 13px
+    }
+    .profile-container .services-block {
+        min-height: 150px;
+        padding: 9px 9px 9px 19px
+    }
+    .profile-container .overview-block {
+        padding: 19px 19px 4px 19px
+    }
+    .profile-container .map-block {
+        position: relative;
+        padding: 0
+    }
+    .profile-container .profile-summary .practice-name {
+        font-size: 28px;
+        margin-bottom: 10px;
+        font-weight: 600;
+        color: #333;
+        word-wrap: break-word;
+        width: 465px
+    }
+    .profile-container .profile-summary .practice-address {
+        line-height: 1.3;
+        color: #818181;
+        width: 380px
+    }
+    .profile-container .practice-logo {
+        float: left;
+        margin: 0 10px 10px 0
+    }
+    .profile-container .practice-logo img {
+        max-width: 70px;
+        height: auto
+    }
+    .profile-container .profile-summary .practice-locality {
+        display: none
+    }
+    .profile-container .overview-block .overview-timings {
+        width: 160px;
+        float: left
+    }
+    .profile-container .overview-block .overview-timings-title,
+    .profile-container .overview-block .overview-services-title,
+    .profile-container .overview-block .overview-photos-title,
+    .profile-container .overview-block .accredit,
+    .profile-container .overview-block .clinic-address,
+    .profile-container .overview-block .profile-fees,
+    .main-test-fees {
+        color: #333;
+        font-weight: 600;
+        font-size: 14px;
+        padding-left: 28px;
+        line-height: 30px;
+        margin-bottom: 10px
+    }
+    .profile-container .overview-block .overview-timings-title {
+        background: url("../lab/timings-blue-small.png") no-repeat left center
+    }
+    .profile-container .overview-block .overview-services-title {
+        background: url("../lab/services-blue-small.png") no-repeat left center
+    }
+    .profile-container .overview-block .overview-photos-title {
+        background: url("../lab/photos-blue-small.png") no-repeat left center
+    }
+    .profile-container .overview-block .overview-services {
+        width: 310px;
+        margin-left: 10px;
+        float: left
+    }
+    .profile-container .overview-block .overview-service-row {
+        width: 310px;
+        margin-bottom: 10px
+    }
+    .profile-container .overview-block .overview-timings-day-label {
+        color: #333;
+        font-weight: 600;
+        margin-bottom: 5px
+    }
+    .profile-container .overview-block .overview-timings-session-details {
+        line-height: 1.5
+    }
+    .profile-container .overview-block .overview-service-cell {
+        width: 150px;
+        float: left;
+        margin-left: 10px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        line-height: 15px;
+        white-space: nowrap
+    }
+    .profile-container .overview-block .overview-service-cell a {
+        color: #818181;
+        text-decoration: none
+    }
+    .profile-container .overview-block .overview-service-cell a:hover {
+        text-decoration: underline
+    }
+    .profile-container .overview-block .overview-service-cell:first-child {
+        margin-left: 0
+    }
+    .profile-container .overview-block .overview-photos {
+        width: 180px;
+        margin-left: 10px;
+        float: left
+    }
+    .profile-container .overview-block .overview-photos img {
+        width: 36px;
+        height: 36px;
+        opacity: .9;
+        cursor: pointer;
+        border-radius: 3px;
+        margin: 0 5px 5px 0
+    }
+    .profile-container .overview-block .overview-photos img:last-child {
+        margin: 0 0 5px 0
+    }
+    .profile-container .view-all-services-link {
+        font-size: 11px
+    }
+    .profile-container h3 {
+        font-size: 16px;
+        color: #555;
+        margin: 0;
+        padding: 0;
+        outline: 0;
+        padding-left: 40px;
+        line-height: 36px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        display: inline-block
+    }
+    .profile-container h3.no-icon {
+        padding-left: 0;
+        line-height: 25px
+    }
+    .profile-container .overview-block .overview-doctor-title-block h3,
+    .profile-container .overview-block .clinic-summary-title {
+        clear: both;
+        font-weight: 600;
+        color: #333;
+        font-size: 18px
+    }
+    .profile-container .overview-block .clinic-summary-title.no-icon {
+        font-size: 14px
+    }
+    .doctor-block {
+        margin-top: -1px;
+        padding: 15px;
+        border: 1px solid #d6d6d6;
+        border-top: 0
+    }
+    .doctor-block h2 {
+        color: #49b1d1;
+        font-size: 16px;
+        margin: 0;
+        line-height: 22px
+    }
+    .doctor-block .timings {
+        margin-bottom: 8px;
+        line-height: 1.2;
+        padding-left: 25px;
+        background: url('../lab/visit_timings.png') no-repeat
+    }
+    .doctor-block .fees {
+        line-height: 20px;
+        margin-bottom: 8px;
+        padding-left: 25px;
+        background: url('../lab/fees.png') no-repeat
+    }
+    .doctor-block .locality {
+        line-height: 20px;
+        margin-bottom: 8px;
+        padding-left: 25px;
+        background: url('../lab/locality.png') no-repeat
+    }
+    .doc_avatar {
+        max-width: 100px;
+        max-height: auto;
+        border-radius: 6px
+    }
+    .doc-photo-container {
+        width: 120px;
+        float: left;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .doc-details-block {
+        width: 308px;
+        margin-right: 10px;
+        float: left;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .doc-name {
+        font-size: 20px;
+        font-weight: bold
+    }
+    .doc-name h2 {
+        max-width: 100%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap
+    }
+    .doc-qualifications,
+    .doc-exp-years,
+    .doc-specialties,
+    .doc-specialties a,
+    .doc-specialties a:visited {
+        max-width: 100%;
+        color: #7f7f7f;
+        line-height: 1.2;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        display: block
+    }
+    .doc-clinic-name {
+        margin: 8px 0
+    }
+    .doc-specialties a,
+    .doc-specialties a:visited {
+        text-decoration: none;
+        display: inline-block
+    }
+    .doc-specialties {
+        margin-top: 5px
+    }
+    .doc-qualifications {
+        font-weight: bold;
+        line-height: 1.5
+    }
+    .doc-availability-block {
+        width: 240px;
+        float: left;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .profile-container .services-block {
+        font-size: 13px;
+        color: #818181
+    }
+    .profile-container .service-row {
+        width: 680px;
+        margin-bottom: 5px
+    }
+    .profile-container .service-row .service-cell {
+        line-height: 1.5;
+        outline: 0;
+        margin: 0;
+        padding-left: 40px;
+        background: url('../lab/mid-bullet.png') no-repeat
+    }
+    .profile-container .service-row .service-cell {
+        width: 178px;
+        margin-right: 5px;
+        float: left
+    }
+    .slideshow-screen {
+        position: relative;
+        width: 708px;
+        display: block;
+        height: 531px
+    }
+    .slideshow-screen .banner-large {
+        max-height: 531px;
+        max-width: 708px;
+        width: auto;
+        height: auto
+    }
+    .slideshow-screen .slideshow-next-image,
+    .slideshow-screen .slideshow-prev-image {
+        height: 531px;
+        width: 60px;
+        opacity: .25;
+        top: 0;
+        display: inline-block;
+        background: #1f1f1f;
+        position: absolute;
+        z-index: 100020;
+        cursor: pointer
+    }
+    .slideshow-screen .slideshow-next-image {
+        background-image: url('../lab/slideshow-right-arrow.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        right: 0
+    }
+    .slideshow-screen .slideshow-prev-image {
+        background-image: url('../lab/slideshow-left-arrow.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        left: 0
+    }
+    .slideshow-screen .slideshow-next-image:hover {
+        opacity: .6;
+        background-color: #000;
+        background-image: url('../lab/slideshow-right-arrow-glow.png')
+    }
+    .slideshow-screen .slideshow-prev-image:hover {
+        opacity: .6;
+        background-color: #000;
+        background-image: url('../lab/slideshow-left-arrow-glow.png')
+    }
+    .slideshow-queue {
+        line-height: 1;
+        margin: 0;
+        padding: 0;
+        outline: 0;
+        width: 708px;
+        display: block
+    }
+    .slideshow-queue .slideshow-thumbs {
+        display: inline-block;
+        text-decoration: none;
+        margin-left: 8px;
+        margin-top: 8px;
+        cursor: pointer;
+        height: 50px;
+        width: auto;
+        border-radius: 3px;
+        border: 2px solid transparent;
+        margin-bottom: 8px;
+        line-height: 1
+    }
+    .slideshow-queue .slideshow-thumbs.selected {
+        border: 2px solid #02a6d8
+    }
+    .profile-container .map-block a.get-directions-link {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        z-index: 100010;
+        color: #FFF;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: bold;
+        line-height: 25px;
+        padding: 8px 20px 8px 50px;
+        background: #0094de;
+        background-image: url('../lab/get-direction-arrow.png');
+        background-position: left center;
+        background-repeat: no-repeat
+    }
+    .profile-container .map-block a.get-directions-link:focus,
+    .profile-container .map-block a.get-directions-link:hover {
+        text-decoration: none;
+        background: #0072ab;
+        color: #FFF;
+        background-image: url('../lab/get-direction-arrow.png');
+        background-position: left center;
+        background-repeat: no-repeat
+    }
+    #mapContainer {
+        width: 708px;
+        height: 508px
+    }
+    .map-link-container {
+        display: none
+    }
+    .profile-details-wrapper {
+        width: 710px;
+        border: 0;
+        margin: 0
+    }
+    .profile-summary h2 {
+        display: block
+    }
+    .marketing-app-banner-link {
+        float: right;
+        width: 240px;
+        display: inline-block
+    }
+    .profile-summary .booking-button {
+        float: right;
+        margin-top: 82px
+    }
+    .profile-container .service-row .service-cell a:hover {
+        text-decoration: underline
+    }
+}
+@media screen and (max-width: 979px) {
+    #centersNavLink {
+        background-image: url('/bundles/practopractoapp/images/icons/building_white_60.png');
+        background-position: center top;
+        background-repeat: no-repeat
+    }
+    #centersNavLink.selected {
+        background-image: url('/bundles/practopractoapp/images/icons/building_blue_60.png');
+        background-position: center top;
+        background-repeat: no-repeat
+    }
+    a#moreNavLink:before {
+        content: '\00B7\0020\00B7\0020\00B7';
+        font-weight: bold;
+        display: block;
+        font-size: 27px
+    }
+    a#moreNavLink.focusin:before {
+        color: #02a6d8
+    }
+    .profile-container .profile-nav-tab.more-tab-1 {
+        position: absolute;
+        right: 0;
+        z-index: 100021;
+        top: 97px;
+        display: none
+    }
+    .profile-container .profile-nav-tab.more-tab-2 {
+        display: none;
+        position: absolute;
+        right: 0;
+        z-index: 100021;
+        top: 97px;
+        right: 139px;
+        border-right: 1px solid #000
+    }
+    .profile-container a.more-tab {
+        position: absolute;
+        right: 0;
+        padding-top: 38px;
+        border-bottom: 1px solid#e0e0e0
+    }
+    .results-found-text {
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+        padding-left: 29px;
+        margin-top: 10px
+    }
+    .refresh-specialty-filter,
+    .refrest-test-filter {
+        top: 15px
+    }
+    .doctor-search-container,
+    .seg-service-container {
+        background-color: #fff;
+        margin-top: -2px
+    }
+    .doctor-search-container input,
+    .seg-service-container input {
+        background-color: #f3f3f3;
+        border: 0;
+        height: 30px
+    }
+    .profile-summary h2 {
+        display: block
+    }
+    .overview-timing-group {
+        width: 50%;
+        float: left
+    }
+    .vn-container {
+        text-align: right
+    }
+    .overview-address-text {
+        width: 80%;
+        float: left
+    }
+    .overview-address-map-link {
+        width: 20%;
+        float: left;
+        text-align: right
+    }
+    .profile-col {
+        width: 100%;
+        float: left;
+        min-height: 1px;
+        margin-bottom: 20px
+    }
+    .profile-name {
+        width: 60%;
+        float: left
+    }
+    .profile-name h2 {
+        margin-left: 0
+    }
+    .profile-container .overview-block {
+        padding: 19px 19px 4px 19px
+    }
+    .profile-container .overview-block .overview-timings {
+        width: 100%;
+        float: left
+    }
+    .profile-container .overview-block .overview-timings-title,
+    .profile-container .overview-block .overview-services-title,
+    .profile-container .overview-block .overview-photos-title,
+    .profile-container .overview-block .accredit,
+    .profile-container .overview-block .clinic-address,
+    .profile-container .overview-block .profile-fees,
+    .main-test-fees {
+        color: #333;
+        font-weight: 600;
+        font-size: 14px;
+        padding-left: 28px;
+        line-height: 30px;
+        margin-bottom: 10px
+    }
+    .profile-container .overview-block .overview-timings-title {
+        background: url("../lab/timings-blue-small.png") no-repeat left center
+    }
+    .profile-container .overview-block .overview-services-title {
+        background: url("../lab/services-blue-small.png") no-repeat left center
+    }
+    .profile-container .overview-block .overview-photos-title {
+        background: url("../lab/photos-blue-small.png") no-repeat left center
+    }
+    .profile-container .overview-block .overview-services {
+        width: 310px;
+        margin-left: 10px;
+        float: left
+    }
+    .profile-container .overview-block .overview-service-row {
+        width: 310px;
+        margin-bottom: 10px
+    }
+    .profile-container .overview-block .overview-timings-day-label {
+        color: #333;
+        font-weight: 600;
+        margin-bottom: 5px
+    }
+    .profile-container .overview-block .overview-timings-session-details {
+        line-height: 1.5
+    }
+    .profile-container .overview-block .overview-service-cell {
+        width: 150px;
+        float: left;
+        margin-left: 10px
+    }
+    .profile-container .overview-block .overview-service-cell:first-child {
+        margin-left: 0
+    }
+    .profile-container .overview-block .overview-photos {
+        width: 180px;
+        float: left
+    }
+    .profile-container .overview-block .overview-photos img {
+        width: 36px;
+        height: 36px;
+        opacity: .9;
+        cursor: pointer;
+        border-radius: 3px;
+        margin: 0 5px 5px 0
+    }
+    .profile-container .overview-block .overview-photos img:last-child {
+        margin: 0 0 5px 0
+    }
+    .report-error-row {
+        box-shadow: 0 2px 2px 2px #e0e0e0
+    }
+    .profile-container .profile-summary .clinic-location {
+        display: none
+    }
+    .profile-container .profile-summary-wrapper {
+        width: 660px;
+        padding: 19px;
+        border-top: 1px solid #dcdcdc;
+        border-right: 1px solid #dcdcdc;
+        border-left: 1px solid #dcdcdc;
+        background: #fff
+    }
+}
+@media screen and (min-width: 740px) and (max-width: 979px) {
+    .profile-container a.more-tab {
+        width: 210px
+    }
+    .doctor-search-container input,
+    .seg-service-container input {
+        width: 648px
+    }
+    .breadcrum-container {
+        display: none
+    }
+    .seg-profile-container.profile-container .overview-block,
+    .profile-container .services-block,
+    .profile-container .photos-block,
+    .profile-container .doctor-block,
+    .profile-container .centers-block {
+        padding: 19px;
+        background: #fff;
+        border-bottom: 1px solid #dcdcdc;
+        border-left: 1px solid #dcdcdc;
+        border-right: 1px solid #dcdcdc
+    }
+    .profile-container .centers-block {
+        padding: 0
+    }
+    .profile-details-wrapper {
+        width: 700px;
+        border: 0;
+        margin: 0
+    }
+    .profile-container .services-block,
+    .profile-container .photos-block,
+    .profile-container .doctor-block.first,
+    .profile-container .centers-block {
+        margin-top: -2px
+    }
+    .profile-container .profile-summary .practice-name {
+        float: left;
+        word-wrap: break-word
+    }
+    .profile-container .profile-summary .practice-locality {
+        clear: both;
+        width: 658px;
+        font-weight: 600;
+        padding-left: 35px;
+        font-size: 16px;
+        line-height: 20px;
+        background: url('/bundles/practopractoapp/images/icons/location_blue.png') no-repeat left top;
+        margin-bottom: 6px
+    }
+    .profile-container .profile-summary .practice-name {
+        font-size: 28px;
+        margin-bottom: 4px;
+        font-weight: 600;
+        color: #333;
+        width: 550px
+    }
+    .profile-container .profile-summary .practice-address {
+        float: left;
+        width: 573px;
+        margin-top: 10px;
+        color: #818181;
+        font-size: 14px;
+        line-height: 1.3
+    }
+    .profile-container .practice-logo {
+        float: left;
+        margin: 0 20px 20px 0
+    }
+    .profile-container .practice-logo img {
+        max-width: 70px;
+        height: auto
+    }
+    .profile-container .profile-summary .map-link-container {
+        float: left
+    }
+    .seg-profile-container .map-link-container a,
+    .seg-profile-container .map-link-container a:visited,
+    .profile-container .profile-summary .map-link-container a,
+    .profile-container .profile-summary .map-link-container a:visited {
+        outline: 0;
+        background: url('/bundles/practopractoapp/images/icons/directions-link-blue.png') no-repeat center center;
+        display: inline-block;
+        height: 40px;
+        width: 40px;
+        border: 1px solid #dcdcdc;
+        border-radius: 3px;
+        margin: 10px 10px 0 35px;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .seg-profile-container .map-link-container a:hover,
+    .seg-profile-container .map-link-container a:focus,
+    .profile-container .profile-summary .map-link-container a:hover,
+    .profile-container .profile-summary .map-link-container a:focus {
+        border: 1px solid #c6c6c6;
+        background-color: #f1f1f1
+    }
+    .seg-profile-container .map-link-container a:active,
+    .profile-container .profile-summary .map-link-container a:active {
+        background-color: #b3e3f2
+    }
+    .profile-container .profile-nav-container {
+        width: 700px;
+        position: relative;
+        border-left: 1px solid #dcdcdc;
+        border-right: 1px solid #dcdcdc;
+        padding: 0;
+        display: inline-block
+    }
+    .profile-container .profile-nav-tab {
+        background: #f3f3f3;
+        display: inline-block;
+        padding: 65px 15px 15px 15px;
+        width: 174px;
+        font-size: 16px;
+        outline: 0;
+        text-align: center;
+        float: left;
+        color: #737373;
+        text-decoration: none;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    #centersNavLink,
+    #photosNavLink {
+        width: 175px
+    }
+    #overviewNavLink,
+    #mapNavLink {
+        display: none
+    }
+    #centersNavLink {
+        border-right: 1px solid #f3f3f3;
+        border-left: 1px solid #f3f3f3;
+        border-bottom: 1px solid #e0e0e0
+    }
+    #centersNavLink.selected {
+        border-right: 1px solid #f3f3f3;
+        border-left: 1px solid #ececec;
+        border-bottom: 1px solid #fff
+    }
+    #photosNavLink {
+        background-image: url('/bundles/practopractoapp/images/icons/clinic-profile-photos-inactive-740.png');
+        background-position: center top;
+        background-repeat: no-repeat;
+        border-right: 1px solid #f3f3f3;
+        border-left: 1px solid #f3f3f3;
+        border-bottom: 1px solid #e0e0e0
+    }
+    #photosNavLink.selected {
+        background-image: url('/bundles/practopractoapp/images/icons/clinic-profile-photos-active-740.png');
+        background-position: center top;
+        background-repeat: no-repeat;
+        border-right: 1px solid #ececec;
+        border-left: 1px solid #ececec;
+        border-bottom: 1px solid #fff
+    }
+    #doctorsNavLink {
+        background-image: url('/bundles/practopractoapp/images/icons/clinic-profile-doctors-inactive-740.png');
+        background-position: center top;
+        background-repeat: no-repeat;
+        border-right: 1px solid #f3f3f3;
+        border-left: 1px solid #f3f3f3;
+        border-bottom: 1px solid #e0e0e0
+    }
+    #doctorsNavLink.selected {
+        background-image: url('/bundles/practopractoapp/images/icons/clinic-profile-doctors-active-740.png');
+        background-position: center top;
+        background-repeat: no-repeat;
+        border-left: 1px solid #f3f3f3;
+        border-right: 1px solid #ececec;
+        border-bottom: 1px solid #fff
+    }
+    #servicesNavLink {
+        background-image: url('/bundles/practopractoapp/images/icons/clinic-profile-services-inactive-740.png');
+        background-position: center top;
+        background-repeat: no-repeat;
+        border-right: 1px solid #f3f3f3;
+        border-left: 1px solid #f3f3f3;
+        border-bottom: 1px solid #e0e0e0
+    }
+    #servicesNavLink.selected {
+        background-image: url('/bundles/practopractoapp/images/icons/clinic-profile-services-active-740.png');
+        background-position: center top;
+        background-repeat: no-repeat;
+        border-right: 1px solid #ececec;
+        border-left: 1px solid #ececec;
+        border-bottom: 1px solid #fff
+    }
+    .profile-container .profile-nav-tab:hover,
+    .profile-container .profile-nav-tab:focus {
+        text-decoration: none;
+        transition: .5s;
+        -moz-transition: .5s;
+        -o-transition: .5s;
+        -webkit-transition: .5s;
+        -ms-transition: .5s
+    }
+    .profile-container .profile-nav-tab.selected,
+    .profile-container .profile-nav-tab.selected:hover,
+    .profile-container .profile-nav-tab.selected:focus {
+        color: #000;
+        background: #FFF
+    }
+    .profile-container .centers-block {
+        min-height: 350px
+    }
+    .profile-container .services-block {
+        font-size: 13px;
+        color: #818181
+    }
+    .profile-container .service-row {
+        width: 660px;
+        margin-bottom: 5px
+    }
+    .profile-container .service-row .service-cell {
+        line-height: 1.5;
+        outline: 0;
+        margin: 0;
+        padding-left: 40px;
+        background: url('/bundles/practopractoapp/images/icons/mid-bullet.png') no-repeat
+    }
+    .profile-container .service-row .service-cell {
+        width: 175px;
+        margin-right: 5px;
+        float: left
+    }
+    .slideshow-screen {
+        position: relative;
+        width: 660px;
+        display: block;
+        height: 440px
+    }
+    .slideshow-screen .banner-large {
+        max-height: 440px;
+        max-width: 660px;
+        width: auto;
+        height: auto
+    }
+    .slideshow-screen .slideshow-next-image,
+    .slideshow-screen .slideshow-prev-image {
+        height: 440px;
+        width: 60px;
+        opacity: .25;
+        top: 0;
+        display: inline-block;
+        background: #1f1f1f;
+        position: absolute;
+        z-index: 100020;
+        cursor: pointer
+    }
+    .slideshow-screen .slideshow-next-image {
+        background-image: url('/bundles/practopractoapp/images/icons/slideshow-right-arrow.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        right: 0
+    }
+    .slideshow-screen .slideshow-prev-image {
+        background-image: url('/bundles/practopractoapp/images/icons/slideshow-left-arrow.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        left: 0
+    }
+    .slideshow-screen .slideshow-next-image:hover {
+        opacity: .6;
+        background-color: #000;
+        background-image: url('/bundles/practopractoapp/images/icons/slideshow-right-arrow-glow.png')
+    }
+    .slideshow-screen .slideshow-prev-image:hover {
+        opacity: .6;
+        background-color: #000;
+        background-image: url('/bundles/practopractoapp/images/icons/slideshow-left-arrow-glow.png')
+    }
+    .slideshow-queue {
+        line-height: 1;
+        margin: 0;
+        padding: 0;
+        outline: 0;
+        width: 660px;
+        display: block
+    }
+    .slideshow-queue .slideshow-thumbs {
+        display: inline-block;
+        text-decoration: none;
+        margin-left: 8px;
+        margin-top: 8px;
+        cursor: pointer;
+        height: 20px;
+        width: 20px;
+        opacity: .9;
+        background: #818181;
+        border-radius: 50%;
+        border: 2px solid transparent;
+        margin-bottom: 8px;
+        line-height: 1
+    }
+    .slideshow-queue .slideshow-thumbs.selected {
+        background: #02a6d8;
+        border: 2px solid #02a6d8
+    }
+    .doctor-block {
+        padding: 15px;
+        border-bottom: 1px solid #d6d6d6
+    }
+    .doctor-block:last-child {
+        border-bottom: none !important
+    }
+    .doctor-block h2 {
+        color: #49b1d1;
+        font-size: 16px;
+        margin: 0;
+        line-height: 22px
+    }
+    .profile-summary .practice-timings,
+    .doctor-block .timings {
+        margin-bottom: 8px;
+        line-height: 1.2;
+        padding-left: 35px;
+        background: url('/bundles/practopractoapp/images/icons/visit_timings_740.png') no-repeat
+    }
+    .doctor-block .fees {
+        line-height: 20px;
+        margin-bottom: 8px;
+        padding-left: 35px;
+        background: url('/bundles/practopractoapp/images/icons/fees_740.png') no-repeat
+    }
+    .doctor-block .locality {
+        line-height: 20px;
+        margin-bottom: 8px;
+        padding-left: 35px;
+        background: url('/bundles/practopractoapp/images/icons/locality_740.png') no-repeat
+    }
+    .doc_avatar {
+        max-width: 100px;
+        max-height: auto;
+        border-radius: 6px
+    }
+    .doc-photo-container {
+        width: 120px;
+        float: left;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .doc-details-block {
+        width: 540px;
+        float: left;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .doc-name {
+        font-size: 20px;
+        font-weight: bold
+    }
+    .doc-name h2 {
+        max-width: 100%;
+        font-size: 18px;
+        margin-bottom: 5px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap
+    }
+    .doc-qualifications,
+    .doc-exp-years,
+    .doc-specialties,
+    .doc-specialties a,
+    .doc-specialties a:visited,
+    .doc-clinic-name a,
+    .doc-clinic-name a:visited {
+        max-width: 100%;
+        color: #7f7f7f;
+        line-height: 1.2;
+        font-size: 14px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        display: block
+    }
+    .doc-clinic-name {
+        margin: 8px 0
+    }
+    .doc-specialties a,
+    .doc-specialties a:visited,
+    .doc-clinic-name a,
+    .doc-clinic-name a:visited {
+        text-decoration: none;
+        display: inline-block
+    }
+    .doc-clinic-name a:focus,
+    .doc-clinic-name a:hover {
+        text-decoration: underline
+    }
+    .doc-specialties {
+        margin-top: 5px
+    }
+    .doc-qualifications {
+        line-height: 1.5;
+        font-weight: bold
+    }
+    .doc-availability-block {
+        margin-top: 8px;
+        display: inline-block;
+        clear: both;
+        font-size: 14px;
+        padding-top: 5px;
+        width: 668px;
+        float: left;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .doc-availability-block .locality,
+    .doc-availability-block .fees {
+        float: left;
+        display: inline-block;
+        width: 329px;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .doc-availability-block .timings {
+        clear: both
+    }
+    .doc-availability-block .timings>p {
+        width: 315px;
+        margin-bottom: 10px;
+        float: left
+    }
+    .profile-summary .practice-timings-group {
+        width: 201px;
+        margin-bottom: 10px;
+        float: left;
+        margin-left: 10px
+    }
+    .profile-summary .practice-timings-group:first-child,
+    .profile-summary .practice-timings-group:nth-child(4),
+    .profile-summary .practice-timings-group:nth-child(7) {
+        clear: both;
+        margin-left: 0
+    }
+    .profile-summary .practice-timings {
+        clear: both;
+        margin-top: 20px;
+        width: 660px;
+        display: inline-block
+    }
+    .profile-summary p.practice-timings-day-label {
+        font-weight: bold;
+        display: block
+    }
+    .doc-availability-block .timings>p span {
+        display: block
+    }
+    .profile-summary p.practice-timings-session-details,
+    .doc-availability-block .timings>p span:first-child {
+        display: inline-block
+    }
+    .booking-link-container {
+        float: right
+    }
+    #reviewsNavLink {
+        background-image: url('/bundles/practopractoapp/images/icons/review-grey.png');
+        background-position: center top;
+        background-repeat: no-repeat;
+        border-right: 1px solid #f3f3f3;
+        border-left: 1px solid #f3f3f3;
+        border-bottom: 1px solid#e0e0e0;
+        height: 96px;
+        width: 140px
+    }
+    #reviewsNavLink.selected {
+        background-image: url('/bundles/practopractoapp/images/icons/review-blue.png')
+    }
+    .new-badge {
+        display: none
+    }
+    .profile-container .overview-block {
+        display: none
+    }
+    .profile-summary h2 {
+        display: block
+    }
+    .profile-container .profile-summary .clinic-location {
+        display: none
+    }
+    .profile-container .profile-summary .estab-vote-count {
+        width: 100%;
+        color: #818181;
+        margin-right: 5px
+    }
+    .profile-container .profile-summary .practice-info {
+        display: inline-block;
+        margin-left: 0;
+        margin-bottom: 15px
+    }
+    .profile-container .rating-number {
+        display: inline-block;
+        width: 100%;
+        padding: 15px;
+        margin-top: 10px
+    }
+    .profile-container .rating-number .clinic-rating {
+        display: inline-block;
+        float: left;
+        width: 121px;
+        text-align: left
+    }
+    .profile-container .rating-number .booking-button {
+        display: inline
+    }
+}
+@media screen and (min-width: 600px) and (max-width: 739px) {
+    .doctor-search-container input,
+    .seg-service-container input {
+        width: 509px
+    }
+    .breadcrum-container {
+        display: none
+    }
+    .seg-profile-container.profile-container .overview-block,
+    .profile-container .services-block,
+    .profile-container .photos-block,
+    .profile-container .doctor-block,
+    .profile-container .centers-block {
+        padding: 19px;
+        background: #fff;
+        border-bottom: 1px solid #dcdcdc;
+        border-left: 1px solid #dcdcdc;
+        border-right: 1px solid #dcdcdc
+    }
+    .profile-container .centers-block {
+        padding: 0
+    }
+    .profile-details-wrapper {
+        width: 560px;
+        border: 0;
+        margin: 0
+    }
+    .profile-container .services-block,
+    .profile-container .photos-block,
+    .profile-container .doctor-block.first,
+    .profile-container .centers-block {
+        margin-top: -2px
+    }
+    .profile-container .profile-summary .practice-name {
+        float: left
+    }
+    .profile-container .profile-summary .practice-locality {
+        clear: both;
+        width: 518px;
+        font-weight: 600;
+        padding-left: 35px;
+        font-size: 16px;
+        line-height: 20px;
+        background: url('/bundles/practopractoapp/images/icons/location_blue.png') no-repeat left top;
+        margin-bottom: 6px
+    }
+    .profile-container .profile-summary .practice-name {
+        font-size: 28px;
+        margin-bottom: 4px;
+        font-weight: 600;
+        color: #333;
+        word-wrap: break-word;
+        width: 420px
+    }
+    .profile-container .profile-summary .practice-address {
+        float: left;
+        width: 433px;
+        margin-top: 10px;
+        color: #818181;
+        font-size: 14px;
+        line-height: 1.3
+    }
+    .profile-container .practice-logo {
+        float: left;
+        margin: 0 20px 20px 0
+    }
+    .profile-container .practice-logo img {
+        max-width: 70px;
+        height: auto
+    }
+    .profile-container .profile-summary .map-link-container {
+        float: left
+    }
+    .seg-profile-container .map-link-container a,
+    .seg-profile-container .map-link-container a:visited,
+    .profile-container .profile-summary .map-link-container a,
+    .profile-container .profile-summary .map-link-container a:visited {
+        outline: 0;
+        background: url('/bundles/practopractoapp/images/icons/directions-link-blue.png') no-repeat center center;
+        display: inline-block;
+        height: 40px;
+        width: 40px;
+        border: 1px solid #dcdcdc;
+        border-radius: 3px;
+        margin: 10px 10px 0 35px;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .seg-profile-container .map-link-container a:hover,
+    .seg-profile-container .map-link-container a:focus,
+    .profile-container .profile-summary .map-link-container a:hover,
+    .profile-container .profile-summary .map-link-container a:focus {
+        border: 1px solid #c6c6c6;
+        background-color: #f1f1f1
+    }
+    .seg-profile-container .map-link-container a:active,
+    .profile-container .profile-summary .map-link-container a:active {
+        background-color: #b3e3f2
+    }
+    .profile-container .profile-nav-container {
+        width: 560px;
+        position: relative;
+        border-left: 1px solid #dcdcdc;
+        border-right: 1px solid #dcdcdc;
+        padding: 0;
+        display: inline-block
+    }
+    .profile-container .profile-nav-tab {
+        background: #f3f3f3;
+        display: inline-block;
+        padding: 65px 15px 15px 15px;
+        width: 139px;
+        font-size: 16px;
+        outline: 0;
+        text-align: center;
+        float: left;
+        color: #737373;
+        text-decoration: none;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    #centersNavLink,
+    #photosNavLink {
+        width: 140px
+    }
+    #overviewNavLink,
+    #mapNavLink {
+        display: none
+    }
+    #centersNavLink {
+        border-right: 1px solid #f3f3f3;
+        border-left: 1px solid #f3f3f3;
+        border-bottom: 1px solid #e0e0e0
+    }
+    #centersNavLink.selected {
+        border-right: 1px solid #f3f3f3;
+        border-left: 1px solid #ececec;
+        border-bottom: 1px solid #fff
+    }
+    #photosNavLink {
+        background-image: url('/bundles/practopractoapp/images/icons/clinic-profile-photos-inactive-740.png');
+        background-position: center top;
+        background-repeat: no-repeat;
+        border-right: 1px solid #f3f3f3;
+        border-left: 1px solid #f3f3f3;
+        border-bottom: 1px solid #e0e0e0
+    }
+    #photosNavLink.selected {
+        background-image: url('/bundles/practopractoapp/images/icons/clinic-profile-photos-active-740.png');
+        background-position: center top;
+        background-repeat: no-repeat;
+        border-right: 1px solid #ececec;
+        border-left: 1px solid #ececec;
+        border-bottom: 1px solid #fff
+    }
+    #doctorsNavLink {
+        background-image: url('/bundles/practopractoapp/images/icons/clinic-profile-doctors-inactive-740.png');
+        background-position: center top;
+        background-repeat: no-repeat;
+        border-right: 1px solid #f3f3f3;
+        border-left: 1px solid #f3f3f3;
+        border-bottom: 1px solid #e0e0e0
+    }
+    #doctorsNavLink.selected {
+        background-image: url('/bundles/practopractoapp/images/icons/clinic-profile-doctors-active-740.png');
+        background-position: center top;
+        background-repeat: no-repeat;
+        border-left: 1px solid #f3f3f3;
+        border-right: 1px solid #ececec;
+        border-bottom: 1px solid #fff
+    }
+    #servicesNavLink {
+        background-image: url('/bundles/practopractoapp/images/icons/clinic-profile-services-inactive-740.png');
+        background-position: center top;
+        background-repeat: no-repeat;
+        border-right: 1px solid #f3f3f3;
+        border-left: 1px solid #f3f3f3;
+        border-bottom: 1px solid #e0e0e0
+    }
+    #servicesNavLink.selected {
+        background-image: url('/bundles/practopractoapp/images/icons/clinic-profile-services-active-740.png');
+        background-position: center top;
+        background-repeat: no-repeat;
+        border-right: 1px solid #ececec;
+        border-left: 1px solid #ececec;
+        border-bottom: 1px solid #fff
+    }
+    .profile-container .profile-nav-tab:hover,
+    .profile-container .profile-nav-tab:focus {
+        text-decoration: none;
+        transition: .5s;
+        -moz-transition: .5s;
+        -o-transition: .5s;
+        -webkit-transition: .5s;
+        -ms-transition: .5s
+    }
+    .profile-container .profile-nav-tab.selected,
+    .profile-container .profile-nav-tab.selected:hover,
+    .profile-container .profile-nav-tab.selected:focus {
+        color: #000;
+        background: #FFF
+    }
+    .profile-container .centers-block {
+        min-height: 350px
+    }
+    .profile-container .services-block {
+        font-size: 13px;
+        color: #818181
+    }
+    .profile-container .service-row {
+        width: 520px;
+        margin-bottom: 5px
+    }
+    .profile-container .service-row .service-cell {
+        line-height: 1.5;
+        outline: 0;
+        margin: 0;
+        padding-left: 40px;
+        background: url('/bundles/practopractoapp/images/icons/mid-bullet.png') no-repeat
+    }
+    .profile-container .service-row .service-cell {
+        width: 128px;
+        margin-right: 5px;
+        float: left
+    }
+    .slideshow-screen {
+        position: relative;
+        width: 520px;
+        display: block;
+        height: 346px
+    }
+    .slideshow-screen .banner-large {
+        max-height: 346px;
+        max-width: 520px;
+        width: auto;
+        height: auto
+    }
+    .slideshow-screen .slideshow-next-image,
+    .slideshow-screen .slideshow-prev-image {
+        height: 346px;
+        width: 60px;
+        opacity: .25;
+        top: 0;
+        display: inline-block;
+        background: #1f1f1f;
+        position: absolute;
+        z-index: 100020;
+        cursor: pointer
+    }
+    .slideshow-screen .slideshow-next-image {
+        background-image: url('/bundles/practopractoapp/images/icons/slideshow-right-arrow.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        right: 0
+    }
+    .slideshow-screen .slideshow-prev-image {
+        background-image: url('/bundles/practopractoapp/images/icons/slideshow-left-arrow.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        left: 0
+    }
+    .slideshow-screen .slideshow-next-image:hover {
+        opacity: .6;
+        background-color: #000;
+        background-image: url('/bundles/practopractoapp/images/icons/slideshow-right-arrow-glow.png')
+    }
+    .slideshow-screen .slideshow-prev-image:hover {
+        opacity: .6;
+        background-color: #000;
+        background-image: url('/bundles/practopractoapp/images/icons/slideshow-left-arrow-glow.png')
+    }
+    .slideshow-queue {
+        line-height: 1;
+        margin: 0;
+        padding: 0;
+        outline: 0;
+        width: 520px;
+        display: block
+    }
+    .slideshow-queue .slideshow-thumbs {
+        display: inline-block;
+        text-decoration: none;
+        margin-left: 8px;
+        margin-top: 8px;
+        cursor: pointer;
+        height: 20px;
+        width: 20px;
+        opacity: .9;
+        background: #818181;
+        border-radius: 50%;
+        border: 2px solid transparent;
+        margin-bottom: 8px;
+        line-height: 1
+    }
+    .slideshow-queue .slideshow-thumbs.selected {
+        background: #02a6d8;
+        border: 2px solid #02a6d8
+    }
+    .doctor-block {
+        padding: 15px;
+        border-bottom: 1px solid #d6d6d6
+    }
+    .doctor-block:last-child {
+        border-bottom: none !important
+    }
+    .doctor-block h2 {
+        color: #49b1d1;
+        font-size: 16px;
+        margin: 0;
+        line-height: 22px
+    }
+    .profile-summary .practice-timings,
+    .doctor-block .timings {
+        margin-bottom: 8px;
+        line-height: 1.2;
+        padding-left: 35px;
+        background: url('/bundles/practopractoapp/images/icons/visit_timings_740.png') no-repeat
+    }
+    .doctor-block .fees {
+        line-height: 20px;
+        margin-bottom: 8px;
+        padding-left: 35px;
+        background: url('/bundles/practopractoapp/images/icons/fees_740.png') no-repeat
+    }
+    .doctor-block .locality {
+        line-height: 20px;
+        margin-bottom: 8px;
+        padding-left: 35px;
+        background: url('/bundles/practopractoapp/images/icons/locality_740.png') no-repeat
+    }
+    .doc_avatar {
+        max-width: 100px;
+        max-height: auto;
+        border-radius: 6px
+    }
+    .doc-photo-container {
+        width: 120px;
+        float: left;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .doc-details-block {
+        width: 400px;
+        float: left;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .doc-name {
+        font-size: 20px;
+        font-weight: bold
+    }
+    .doc-name h2 {
+        max-width: 100%;
+        font-size: 18px;
+        margin-bottom: 5px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap
+    }
+    .doc-qualifications,
+    .doc-exp-years,
+    .doc-specialties,
+    .doc-specialties a,
+    .doc-specialties a:visited,
+    .doc-clinic-name a,
+    .doc-clinic-name a:visited {
+        max-width: 100%;
+        color: #7f7f7f;
+        line-height: 1.2;
+        font-size: 14px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        display: block
+    }
+    .doc-clinic-name {
+        margin: 8px 0
+    }
+    .doc-specialties a,
+    .doc-specialties a:visited,
+    .doc-clinic-name a,
+    .doc-clinic-name a:visited {
+        text-decoration: none;
+        display: inline-block
+    }
+    .doc-clinic-name a:focus,
+    .doc-clinic-name a:hover {
+        text-decoration: underline
+    }
+    .doc-specialties {
+        margin-top: 5px
+    }
+    .doc-qualifications {
+        line-height: 1.5;
+        font-weight: bold
+    }
+    .doc-availability-block {
+        margin-top: 8px;
+        display: inline-block;
+        clear: both;
+        font-size: 14px;
+        padding-top: 5px;
+        width: 525px;
+        float: left;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .doc-availability-block .locality,
+    .doc-availability-block .fees {
+        float: left;
+        display: inline-block;
+        width: 260px;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .doc-availability-block .timings {
+        clear: both
+    }
+    .doc-availability-block .timings>p {
+        width: 240px;
+        margin-bottom: 10px;
+        float: left
+    }
+    .profile-summary .practice-timings-group {
+        width: 166px;
+        margin-bottom: 10px;
+        float: left;
+        margin-left: 10px
+    }
+    .profile-summary .practice-timings-group:first-child,
+    .profile-summary .practice-timings-group:nth-child(4),
+    .profile-summary .practice-timings-group:nth-child(7) {
+        clear: both;
+        margin-left: 0
+    }
+    .profile-summary .practice-timings {
+        clear: both;
+        margin-top: 20px;
+        width: 520px;
+        display: inline-block
+    }
+    .profile-summary p.practice-timings-day-label {
+        font-weight: bold;
+        display: block
+    }
+    .doc-availability-block .timings>p span {
+        display: block
+    }
+    .doc-availability-block .timings>p span:first-child {
+        display: inline-block
+    }
+    .booking-link-container {
+        float: right
+    }
+    #reviewsNavLink {
+        background-image: url('/bundles/practopractoapp/images/icons/review-grey.png');
+        background-position: center top;
+        background-repeat: no-repeat;
+        border-right: 1px solid #f3f3f3;
+        border-left: 1px solid #f3f3f3;
+        border-bottom: 1px solid#e0e0e0;
+        height: 96px;
+        width: 150px
+    }
+    #reviewsNavLink.selected {
+        background-image: url('/bundles/practopractoapp/images/icons/review-blue.png')
+    }
+    .new-badge {
+        display: none
+    }
+    .profile-container .overview-block {
+        display: none
+    }
+    .profile-summary h2 {
+        display: block
+    }
+    .profile-container .profile-summary .clinic-location {
+        display: none
+    }
+    .profile-container .profile-summary-wrapper {
+        width: 520px;
+        height: 270px
+    }
+    .profile-container .profile-summary-wrapper .rating-number {
+        width: 100%;
+        float: left
+    }
+    .profile-container .profile-summary-wrapper .estab-vote-count {
+        display: inline-block;
+        width: 100%;
+        color: #818181
+    }
+    .profile-container .profile-summary .practice-info {
+        display: inline-block;
+        margin-left: 0;
+        margin-bottom: 15px
+    }
+    .profile-container .rating-number {
+        display: inline-block;
+        width: 100%;
+        padding: 13px
+    }
+    .profile-container .rating-number .clinic-rating {
+        display: inline-block
+    }
+    .profile-container .rating-number .booking-button {
+        display: inline
+    }
+}
+@media screen and (min-width: 480px) and (max-width: 599px) {
+    .profile-container .profile-nav-tab.more-tab-2 {
+        right: 109px
+    }
+    .profile-container a.more-tab {
+        width: 102px
+    }
+    .doctor-search-container input,
+    .seg-service-container input {
+        width: 388px
+    }
+    .breadcrum-container {
+        display: none
+    }
+    .seg-profile-container.profile-container .overview-block,
+    .profile-container .services-block,
+    .profile-container .photos-block,
+    .profile-container .doctor-block,
+    .profile-container .centers-block {
+        padding: 19px;
+        background: #fff;
+        border-bottom: 1px solid #dcdcdc;
+        border-left: 1px solid #dcdcdc;
+        border-right: 1px solid #dcdcdc
+    }
+    .profile-container .centers-block {
+        padding: 0
+    }
+    .profile-details-wrapper {
+        width: 440px;
+        border: 0;
+        margin: 0
+    }
+    .profile-container .services-block,
+    .profile-container .photos-block,
+    .profile-container .doctor-block.first,
+    .profile-container .centers-block {
+        margin-top: -2px
+    }
+    .profile-container .profile-summary .practice-name {
+        width: 308px;
+        float: left
+    }
+    .profile-container .profile-summary .practice-locality {
+        clear: both;
+        width: 368px;
+        font-weight: 600;
+        padding-left: 35px;
+        font-size: 16px;
+        line-height: 20px;
+        background: url('/bundles/practopractoapp/images/icons/location_blue.png') no-repeat left top;
+        margin-bottom: 6px
+    }
+    .profile-container .profile-summary .practice-name {
+        font-size: 28px;
+        margin-bottom: 4px;
+        font-weight: 600;
+        color: #333;
+        word-wrap: break-word
+    }
+    .profile-container .profile-summary .practice-address {
+        float: left;
+        width: 313px;
+        margin-top: 10px;
+        color: #818181;
+        font-size: 14px;
+        line-height: 1.3
+    }
+    .profile-container .practice-logo {
+        float: left;
+        margin: 0 20px 20px 0
+    }
+    .profile-container .practice-logo img {
+        max-width: 70px;
+        height: auto
+    }
+    .profile-container .profile-summary .map-link-container {
+        float: left
+    }
+    .seg-profile-container .map-link-container a,
+    .seg-profile-container .map-link-container a:visited,
+    .profile-container .profile-summary .map-link-container a,
+    .profile-container .profile-summary .map-link-container a:visited {
+        outline: 0;
+        background: url('/bundles/practopractoapp/images/icons/directions-link-blue.png') no-repeat center center;
+        display: inline-block;
+        height: 40px;
+        width: 40px;
+        border: 1px solid #dcdcdc;
+        border-radius: 3px;
+        margin: 10px 10px 0 35px;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .seg-profile-container .map-link-container a:hover,
+    .seg-profile-container .map-link-container a:focus,
+    .profile-container .profile-summary .map-link-container a:hover,
+    .profile-container .profile-summary .map-link-container a:focus {
+        border: 1px solid #c6c6c6;
+        background-color: #f1f1f1
+    }
+    .seg-profile-container .map-link-container a:active,
+    .profile-container .profile-summary .map-link-container a:active {
+        background-color: #b3e3f2
+    }
+    .profile-container .profile-nav-container {
+        width: 440px;
+        position: relative;
+        border-left: 1px solid #dcdcdc;
+        border-right: 1px solid #dcdcdc;
+        padding: 0;
+        display: inline-block
+    }
+    .profile-container .profile-nav-tab {
+        background: #f3f3f3;
+        display: inline-block;
+        padding: 65px 5px 15px 5px;
+        width: 109px;
+        font-size: 15px;
+        outline: 0;
+        text-align: center;
+        float: left;
+        color: #737373;
+        text-decoration: none;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    #centersNavLink,
+    #photosNavLink {
+        width: 112px
+    }
+    #overviewNavLink,
+    #mapNavLink {
+        display: none
+    }
+    #centersNavLink {
+        border-right: 1px solid #f3f3f3;
+        border-left: 1px solid #f3f3f3;
+        border-bottom: 1px solid #e0e0e0
+    }
+    #centersNavLink.selected {
+        border-right: 1px solid #f3f3f3;
+        border-left: 1px solid #ececec;
+        border-bottom: 1px solid #fff
+    }
+    #photosNavLink {
+        background-image: url('/bundles/practopractoapp/images/icons/clinic-profile-photos-inactive-740.png');
+        background-position: center top;
+        background-repeat: no-repeat;
+        border-right: 1px solid #f3f3f3;
+        border-left: 1px solid #f3f3f3;
+        border-bottom: 1px solid #e0e0e0
+    }
+    #photosNavLink.selected {
+        background-image: url('/bundles/practopractoapp/images/icons/clinic-profile-photos-active-740.png');
+        background-position: center top;
+        background-repeat: no-repeat;
+        border-right: 1px solid #ececec;
+        border-left: 1px solid #ececec;
+        border-bottom: 1px solid #fff
+    }
+    #doctorsNavLink {
+        background-image: url('/bundles/practopractoapp/images/icons/clinic-profile-doctors-inactive-740.png');
+        background-position: center top;
+        background-repeat: no-repeat;
+        border-right: 1px solid #f3f3f3;
+        border-left: 1px solid #f3f3f3;
+        border-bottom: 1px solid #e0e0e0
+    }
+    #doctorsNavLink.selected {
+        background-image: url('/bundles/practopractoapp/images/icons/clinic-profile-doctors-active-740.png');
+        background-position: center top;
+        background-repeat: no-repeat;
+        border-left: 1px solid #f3f3f3;
+        border-right: 1px solid #ececec;
+        border-bottom: 1px solid #fff
+    }
+    #servicesNavLink {
+        background-image: url('/bundles/practopractoapp/images/icons/clinic-profile-services-inactive-740.png');
+        background-position: center top;
+        background-repeat: no-repeat;
+        border-right: 1px solid #f3f3f3;
+        border-left: 1px solid #f3f3f3;
+        border-bottom: 1px solid #e0e0e0
+    }
+    #servicesNavLink.selected {
+        background-image: url('/bundles/practopractoapp/images/icons/clinic-profile-services-active-740.png');
+        background-position: center top;
+        background-repeat: no-repeat;
+        border-right: 1px solid #ececec;
+        border-left: 1px solid #ececec;
+        border-bottom: 1px solid #fff
+    }
+    .profile-container .profile-nav-tab:hover,
+    .profile-container .profile-nav-tab:focus {
+        text-decoration: none;
+        transition: .5s;
+        -moz-transition: .5s;
+        -o-transition: .5s;
+        -webkit-transition: .5s;
+        -ms-transition: .5s
+    }
+    .profile-container .profile-nav-tab.selected,
+    .profile-container .profile-nav-tab.selected:hover,
+    .profile-container .profile-nav-tab.selected:focus {
+        color: #000;
+        background: #FFF
+    }
+    .profile-container .centers-block {
+        min-height: 350px
+    }
+    .profile-container .services-block {
+        font-size: 13px;
+        color: #818181
+    }
+    .profile-container .service-row {
+        width: 400px
+    }
+    .profile-container .service-row .service-cell {
+        line-height: 1.5;
+        outline: 0;
+        margin: 0;
+        padding-left: 40px;
+        background: url('/bundles/practopractoapp/images/icons/mid-bullet.png') no-repeat
+    }
+    .profile-container .service-row .service-cell {
+        width: 363px;
+        margin-bottom: 5px
+    }
+    .slideshow-screen {
+        position: relative;
+        width: 400px;
+        display: block;
+        height: 266px
+    }
+    .slideshow-screen .banner-large {
+        max-height: 266px;
+        max-width: 400px;
+        width: auto;
+        height: auto
+    }
+    .slideshow-screen .slideshow-next-image,
+    .slideshow-screen .slideshow-prev-image {
+        height: 266px;
+        width: 60px;
+        opacity: .25;
+        top: 0;
+        display: inline-block;
+        background: #1f1f1f;
+        position: absolute;
+        z-index: 100020;
+        cursor: pointer
+    }
+    .slideshow-screen .slideshow-next-image {
+        background-image: url('/bundles/practopractoapp/images/icons/slideshow-right-arrow.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        right: 0
+    }
+    .slideshow-screen .slideshow-prev-image {
+        background-image: url('/bundles/practopractoapp/images/icons/slideshow-left-arrow.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        left: 0
+    }
+    .slideshow-screen .slideshow-next-image:hover {
+        opacity: .6;
+        background-color: #000;
+        background-image: url('/bundles/practopractoapp/images/icons/slideshow-right-arrow-glow.png')
+    }
+    .slideshow-screen .slideshow-prev-image:hover {
+        opacity: .6;
+        background-color: #000;
+        background-image: url('/bundles/practopractoapp/images/icons/slideshow-left-arrow-glow.png')
+    }
+    .slideshow-queue {
+        line-height: 1;
+        margin: 0;
+        padding: 0;
+        outline: 0;
+        width: 400px;
+        display: block
+    }
+    .slideshow-queue .slideshow-thumbs {
+        display: inline-block;
+        text-decoration: none;
+        margin-left: 8px;
+        margin-top: 8px;
+        cursor: pointer;
+        height: 20px;
+        width: 20px;
+        opacity: .9;
+        background: #818181;
+        border-radius: 50%;
+        border: 2px solid transparent;
+        margin-bottom: 8px;
+        line-height: 1
+    }
+    .slideshow-queue .slideshow-thumbs.selected {
+        background: #02a6d8;
+        border: 2px solid #02a6d8
+    }
+    .doctor-block {
+        padding: 15px;
+        border-bottom: 1px solid #d6d6d6
+    }
+    .doctor-block:last-child {
+        border-bottom: none !important
+    }
+    .doctor-block h2 {
+        color: #49b1d1;
+        font-size: 16px;
+        margin: 0;
+        line-height: 22px
+    }
+    .profile-summary .practice-timings,
+    .doctor-block .timings {
+        margin-bottom: 8px;
+        line-height: 1.2;
+        padding-left: 30px;
+        background: url('/bundles/practopractoapp/images/icons/visit_timings_740.png') no-repeat
+    }
+    .doctor-block .fees {
+        line-height: 20px;
+        margin-bottom: 8px;
+        padding-left: 30px;
+        background: url('/bundles/practopractoapp/images/icons/fees_740.png') no-repeat
+    }
+    .doctor-block .locality {
+        line-height: 20px;
+        margin-bottom: 8px;
+        padding-left: 25px;
+        background: url('/bundles/practopractoapp/images/icons/locality_740.png') no-repeat
+    }
+    .doc_avatar {
+        max-width: 100px;
+        max-height: auto;
+        border-radius: 6px
+    }
+    .doc-photo-container {
+        width: 120px;
+        float: left;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .doc-details-block {
+        width: 278px;
+        float: left;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .doc-name {
+        font-size: 20px;
+        font-weight: bold
+    }
+    .doc-name h2 {
+        max-width: 100%;
+        font-size: 18px;
+        margin-bottom: 5px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap
+    }
+    .doc-qualifications,
+    .doc-exp-years,
+    .doc-specialties,
+    .doc-specialties a,
+    .doc-specialties a:visited,
+    .doc-clinic-name a,
+    .doc-clinic-name a:visited {
+        max-width: 100%;
+        color: #7f7f7f;
+        line-height: 1.2;
+        font-size: 13px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        display: block
+    }
+    .doc-clinic-name {
+        margin: 8px 0
+    }
+    .doc-specialties a,
+    .doc-specialties a:visited,
+    .doc-clinic-name a,
+    .doc-clinic-name a:visited {
+        text-decoration: none;
+        display: inline-block
+    }
+    .doc-clinic-name a:focus,
+    .doc-clinic-name a:hover {
+        text-decoration: underline
+    }
+    .doc-specialties {
+        margin-top: 5px
+    }
+    .doc-qualifications {
+        line-height: 1.5;
+        font-weight: bold
+    }
+    .doc-availability-block {
+        margin-top: 8px;
+        display: inline-block;
+        clear: both;
+        font-size: 13px;
+        padding-top: 5px;
+        width: 408px;
+        float: left;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .doc-availability-block .locality,
+    .doc-availability-block .fees {
+        float: left;
+        display: inline-block;
+        width: 194px;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .doc-availability-block .fees {
+        margin-left: 0
+    }
+    .doc-availability-block .timings {
+        clear: both
+    }
+    .profile-summary .practice-timings-group {
+        width: 195px;
+        margin-bottom: 10px;
+        float: left;
+        margin-left: 10px
+    }
+    .profile-summary .practice-timings-group:first-child,
+    .profile-summary .practice-timings-group:nth-child(odd) {
+        clear: both;
+        margin-left: 0
+    }
+    .profile-summary .practice-timings {
+        clear: both;
+        margin-top: 20px;
+        width: 400px;
+        display: inline-block
+    }
+    .profile-summary p.practice-timings-day-label {
+        font-weight: bold;
+        display: block
+    }
+    .doc-availability-block .timings>p {
+        width: 178px;
+        margin-bottom: 10px;
+        float: left
+    }
+    .doc-availability-block .timings>p span {
+        display: block
+    }
+    .doc-availability-block .timings>p span:first-child {
+        display: inline-block
+    }
+    .booking-link-container {
+        float: right
+    }
+    #reviewsNavLink {
+        background-image: url('/bundles/practopractoapp/images/icons/review-grey.png');
+        background-position: center top;
+        background-repeat: no-repeat;
+        border-right: 1px solid #f3f3f3;
+        border-left: 1px solid #f3f3f3;
+        border-bottom: 1px solid#e0e0e0;
+        height: 96px;
+        width: 119px
+    }
+    #reviewsNavLink.selected {
+        background-image: url('/bundles/practopractoapp/images/icons/review-blue.png')
+    }
+    .new-badge {
+        display: none
+    }
+    .profile-container .overview-block {
+        display: none
+    }
+    .profile-summary h2 {
+        display: block
+    }
+    .profile-container .profile-summary .clinic-location {
+        display: none
+    }
+    .profile-container .profile-summary-wrapper {
+        width: 400px
+    }
+    .profile-container .rating-number .estab-vote-count {
+        width: 100%;
+        display: inline-block;
+        color: #818181
+    }
+    .profile-container .profile-summary .practice-info {
+        display: inline-block;
+        margin-left: 0;
+        width: 308px;
+        margin-bottom: 15px
+    }
+    .profile-container .rating-number .booking-button {
+        display: inline-block
+    }
+    .profile-container .rating-number .booking-button .booking-link-container {
+        margin-left: 0;
+        margin-top: 10px
+    }
+    .profile-container .rating-number {
+        display: inline-block;
+        width: 100%;
+        padding: 13px
+    }
+}
+@media screen and (max-width: 479px) {
+    .vn-button {
+        margin-right: 26px
+    }
+    .clinic-timings {
+        margin-left: 40px
+    }
+    .profile-container .profile-nav-tab.more-tab-1 {
+        top: 77px;
+        width: 77px
+    }
+    .profile-container .profile-nav-tab.more-tab-2 {
+        top: 77px;
+        right: 71px
+    }
+    .profile-container a.more-tab {
+        padding-top: 19px;
+        width: 64px;
+        width: 72px
+    }
+    .doctor-search-container input {
+        width: 233px
+    }
+    .results-found-text {
+        padding-left: 24px
+    }
+    .doctor-search-container input,
+    .seg-service-container input {
+        width: 229px
+    }
+    .breadcrum-container {
+        display: none
+    }
+    .seg-profile-container.profile-container .overview-block,
+    .profile-container .services-block,
+    .profile-container .photos-block,
+    .profile-container .doctor-block,
+    .profile-container .centers-block {
+        padding: 14px;
+        background: #fff;
+        border-bottom: 1px solid #dcdcdc;
+        border-left: 1px solid #dcdcdc;
+        border-right: 1px solid #dcdcdc
+    }
+    .profile-container .centers-block {
+        padding: 0
+    }
+    .profile-details-wrapper {
+        width: 280px;
+        border: 0;
+        margin: 0
+    }
+    .profile-container .services-block,
+    .profile-container .photos-block,
+    .profile-container .doctor-block.first,
+    .profile-container .centers-block {
+        margin-top: -2px
+    }
+    .profile-container .profile-summary .practice-name {
+        width: 248px;
+        text-align: center
+    }
+    .profile-container .profile-summary .practice-locality {
+        clear: both;
+        width: 248px;
+        text-align: center;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 20px;
+        margin-bottom: 6px
+    }
+    .profile-container .profile-summary .practice-name {
+        font-size: 20px;
+        margin-bottom: 4px;
+        font-weight: 600;
+        color: #333;
+        word-wrap: break-word
+    }
+    .profile-container .profile-summary .practice-address {
+        text-align: center;
+        line-height: 1.3;
+        font-size: 13px;
+        color: #818181;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 248px
+    }
+    .profile-container .practice-logo {
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 248px
+    }
+    .profile-container .practice-logo img {
+        max-width: 70px;
+        height: auto
+    }
+    .profile-container .profile-summary .map-link-container {
+        text-align: center
+    }
+    .seg-profile-container .map-link-container a,
+    .seg-profile-container .map-link-container a:visited,
+    .profile-container .profile-summary .map-link-container a,
+    .profile-container .profile-summary .map-link-container a:visited {
+        outline: 0;
+        background: url("/bundles/practopractoapp/images/icons/directions-blue.png") no-repeat left center;
+        display: inline-block;
+        width: auto;
+        line-height: 36px;
+        text-decoration: none;
+        font-weight: 600;
+        color: #818181;
+        border: 1px solid #dcdcdc;
+        border-radius: 3px;
+        padding: 0 10px 0 35px;
+        margin: 10px 0;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .seg-profile-container .map-link-container a:after,
+    .profile-container .profile-summary .map-link-container a:after {
+        content: attr(data-content)
+    }
+    .seg-profile-container .map-link-container a:hover,
+    .seg-profile-container .map-link-container a:focus,
+    .profile-container .profile-summary .map-link-container a:hover,
+    .profile-container .profile-summary .map-link-container a:focus {
+        border: 1px solid #c6c6c6;
+        background-color: #f1f1f1
+    }
+    .seg-profile-container .map-link-container a:active,
+    .profile-container .profile-summary .map-link-container a:active {
+        background-color: #b3e3f2
+    }
+    .profile-container .profile-nav-container {
+        width: 280px;
+        position: relative;
+        border-left: 1px solid #dcdcdc;
+        border-right: 1px solid #dcdcdc;
+        padding: 0;
+        display: inline-block
+    }
+    .profile-container .profile-nav-tab {
+        background: #f3f3f3;
+        display: inline-block;
+        padding: 45px 5px 10px 5px;
+        width: 69px;
+        height: 77px;
+        font-size: 13px;
+        outline: 0;
+        text-align: center;
+        float: left;
+        color: #737373;
+        text-decoration: none;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    #reviewsNavLink {
+        border-bottom: 1px solid #e0e0e0
+    }
+    #centersNavLink,
+    #photosNavLink {
+        width: 71px
+    }
+    #overviewNavLink,
+    #mapNavLink {
+        display: none
+    }
+    #centersNavLink {
+        background-image: url('/bundles/practopractoapp/images/icons/building_white_40.png');
+        background-position: center top;
+        background-repeat: no-repeat;
+        border-right: 1px solid #f3f3f3;
+        border-left: 1px solid #f3f3f3;
+        border-bottom: 1px solid #e0e0e0
+    }
+    #centersNavLink.selected {
+        background-image: url('/bundles/practopractoapp/images/icons/building_blue_40.png');
+        background-position: center top;
+        background-repeat: no-repeat;
+        border-right: 1px solid #f3f3f3;
+        border-left: 1px solid #ececec;
+        border-bottom: 1px solid #fff
+    }
+    #photosNavLink {
+        background-image: url('/bundles/practopractoapp/images/icons/clinic-profile-photos-inactive-320.png');
+        background-position: center top;
+        background-repeat: no-repeat;
+        border-right: 1px solid #f3f3f3;
+        border-left: 1px solid #f3f3f3;
+        border-bottom: 1px solid #e0e0e0
+    }
+    #photosNavLink.selected {
+        background-image: url('/bundles/practopractoapp/images/icons/clinic-profile-photos-active-320.png');
+        background-position: center top;
+        background-repeat: no-repeat;
+        border-right: 1px solid #ececec;
+        border-left: 1px solid #ececec;
+        border-bottom: 1px solid #fff
+    }
+    #doctorsNavLink {
+        background-image: url('/bundles/practopractoapp/images/icons/clinic-profile-doctors-inactive-320.png');
+        background-position: center top;
+        background-repeat: no-repeat;
+        border-right: 1px solid #f3f3f3;
+        border-left: 1px solid #f3f3f3;
+        border-bottom: 1px solid #e0e0e0
+    }
+    #doctorsNavLink.selected {
+        background-image: url('/bundles/practopractoapp/images/icons/clinic-profile-doctors-active-320.png');
+        background-position: center top;
+        background-repeat: no-repeat;
+        border-left: 1px solid #f3f3f3;
+        border-right: 1px solid #ececec;
+        border-bottom: 1px solid #fff
+    }
+    #servicesNavLink {
+        background-image: url('/bundles/practopractoapp/images/icons/clinic-profile-services-inactive-320.png');
+        background-position: center top;
+        background-repeat: no-repeat;
+        border-right: 1px solid #f3f3f3;
+        border-left: 1px solid #f3f3f3;
+        border-bottom: 1px solid #e0e0e0
+    }
+    #servicesNavLink.selected {
+        background-image: url('/bundles/practopractoapp/images/icons/clinic-profile-services-active-320.png');
+        background-position: center top;
+        background-repeat: no-repeat;
+        border-right: 1px solid #ececec;
+        border-left: 1px solid #ececec;
+        border-bottom: 1px solid #fff
+    }
+    .profile-container .profile-nav-tab:hover,
+    .profile-container .profile-nav-tab:focus {
+        text-decoration: none;
+        transition: .5s;
+        -moz-transition: .5s;
+        -o-transition: .5s;
+        -webkit-transition: .5s;
+        -ms-transition: .5s
+    }
+    .profile-container .profile-nav-tab.selected,
+    .profile-container .profile-nav-tab.selected:hover,
+    .profile-container .profile-nav-tab.selected:focus {
+        color: #000;
+        background: #FFF
+    }
+    .profile-container .centers-block {
+        min-height: 250px
+    }
+    .profile-container .services-block {
+        font-size: 13px;
+        color: #818181
+    }
+    .profile-container .service-row {
+        width: 250px
+    }
+    .profile-container .service-row .service-cell {
+        line-height: 1.5;
+        outline: 0;
+        margin: 0;
+        padding-left: 40px;
+        background: url('/bundles/practopractoapp/images/icons/mid-bullet.png') no-repeat
+    }
+    .profile-container .service-row .service-cell {
+        width: 210px;
+        margin-bottom: 5px
+    }
+    .slideshow-screen {
+        position: relative;
+        width: 250px;
+        display: block;
+        height: 166px
+    }
+    .slideshow-screen .banner-large {
+        max-height: 166px;
+        max-width: 250px;
+        width: auto;
+        height: auto
+    }
+    .slideshow-screen .slideshow-next-image,
+    .slideshow-screen .slideshow-prev-image {
+        height: 166px;
+        width: 60px;
+        opacity: .25;
+        top: 0;
+        display: inline-block;
+        background: #1f1f1f;
+        position: absolute;
+        z-index: 100020;
+        cursor: pointer
+    }
+    .slideshow-screen .slideshow-next-image {
+        background-image: url('/bundles/practopractoapp/images/icons/slideshow-right-arrow.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        right: 0
+    }
+    .slideshow-screen .slideshow-prev-image {
+        background-image: url('/bundles/practopractoapp/images/icons/slideshow-left-arrow.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        left: 0
+    }
+    .slideshow-screen .slideshow-next-image:hover {
+        opacity: .6;
+        background-color: #000;
+        background-image: url('/bundles/practopractoapp/images/icons/slideshow-right-arrow-glow.png')
+    }
+    .slideshow-screen .slideshow-prev-image:hover {
+        opacity: .6;
+        background-color: #000;
+        background-image: url('/bundles/practopractoapp/images/icons/slideshow-left-arrow-glow.png')
+    }
+    .slideshow-queue {
+        line-height: 1;
+        margin: 0;
+        padding: 0;
+        outline: 0;
+        width: 250px;
+        display: block
+    }
+    .slideshow-queue .slideshow-thumbs {
+        display: inline-block;
+        text-decoration: none;
+        margin-left: 8px;
+        margin-top: 4px;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+        opacity: .9;
+        background: #818181;
+        border-radius: 50%;
+        border: 5px solid transparent;
+        margin-bottom: 8px;
+        line-height: 1
+    }
+    .slideshow-queue .slideshow-thumbs.selected {
+        background: #02a6d8;
+        border: 5px solid #02a6d8
+    }
+    .doctor-block {
+        padding: 10px;
+        border-bottom: 1px solid #d6d6d6
+    }
+    .doctor-block:last-child {
+        border-bottom: none !important
+    }
+    .doctor-block h2 {
+        color: #49b1d1;
+        font-size: 14px;
+        margin: 0;
+        line-height: 22px
+    }
+    .profile-summary .practice-timings,
+    .doctor-block .timings {
+        margin-bottom: 8px;
+        line-height: 1.2;
+        padding-left: 35px;
+        background: url('/bundles/practopractoapp/images/icons/visit_timings_740.png') no-repeat
+    }
+    .doctor-block .fees {
+        line-height: 20px;
+        margin-bottom: 8px;
+        padding-left: 35px;
+        background: url('/bundles/practopractoapp/images/icons/fees_740.png') no-repeat
+    }
+    .doctor-block .locality {
+        line-height: 20px;
+        margin-bottom: 8px;
+        padding-left: 25px;
+        background: url('/bundles/practopractoapp/images/icons/locality_740.png') no-repeat
+    }
+    .doc_avatar {
+        max-width: 70px;
+        max-height: auto;
+        border-radius: 6px
+    }
+    .doc-photo-container {
+        width: 80px;
+        float: left;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .doc-details-block {
+        width: 168px;
+        float: left;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .doc-name {
+        font-weight: bold
+    }
+    .doc-name h2 {
+        max-width: 100%;
+        font-size: 14px;
+        line-height: 1.2;
+        margin-bottom: 5px
+    }
+    .doc-qualifications,
+    .doc-exp-years,
+    .doc-specialties,
+    .doc-specialties a,
+    .doc-specialties a:visited,
+    .doc-clinic-name a,
+    .doc-clinic-name a:visited {
+        max-width: 100%;
+        color: #7f7f7f;
+        line-height: 1.2;
+        font-size: 13px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        display: block
+    }
+    .doc-clinic-name {
+        margin: 4px 0
+    }
+    .doc-specialties a,
+    .doc-specialties a:visited,
+    .doc-clinic-name a,
+    .doc-clinic-name a:visited {
+        text-decoration: none;
+        display: inline-block
+    }
+    .doc-clinic-name a:focus,
+    .doc-clinic-name a:hover {
+        text-decoration: underline
+    }
+    .doc-specialties {
+        margin-top: 2px
+    }
+    .doc-qualifications {
+        line-height: 1.2;
+        font-weight: bold
+    }
+    .doc-availability-block {
+        margin-top: 8px;
+        display: inline-block;
+        clear: both;
+        font-size: 13px;
+        padding-top: 5px;
+        width: 248px;
+        float: left;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .doc-clinic-photos {
+        display: none
+    }
+    .doc-availability-block .locality,
+    .doc-availability-block .fees {
+        float: left;
+        display: inline-block;
+        width: 278px;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .doc-availability-block .fees {
+        margin-left: 0
+    }
+    .doc-availability-block .timings {
+        clear: both
+    }
+    .profile-summary .practice-timings-group {
+        margin-bottom: 10px
+    }
+    .profile-summary .practice-timings {
+        clear: both;
+        margin-top: 25px;
+        width: 240px;
+        display: inline-block
+    }
+    .profile-summary p.practice-timings-day-label {
+        font-weight: bold;
+        display: block
+    }
+    .doc-availability-block .timings>p {
+        width: 110px;
+        margin-bottom: 10px;
+        float: left
+    }
+    .doc-availability-block .timings>p span {
+        display: block
+    }
+    .doc-availability-block .timings>p span:first-child {
+        display: inline-block
+    }
+    .booking-link-container {
+        float: left;
+        margin-left: 10px
+    }
+    #reviewsNavLink {
+        background-image: url('lab/review-grey.png');
+        background-position: center top;
+        background-repeat: no-repeat;
+        border-right: 1px solid #f3f3f3;
+        border-left: 1px solid #f3f3f3
+    }
+    #reviewsNavLink.selected {
+        background-image: url('../lab/review-blue.png')
+    }
+    .new-badge {
+        display: none
+    }
+    .profile-container .profile-summary .share-button {
+        display: none
+    }
+    .profile-container .profile-summary .share-button.mobile {
+        display: inline-block;
+        width: 50px;
+        padding: 4px 5px;
+        position: relative;
+        left: 40%
+    }
+    .profile-container .overview-block {
+        display: none
+    }
+    .profile-summary h2 {
+        margin-bottom: 0;
+        text-align: center;
+        margin: 0;
+        display: block
+    }
+    .profile-container .profile-summary .clinic-location {
+        display: none
+    }
+    .profile-container .profile-summary .practice-info {
+        width: 100%
+    }
+    .profile-container .profile-summary-wrapper {
+        width: 240px
+    }
+    .profile-container .rating-number .estab-elements {
+        padding-left: 30%;
+        margin-top: 10px
+    }
+    .profile-container .rating-number .estab-vote-count {
+        width: 100%;
+        display: inline-block;
+        color: #818181;
+        text-align: center
+    }
+    .profile-container .rating-number .booking-button {
+        display: inline-block;
+        margin-top: 10px;
+        margin-left: 24px
+    }
+    .profile-container .rating-number .booking-button .booking-link-container {
+        margin-left: 0;
+        margin-top: 10px
+    }
+}
+.estab-photo-container {
+    position: relative;
+    display: inline-block;
+    outline: 0
+}
+.diagnostic-tests {
+    position: relative
+}
+.iter-tests {
+    font-size: 13px;
+    margin-bottom: 2px;
+    display: block
+}
+.price-chart:nth-child(2n) {
+    background-color: #f8f8f8
+}
+.diagnostic-tests-refresh-filter {
+    right: 30px;
+    top: 8px;
+    z-index: 3
+}
+.diagnostic-summary {
+    padding: 20px 0 0 0
+}
+.no-boder {
+    border: 0
+}
+.test-price-heading {
+    width: 50%;
+    float: left;
+    text-align: right;
+    padding-right: 40px;
+    box-sizing: border-box
+}
+.test-price-detail {
+    float: left;
+    width: 45%;
+    text-align: right;
+    padding-right: 47px;
+    box-sizing: border-box
+}
+.diagnostic-summary-wrapper {
+    display: block;
+    background-color: white;
+    float: left;
+    width: 100%
+}
+.vn-container.diagnostic-summary {
+    float: right;
+    padding-top: 3px;
+    padding-bottom: 10px;
+    margin-top: -5px
+}
+.price-chart {
+    width: 100%;
+    line-height: 20px;
+    padding: 2px 0;
+    clear: both
+}
+.diagnostic-search-box {
+    float: right;
+    width: 128px;
+    height: 20px;
+    border-radius: 15px;
+    font-size: 13px;
+    border: 1px solid #d0d0d0;
+    margin-right: 20px;
+    margin-bottom: 12px;
+    padding-left: 10px;
+    outline: 0;
+    z-index: 2
+}
+.profile-sprite {
+    background-image: url(../lab/diagnostic-sprite.png);
+    background-repeat: no-repeat
+}
+.seg-profile-container.profile-container .overview-block {
+    display: block
+}
+.main-test-fees {
+    background-position: -5px -310px
+}
+.accredit {
+    line-height: 20px;
+    margin-bottom: 3px;
+    padding-left: 25px;
+    background-position: -10px -5px
+}
+.home-sample {
+    line-height: 20px;
+    margin-bottom: 3px;
+    padding-left: 25px;
+    background-position: -10px -130px
+}
+.online-reports {
+    line-height: 20px;
+    margin-bottom: 3px;
+    padding-left: 25px;
+    background-position: -10px -100px
+}
+.payment {
+    line-height: 20px;
+    margin-bottom: 3px;
+    padding-left: 25px;
+    background-position: 0 -415px
+}
+.seg-profile-container .slotviewer-container {
+    margin-top: 40px;
+    margin-bottom: 10px
+}
+.seg-profile-container.profile-container .overview-block .profile-fees {
+    background-position: -5px -190px;
+    padding-left: 35px
+}
+.seg-profile-container.profile-container .clinic-address {
+    background-position: -5px -230px
+}
+.seg-profile-container {
+    margin-bottom: 50px;
+    margin-top: 5px;
+    margin-left: 23%;
+}
+.strike {
+    text-decoration: line-through
+}
+.selling-price {
+    margin-right: 3px
+}
+.disclaimer {
+    line-height: 30px;
+    font-style: italic
+}
+.centersTab {
+    position: relative
+}
+.centersTab .accredit,
+.centersTab .home-sample,
+.centersTab .online-reports,
+.centersTab .icon-shield,
+.centersTab .icon-homesample,
+.centersTab .icon-online-reports {
+    padding-left: 0
+}
+.centersTab .online-reports-text,
+.centersTab .home-sample-text,
+{
+    float: left;
+    margin-left: 5px
+}
+.centersTab .icon-homesample,
+.centersTab .icon-online-reports {
+    float: left
+}
+.centersTab .diag-photo-container {
+    min-height: 104px;
+    position: relative
+}
+.centersTab .photo-count-container {
+    width: 31px
+}
+@media screen and (min-width: 980px) {
+    .centersTab .diag-details-block {
+        width: 240px
+    }
+    .discount-avial-text {
+        position: relative;
+        top: -12px;
+        font-weight: 100;
+        font-style: oblique;
+        margin-bottom: 6px;
+        margin-top: 6px;
+        z-index: 1
+    }
+    .vn-container {
+        text-align: right
+    }
+    .profile-col {
+        width: 33.33333333%;
+        float: left;
+        min-height: 1px;
+        margin-bottom: 15px
+    }
+    .profile-col .practice-address {
+        margin-right: 30px;
+        line-height: 16px
+    }
+    .profile-name {
+        width: 60%;
+        float: left
+    }
+    .profile-container .profile-summary .profile-name .practice-name {
+        width: auto;
+        float: none
+    }
+    .profile-container .diagnostic-summary {
+        width: 100%
+    }
+    .profile-name h2 {
+        margin-left: 0
+    }
+    .main-test-container {
+        width: 28%;
+        float: left;
+        text-align: right
+    }
+    .seg-profile-container.profile-container #overviewNavLink {
+        background: 0
+    }
+    .test-name {
+        width: 50%;
+        float: left;
+        min-height: 1px;
+        padding-left: 20px;
+        box-sizing: border-box
+    }
+    .test-price-seprator {
+        min-height: 1px
+    }
+    .test-price {
+        min-height: 1px;
+        text-align: right
+    }
+    .test-price.strike {
+        text-align: right
+    }
+    p.selling-test-price.selling-price {
+        width: 20%;
+        float: left;
+        min-height: 1px;
+        text-align: right
+    }
+    .seprator {
+        width: 5%;
+        float: left;
+        min-height: 1px;
+        text-align: center
+    }
+}
+@media screen and (max-width: 979px) {
+    .disclaimer {
+        float: right;
+        width: 100%;
+        line-height: 110%;
+        padding-top: 10px
+    }
+    .diagnostic-tests-refresh-filter {
+        right: 40px;
+        top: 18px;
+        z-index: 3
+    }
+    .discount-avial-text {
+        position: relative;
+        font-weight: 500;
+        font-style: oblique;
+        margin-bottom: 20px;
+        line-height: 18px;
+        z-index: 1
+    }
+    .seg-profile-container.profile-container #overviewNavLink {
+        display: inline-block;
+        background-position: center top;
+        background-repeat: no-repeat;
+        border-right: 1px solid #f3f3f3;
+        border-left: 1px solid #f3f3f3;
+        border-bottom: 1px solid #e0e0e0;
+        padding-top: 5px
+    }
+    .seg-profile-container.profile-container #overviewNavLink .establishment {
+        width: 60px;
+        height: 60px;
+        background-position: 0 -515px;
+        display: block;
+        margin: auto
+    }
+    .profile-container .overview-block {
+        margin-top: -2px
+    }
+    .seg-profile-container.profile-container #overviewNavLink.selected {
+        border-bottom: 1px solid #fff
+    }
+    .seg-profile-container.profile-container #overviewNavLink.selected .establishment {
+        width: 60px;
+        height: 60px;
+        background-position: 0 -575px;
+        display: block;
+        margin: auto
+    }
+    .test-name {
+        width: 50%;
+        float: left;
+        min-height: 1px
+    }
+    .test-price {
+        min-height: 1px;
+        text-align: right
+    }
+    .test-price.strike {
+        text-align: right
+    }
+    p.selling-test-price.selling-price {
+        width: 20%;
+        float: left;
+        min-height: 1px;
+        text-align: right
+    }
+    .seprator {
+        width: 5%;
+        float: left;
+        min-height: 1px;
+        text-align: center
+    }
+    .main-test-container {
+        width: 29%;
+        float: left
+    }
+}
+@media screen and (min-width: 740px) and (max-width: 979px) {
+    .diagnostic-search-box {
+        width: 630px;
+        float: left
+    }
+    .diagnostic-summary {
+        width: 100%;
+        display: block;
+        float: left
+    }
+    .seg-profile-container .slotviewer-container {
+        margin-top: 165px;
+        margin-bottom: 10px
+    }
+    .diagnostic-summary-wrapper {
+        border: 1px solid gainsboro
+    }
+    .diagnostic-summary-wrapper .profile-name h1 {
+        width: 100%
+    }
+    .profile-summary.diagnostic-summary {
+        padding: 10px
+    }
+}
+@media screen and (min-width: 600px) and (max-width: 739px) {
+    .diagnostic-search-box {
+        width: 485px;
+        float: left
+    }
+    .profile-summary.diagnostic-summary {
+        display: block;
+        float: left;
+        width: 100%;
+        padding: 10px
+    }
+    .diagnostic-summary-wrapper {
+        display: block;
+        background-color: white;
+        float: left;
+        border: 1px solid gainsboro
+    }
+    .seg-profile-container .slotviewer-container {
+        margin-top: 180px;
+        margin-bottom: 10px
+    }
+    .diagnostic-summary-wrapper .profile-name h1 {
+        width: 100%
+    }
+    .main-test-container {
+        width: 29%;
+        margin-left: 10px;
+        float: left;
+        margin-top: 15px
+    }
+}
+@media screen and (min-width: 480px) and (max-width: 599px) {
+    .diagnostic-search-box {
+        width: 370px;
+        float: left
+    }
+    .seg-profile-container .slotviewer-container {
+        margin-top: 50px;
+        margin-bottom: 10px
+    }
+    .profile-summary.diagnostic-summary {
+        padding: 10px
+    }
+}
+@media screen and (max-width: 479px) {
+    .price-text-right {
+        margin-bottom: 10px
+    }
+    .diagnostic-search-box {
+        width: 215px;
+        float: left
+    }
+    .diagnostic-tests-refresh-filter {
+        right: 35px;
+        top: 13px;
+        z-index: 3
+    }
+    .seg-profile-container.profile-container #overviewNavLink .establishment {
+        width: 40px;
+        height: 40px;
+        background-position: 0 -435px;
+        display: block;
+        margin: auto
+    }
+    .seg-profile-container.profile-container #overviewNavLink {
+        padding-top: 5px
+    }
+    .seg-profile-container.profile-container #overviewNavLink.selected .establishment {
+        width: 40px;
+        height: 40px;
+        background-position: 0 -475px;
+        display: block;
+        margin: auto
+    }
+    .overview-address-text {
+        width: 100%;
+        float: left
+    }
+    .overview-address-map-link {
+        width: 100%;
+        float: left;
+        text-align: center
+    }
+    .profile-name {
+        width: 100%;
+        float: left
+    }
+    .main-test-container {
+        width: 100%;
+        float: left;
+        text-align: center
+    }
+    .diag-test-name {
+        line-height: 11px;
+        margin-bottom: 2px
+    }
+    .main-test-container .main-test-fees {
+        background: 0;
+        font-weight: normal;
+        color: #444;
+        padding-left: 7px
+    }
+    .diagnostic-summary-wrapper {
+        background-color: white;
+        border: 1px solid gainsboro;
+        float: none
+    }
+    .test-price-detail {
+        padding-right: 23px
+    }
+    .test-price-heading {
+        padding-right: 20px
+    }
+    .seg-profile-container .slotviewer-container {
+        margin-top: 0;
+        margin-bottom: 0
+    }
+    .vn-container.diagnostic-summary {
+        display: inline-block;
+        float: none;
+        margin-left: 10px;
+        margin-top: 10px
+    }
+}
+.doctor-block .recommend {
+    line-height: 20px;
+    margin-bottom: 8px;
+    padding-left: 25px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #48b1d1;
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAATCAYAAAB2pebxAAAA6klEQVQ4y2P4//8/Azr23HhRAIi7gTgImzw6ZsBhiC4Q/wfif0BsQa4helBDQHgBuYbYIhlyi1xDUpEM+QPETCQZAtIAxNeQDAFhHlINCUIz4DVUnBmIVYDYH4grgbgNiLkwDAEKMgLxWTRDXgHxZSD+gSYOwvnYDAnEohAfzkExBCigDsRXidT8AYjfAPE8IOaGGXCfRBcg42CYIeQacAiIhSg15C4o1ig15DMQs1FiCMgAG3jsUOCSBGRDdgDxQxINeAHK7dgSmyW0MLoCxL/RNP2BBmQ/ENuDAhRvLoYayALEgkiYGZdaAF/MeQCdJC3dAAAAAElFTkSuQmCC') no-repeat
+}
+.doctor-block .recommend span {
+    vertical-align: baseline;
+    font-size: 13px;
+    font-weight: normal
+}
+.doctor-block .recommend span a {
+    color: inherit
+}
+.reviews-sub-heading-no-recommendation a {
+    line-height: 20px;
+    margin-bottom: 8px;
+    padding-left: 25px;
+    color: #afafaf !important
+}
+.reviews-sub-heading {
+    color: #afafaf
+}
+
+.slot-viewer .slot-header .afternoon,
+.slot-viewer .slot-header .evening {
+    text-align: center
+}
+.slot-viewer .slot-header .afternoon {
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr '#DECCA1', endColorstr='#D18259', GradientType=1)
+}
+.slot-viewer .slot-header .evening {
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr '#D18259', endColorstr='#51558A', GradientType=1)
+}
+
+.non-abs-disclaimer {
+    padding: 10px;
+    line-height: 18px;
+    font-size: 13px;
+    text-align: left
+}
+.estab-discount-msg {
+    background-color: #fdf8e4;
+    line-height: 21px;
+    margin: auto;
+    padding: 5px 12px;
+    border: 1px solid #fef2d5;
+    display: block;
+    width: 75%
+}
+@media screen and (min-width: 980px) {
+    .slot-viewer {
+        width: 758px
+    }
+    .slot-viewer .inside-group {
+        display: none
+    }
+    .slot-viewer .slot-header {
+        width: 658px
+    }
+    .slot-viewer .slot-header .morning {
+        width: 157px
+    }
+    .slot-viewer .slot-header .afternoon,
+    .slot-viewer .slot-header .evening {
+        width: 180px
+    }
+    .slot-viewer .slot-header .night {
+        width: 65px
+    }
+    .slot-viewer .day-row .day-label {
+        width: 89px
+    }
+    .slot-viewer .day-row .day-slot-column {
+        width: 81px
+    }
+    .slot-viewer .day-label .week-day {
+        width: 89px
+    }
+    .slot-viewer .sep-shadow-top {
+        width: 758px
+    }
+    .sep-shadow-bottom {
+        width: 758px
+    }
+    .slot-viewer .action-panel {
+        position: relative
+    }
+    .slot-viewer .slots-group {
+        display: table;
+        empty-cells: show
+    }
+    .slot-viewer .day-row {
+        display: table-row
+    }
+    .slot-viewer .day-row .day-label {
+        display: table-cell
+    }
+    .slot-viewer .day-row .day-slot-column {
+        display: table-cell
+    }
+    .button.day-switcher {
+        display: block;
+        padding: 0 4px 0 24px;
+        width: 71px;
+        text-align: left;
+        line-height: 27px;
+        font-size: 12px;
+        color: #565656;
+        cursor: pointer;
+        border: 0;
+        outline: 0;
+        margin: 0;
+        border-radius: 0;
+        background-color: #f5f5f5;
+        background-image: -moz-linear-gradient(top, #fff, #e6e6e6);
+        background-image: -ms-linear-gradient(top, #fff, #e6e6e6);
+        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#e6e6e6));
+        background-image: -webkit-linear-gradient(top, #fff, #e6e6e6);
+        background-image: -o-linear-gradient(top, #fff, #e6e6e6);
+        background-image: linear-gradient(top, #fff, #e6e6e6);
+        background-repeat: repeat-x;
+        filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0)
+    }
+
+    .slot-viewer .day-row .day-label {
+        text-transform: uppercase;
+        border: 0;
+        border-right: 1px solid #cecece;
+        background: #edecec;
+        min-height: 103px;
+        position: relative;
+        text-align: center;
+        padding: 5px;
+        margin: 0;
+        outline: 0;
+        -moz-box-sizing: content-box;
+        -webkit-box-sizing: content-box;
+        -o-box-sizing: content-box;
+        -ms-box-sizing: content-box;
+        box-sizing: content-box
+    }
+    .slot-viewer .day-row:hover .day-label {
+        background: #fafafa
+    }
+    .slot-viewer .notch {
+        display: block;
+        position: absolute;
+        top: -6px;
+        right: 100px;
+        width: 0;
+        height: 0;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        border-bottom: 7px solid #565787
+    }
+    .slot-viewer .prev-day {
+        float: left;
+        width: 100px;
+        border-right: 1px solid #cecece;
+        background: #edecec;
+        height: 28px;
+        border-bottom: 1px solid #cecece;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .slot-viewer .slots-group {
+        clear: both;
+        border-bottom: 1px solid #cecece
+    }
+    .slot-viewer .day-row {
+        border-bottom: 1px solid #cecece
+    }
+    .slot-viewer .day-row:hover .day-slot-column {
+        background: #fafafa;
+        border-top: 10px solid #fafafa;
+        border-bottom: 10px solid #fafafa
+    }
+    .slot-viewer .day-row .day-slot-column {
+        text-align: center;
+        padding: 0 6px;
+        border-right: 1px solid #e6e6e6;
+        background: #f4f4f4;
+        border-top: 10px solid #f4f4f4;
+        border-bottom: 10px solid #f4f4f4;
+        -moz-box-sizing: content-box;
+        -webkit-box-sizing: content-box;
+        -o-box-sizing: content-box;
+        -ms-box-sizing: content-box;
+        box-sizing: content-box
+    }
+    .slot-viewer .day-row .day-slot-column:nth-child(2) {
+        padding-left: 10px
+    }
+    .slot-viewer .day-row .day-slot-column:last-child {
+        border-right: 0;
+        padding-right: 9px
+    }
+    .slot-viewer .day-label .week-day {
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 1;
+        margin-top: 5px;
+        color: #333
+    }
+    .slot-viewer .day-label .rel-day {
+        background: #b5b5b5;
+        color: #fff;
+        display: inline;
+        text-align: center;
+        border-radius: 10px;
+        padding: 0 10px;
+        font-size: 12px;
+        line-height: 19px;
+        font-weight: bold
+    }
+    .slot-viewer .day-label .date {
+        width: 89px;
+        min-height: 50px;
+        font-weight: bold
+    }
+}
+
+@media screen and (min-width: 740px) and (max-width: 979px) {
+    .ui-button.book-slot {
+        background: 0;
+        text-align: center;
+        width: 109px;
+        border: 0;
+        outline: 0;
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+        font-weight: bold;
+        color: #7fac5a
+    }
+    .ui-button.book-slot .ui-button-text {
+        font-size: 14px;
+        line-height: 30px
+    }
+    .slot-viewer {
+        width: 698px
+    }
+    .slot-viewer .slot-header {
+        width: 698px
+    }
+    .slot-viewer .slot-header .morning {
+        width: 169px;
+        text-align: center;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .slot-viewer .slot-header .afternoon,
+    .slot-viewer .slot-header .evening {
+        width: 170px
+    }
+    .slot-viewer .slot-header .night {
+        width: 169px;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box;
+        text-align: center
+    }
+    .slot-viewer .day-row .day-label {
+        width: 89px
+    }
+    .slot-viewer .day-row .day-slot-column {
+        width: 109px
+    }
+    .slot-viewer .day-label .week-day {
+        width: 89px
+    }
+    .slot-viewer .day-row .day-slot-column:nth-child(3) {
+        clear: both
+    }
+    .slot-viewer .day-row .day-slot-column:nth-child(4) {
+        clear: left
+    }
+    .slot-viewer .day-label .week-day {
+        width: 89px
+    }
+    .slot-viewer .sep-shadow-top {
+        width: 698px
+    }
+    .sep-shadow-bottom {
+        width: 698px
+    }
+    .slot-viewer .slots-group {
+        display: block
+    }
+    .slot-viewer .action-panel {
+        border-top: 1px solid #d6d6d6
+    }
+    .slot-header {
+        display: none
+    }
+    .slot-header.inside-group {
+        clear: both;
+        display: block
+    }
+    .slot-viewer .day-row .day-label {
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center
+    }
+    .slot-viewer .prev-day {
+        position: absolute;
+        top: 10px;
+        left: 10px
+    }
+    .button.day-switcher {
+        display: block;
+        width: auto;
+        text-align: left;
+        line-height: 27px;
+        font-size: 14px;
+        color: #565656;
+        cursor: pointer;
+        border: 1px solid #d1d1d1;
+        outline: 0;
+        margin: 0;
+        border-radius: 0;
+        background: #efefef
+    }
+    .button.day-switcher:hover,
+    .button.day-switcher:focus {
+        background-color: #f6f6f6
+    }
+    .button.day-switcher:active {
+        background-color: #e0e0e0
+    }
+    .button.day-switcher.prev {
+        padding: 5px 10px 5px 24px
+    }
+    .button.day-switcher.next {
+        position: absolute;
+        padding: 5px 28px 5px 10px;
+        right: 10px;
+        top: 10px
+    }
+    .button.day-switcher.prev.disabled,
+    .button.day-switcher.prev.disabled:hover,
+    .button.day-switcher.prev.disabled:active,
+    .button.day-switcher.next.disabled,
+    .button.day-switcher.next.disabled:hover,
+    .button.day-switcher.next.disabled:active {
+        color: #b3b3b3;
+        background: #efefef;
+        border: 1px solid #e6e6e6
+    }
+    .slot-viewer .day-row .day-label .week-day {
+        display: none
+    }
+    .slot-viewer .day-row .day-label .rel-day,
+    .slot-viewer .day-row .day-label .date {
+        display: inline-block;
+        float: left;
+        background: 0;
+        width: 94px;
+        border-radius: 0;
+        margin: 20px 3px;
+        min-height: 0;
+        padding: 0;
+        color: #3f3f3f;
+        font-weight: normal;
+        text-transform: uppercase;
+        font-size: 16px
+    }
+    .slot-viewer .day-row .day-label .date {
+        text-align: right
+    }
+    .slot-viewer .day-row .day-label .rel-day {
+        text-align: left;
+        font-weight: bold;
+        float: right;
+        color: #a5a5a5
+    }
+    .slot-viewer .day-row .day-label .rel-day:before {
+        content: "("
+    }
+    .slot-viewer .day-row .day-label .rel-day:after {
+        content: ")"
+    }
+    .slot-viewer .notch {
+        display: block;
+        position: absolute;
+        top: -9.2px;
+        right: 100px;
+        width: 17px;
+        height: 10px
+    }
+    .slot-viewer .day-row .day-slot-grouping {
+        float: left;
+        padding: 10px 20px 10px 40px;
+        width: 169px;
+        min-height: 70px;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .slot-viewer .day-row .day-slot-grouping:nth-child(3) {
+        clear: both;
+        padding: 10px 10px 10px 50px
+    }
+    .slot-viewer .day-row .day-slot-grouping:last-child {
+        padding: 10px 30px 10px 30px
+    }
+    .slot-viewer .sep-shadow-top {
+        display: none
+    }
+}
+@media screen and (min-width: 600px) and (max-width: 739px) {
+    .ui-button.book-slot {
+        background: 0;
+        text-align: center;
+        width: 109px;
+        border: 0;
+        outline: 0;
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+        font-weight: bold;
+        color: #7fac5a
+    }
+    .slot-loader {
+        width: 558px
+    }
+    .ui-button.book-slot .ui-button-text {
+        font-size: 14px;
+        line-height: 30px
+    }
+    .slot-viewer {
+        width: 558px
+    }
+    .slot-viewer .slot-header {
+        width: 558px
+    }
+    .slot-viewer .slot-header .morning {
+        width: 134px;
+        text-align: center;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .slot-viewer .slot-header .afternoon,
+    .slot-viewer .slot-header .evening {
+        width: 135px
+    }
+    .slot-viewer .slot-header .night {
+        width: 134px;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box;
+        text-align: center
+    }
+    .slot-viewer .day-row .day-label {
+        width: 89px
+    }
+    .slot-viewer .day-row .day-slot-column {
+        width: 109px
+    }
+    .slot-viewer .day-label .week-day {
+        width: 89px
+    }
+    .slot-viewer .day-row .day-slot-column:nth-child(3) {
+        clear: both
+    }
+    .slot-viewer .day-row .day-slot-column:nth-child(4) {
+        clear: left
+    }
+    .slot-viewer .day-label .week-day {
+        width: 89px
+    }
+    .slot-viewer .sep-shadow-top {
+        width: 558px
+    }
+    .sep-shadow-bottom {
+        width: 558px
+    }
+    .slot-viewer .slots-group {
+        display: block
+    }
+    .slot-viewer .action-panel {
+        border-top: 1px solid #d6d6d6
+    }
+    .slot-header {
+        display: none
+    }
+    .slot-header.inside-group {
+        clear: both;
+        display: block
+    }
+    .slot-viewer .day-row .day-label {
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center
+    }
+    .slot-viewer .prev-day {
+        position: absolute;
+        top: 10px;
+        left: 10px
+    }
+    .button.day-switcher {
+        display: block;
+        width: auto;
+        text-align: left;
+        line-height: 27px;
+        font-size: 14px;
+        color: #565656;
+        cursor: pointer;
+        border: 1px solid #d1d1d1;
+        outline: 0;
+        margin: 0;
+        border-radius: 0;
+        background: #efefef
+    }
+    .button.day-switcher:hover,
+    .button.day-switcher:focus {
+        background-color: #f6f6f6
+    }
+    .button.day-switcher:active {
+        background-color: #e0e0e0
+    }
+    .button.day-switcher.prev {
+        padding: 5px 10px 5px 24px
+    }
+    .button.day-switcher.next {
+        position: absolute;
+        padding: 5px 28px 5px 10px;
+        right: 10px;
+        top: 10px
+    }
+    .button.day-switcher.prev.disabled,
+    .button.day-switcher.prev.disabled:hover,
+    .button.day-switcher.prev.disabled:active,
+    .button.day-switcher.next.disabled,
+    .button.day-switcher.next.disabled:hover,
+    .button.day-switcher.next.disabled:active {
+        color: #b3b3b3;
+        background: #efefef;
+        border: 1px solid #e6e6e6
+    }
+    .slot-viewer .day-row .day-label .week-day {
+        display: none
+    }
+    .slot-viewer .day-row .day-label .rel-day,
+    .slot-viewer .day-row .day-label .date {
+        display: inline-block;
+        float: left;
+        background: 0;
+        width: 94px;
+        border-radius: 0;
+        margin: 20px 3px;
+        min-height: 0;
+        padding: 0;
+        color: #3f3f3f;
+        font-weight: normal;
+        text-transform: uppercase;
+        font-size: 16px
+    }
+    .slot-viewer .day-row .day-label .date {
+        text-align: right
+    }
+    .slot-viewer .day-row .day-label .rel-day {
+        text-align: left;
+        font-weight: bold;
+        float: right;
+        color: #a5a5a5
+    }
+    .slot-viewer .day-row .day-label .rel-day:before {
+        content: "("
+    }
+    .slot-viewer .day-row .day-label .rel-day:after {
+        content: ")"
+    }
+    .slot-viewer .notch {
+        display: block;
+        position: absolute;
+        top: -9px;
+        right: 100px;
+        width: 17px;
+        height: 10px
+    }
+    .slot-viewer .day-row .day-slot-grouping {
+        float: left;
+        padding: 10px 20px 10px 20px;
+        width: 134px;
+        min-height: 70px;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .slot-viewer .day-row .day-slot-grouping:nth-child(3) {
+        clear: both;
+        padding: 10px 10px 10px 30px
+    }
+    .slot-viewer .day-row .day-slot-grouping:last-child {
+        padding: 10px 20px 10px 20px
+    }
+    .slot-viewer .sep-shadow-top {
+        display: none
+    }
+}
+@media screen and (min-width: 480px) and (max-width: 599px) {
+    .non-abs-disclaimer {
+        font-size: 12px
+    }
+    .ui-button.book-slot {
+        background: 0;
+        text-align: center;
+        width: 89px;
+        border: 0;
+        outline: 0;
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+        font-weight: bold;
+        color: #7fac5a
+    }
+    .slot-loader {
+        width: 438px
+    }
+    .ui-button.book-slot .ui-button-text {
+        font-size: 14px;
+        line-height: 30px
+    }
+    .slot-viewer {
+        width: 438px
+    }
+    .slot-viewer .slot-header {
+        width: 438px
+    }
+    .slot-viewer .slot-header .morning {
+        width: 104px;
+        text-align: center;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .slot-viewer .slot-header .afternoon,
+    .slot-viewer .slot-header .evening {
+        width: 105px
+    }
+    .slot-viewer .slot-header .night {
+        width: 104px;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box;
+        text-align: center
+    }
+    .slot-viewer .day-row .day-label {
+        width: 89px
+    }
+    .slot-viewer .day-row .day-slot-column {
+        width: 104px
+    }
+    .slot-viewer .day-label .week-day {
+        width: 89px
+    }
+    .slot-viewer .day-row .day-slot-column:nth-child(3) {
+        clear: both
+    }
+    .slot-viewer .day-row .day-slot-column:nth-child(4) {
+        clear: left
+    }
+    .slot-viewer .day-label .week-day {
+        width: 89px
+    }
+    .slot-viewer .sep-shadow-top {
+        width: 438px
+    }
+    .sep-shadow-bottom {
+        width: 438px
+    }
+    .slot-viewer .slots-group {
+        display: block
+    }
+    .slot-viewer .action-panel {
+        border-top: 1px solid #d6d6d6
+    }
+    .slot-header {
+        display: none
+    }
+    .slot-header.inside-group {
+        clear: both;
+        display: block
+    }
+    .slot-viewer .day-row .day-label {
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center
+    }
+    .slot-viewer .prev-day {
+        position: absolute;
+        top: 10px;
+        left: 10px
+    }
+    .button.day-switcher {
+        display: block;
+        width: auto;
+        text-align: left;
+        line-height: 24px;
+        font-size: 14px;
+        color: #565656;
+        cursor: pointer;
+        border: 1px solid #d1d1d1;
+        outline: 0;
+        margin: 0;
+        border-radius: 0;
+        background: #efefef
+    }
+    .button.day-switcher:hover,
+    .button.day-switcher:focus {
+        background-color: #f6f6f6
+    }
+    .button.day-switcher:active {
+        background-color: #e0e0e0
+    }
+    .button.day-switcher.prev {
+        padding: 5px 10px 5px 24px
+    }
+    .button.day-switcher.next {
+        position: absolute;
+        padding: 5px 28px 5px 10px;
+        right: 10px;
+        top: 10px
+    }
+    .button.day-switcher.prev.disabled,
+    .button.day-switcher.prev.disabled:hover,
+    .button.day-switcher.prev.disabled:active,
+    .button.day-switcher.next.disabled,
+    .button.day-switcher.next.disabled:hover,
+    .button.day-switcher.next.disabled:active {
+        color: #b3b3b3;
+        background: #efefef;
+        border: 1px solid #e6e6e6
+    }
+    .slot-viewer .day-row .day-label .week-day {
+        display: none
+    }
+    .slot-viewer .day-row .day-label .rel-day,
+    .slot-viewer .day-row .day-label .date {
+        display: inline-block;
+        float: left;
+        background: 0;
+        width: 94px;
+        border-radius: 0;
+        margin: 20px 3px;
+        min-height: 0;
+        padding: 0;
+        color: #3f3f3f;
+        font-weight: normal;
+        text-transform: uppercase;
+        font-size: 15px
+    }
+    .slot-viewer .day-row .day-label .date {
+        text-align: right
+    }
+    .slot-viewer .day-row .day-label .rel-day {
+        text-align: left;
+        font-weight: bold;
+        float: right;
+        color: #a5a5a5
+    }
+    .slot-viewer .day-row .day-label .rel-day:before {
+        content: "("
+    }
+    .slot-viewer .day-row .day-label .rel-day:after {
+        content: ")"
+    }
+    .slot-viewer .notch {
+        display: block;
+        position: absolute;
+        top: -9px;
+        right: 100px;
+        width: 17px;
+        height: 10px
+    }
+    .slot-viewer .day-row .day-slot-grouping {
+        float: left;
+        padding: 10px 20px 10px 20px;
+        width: 104px;
+        min-height: 70px;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .slot-viewer .day-row .day-slot-grouping:nth-child(3) {
+        clear: both;
+        padding: 10px 10px 10px 30px
+    }
+    .slot-viewer .day-row .day-slot-grouping:last-child {
+        padding: 10px 20px 10px 20px
+    }
+    .slot-viewer .sep-shadow-top {
+        display: none
+    }
+}
+@media screen and (max-width: 479px) {
+    .non-abs-disclaimer {
+        font-size: 11px
+    }
+    .ui-button.book-slot {
+        background: 0;
+        text-align: center;
+        width: 61px;
+        border: 0;
+        outline: 0;
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+        font-weight: bold;
+        color: #7fac5a
+    }
+    .slot-loader {
+        width: 278px
+    }
+    .ui-button.book-slot .ui-button-text {
+        padding: 2px 2px;
+        font-size: 12px;
+        line-height: 30px
+    }
+    .slot-viewer {
+        width: 278px
+    }
+    .slot-viewer .slot-header {
+        width: 278px
+    }
+    .slot-viewer .slot-header .morning {
+        width: 64px;
+        text-align: center;
+        color: transparent;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .slot-viewer .slot-header .afternoon,
+    .slot-viewer .slot-header .evening {
+        color: transparent;
+        width: 65px
+    }
+    .slot-viewer .slot-header .night {
+        color: transparent;
+        width: 64px;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box;
+        text-align: center
+    }
+    .slot-viewer .day-row .day-label {
+        width: 55px
+    }
+    .slot-viewer .day-row .day-slot-column {
+        width: 61px
+    }
+    .slot-viewer .day-label .week-day {
+        width: 55px
+    }
+    .slot-viewer .day-row .day-slot-column:nth-child(3) {
+        clear: both
+    }
+    .slot-viewer .day-row .day-slot-column:nth-child(4) {
+        clear: left
+    }
+    .slot-viewer .day-label .week-day {
+        width: 89px
+    }
+    .slot-viewer .sep-shadow-top {
+        width: 278px
+    }
+    .sep-shadow-bottom {
+        width: 278px
+    }
+    .slot-viewer .slots-group {
+        display: block
+    }
+    .slot-viewer .action-panel {
+        border-top: 1px solid #d6d6d6
+    }
+    .slot-header {
+        display: none
+    }
+    .slot-header.inside-group {
+        clear: both;
+        display: block
+    }
+    .slot-viewer .day-row .day-label {
+        width: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center
+    }
+    .slot-viewer .prev-day {
+        position: absolute;
+        top: 5px;
+        left: 5px
+    }
+    .button.day-switcher {
+        display: block;
+        width: 90px;
+        height: 40px;
+        text-align: left;
+        line-height: 30px;
+        font-size: 12px;
+        cursor: pointer;
+        border: 1px solid #d1d1d1;
+        outline: 0;
+        margin: 0;
+        border-radius: 0;
+        background: #efefef;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .button.day-switcher:hover,
+    .button.day-switcher:focus {
+        background-color: #f6f6f6
+    }
+    .button.day-switcher:active {
+        background-color: #e0e0e0
+    }
+    .button.day-switcher.prev {
+        padding: 5px 5px 5px 20px
+    }
+    .button.day-switcher.next {
+        position: absolute;
+        padding: 5px 19px 5px 10px;
+        right: 5px;
+        top: 5px
+    }
+    .button.day-switcher.prev.disabled,
+    .button.day-switcher.prev.disabled:hover,
+    .button.day-switcher.prev.disabled:active,
+    .button.day-switcher.next.disabled,
+    .button.day-switcher.next.disabled:hover,
+    .button.day-switcher.next.disabled:active {
+        background: #efefef;
+        border: 1px solid #e6e6e6
+    }
+    .slot-viewer .day-row .day-label .week-day {
+        display: none
+    }
+    .slot-viewer .day-row .day-label .rel-day,
+    .slot-viewer .day-row .day-label .date {
+        display: inline-block;
+        float: left;
+        background: 0;
+        width: 94px;
+        line-height: 44px;
+        text-align: middle;
+        border-radius: 0;
+        margin: 3px;
+        min-height: 0;
+        padding: 0;
+        color: #3f3f3f;
+        font-weight: normal;
+        text-transform: uppercase;
+        font-size: 13px
+    }
+    .slot-viewer .day-row .day-label .rel-day {
+        display: none
+    }
+    .slot-viewer .day-row .day-label .rel-day:before {
+        content: "("
+    }
+    .slot-viewer .day-row .day-label .rel-day:after {
+        content: ")"
+    }
+    .slot-viewer .notch {
+        display: block;
+        position: absolute;
+        top: -9px;
+        left: 130px;
+        width: 17px;
+        height: 10px
+    }
+    .slot-viewer .day-row .day-slot-grouping {
+        float: left;
+        padding: 10px 4px;
+        width: 69px;
+        min-height: 70px;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .slot-viewer .day-row .day-slot-grouping:nth-child(3) {
+        clear: both
+    }
+    .slot-viewer .sep-shadow-top {
+        display: none
+    }
+}
+.slot-viewer {
+    position: relative;
+    border-bottom: 1px solid #cecece;
+    background: #FFF
+}
+.slot-viewer .slot-header {
+    float: left;
+    height: 28px;
+    padding: 0 10px;
+    color: #FFF;
+    font-weight: bold;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    background: -moz-linear-gradient(left, #52aae5 0, #92c2e5 14.5%, #decca1 29%, #ddab60 43.5%, #d18259 58%, #71617f 72.5%, #51558a 87%, #51558a 100%);
+    background: -o-linear-gradient(left, #52aae5 0, #92c2e5 14.5%, #decca1 29%, #ddab60 43.5%, #d18259 58%, #71617f 72.5%, #51558a 87%, #51558a 100%);
+    background: -webkit-linear-gradient(left, #52aae5 0, #92c2e5 14.5%, #decca1 29%, #ddab60 43.5%, #d18259 58%, #71617f 72.5%, #51558a 87%, #51558a 100%);
+    background: -webkit-gradient(linear, left, right, color-stop(0, #52aae5), color-stop(14.5%, #92c2e5), color-stop(29%, #decca1), color-stop(43.5%, #ddab60), color-stop(58%, #d18259), color-stop(72.5%, #71617f), color-stop(87%, #51558a), color-stop(100%, #51558a));
+    background: -ms-linear-gradient(left, #52aae5 0, #92c2e5 14.5%, #decca1 29%, #ddab60 43.5%, #d18259 58%, #71617f 72.5%, #51558a 87%, #51558a 100%);
+    background: linear-gradient(left, #52aae5 0, #92c2e5 14.5%, #decca1 29%, #ddab60 43.5%, #d18259 58%, #71617f 72.5%, #51558a 87%, #51558a 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr '#52AAE5', endColorstr='#51558A', GradientType=1)
+}
+.slot-viewer .slot-header * {
+    float: left;
+    line-height: 28px
+}
+.slot-viewer .sep-shadow-top {
+    height: 5px;
+    position: absolute;
+    z-index: 30;
+    top: 0;
+    background: #eaf1f6;
+    background: -moz-linear-gradient(top, #333 0, transparent 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #333), color-stop(100%, transparent));
+    background: -webkit-linear-gradient(top, #333 0, transparent 100%);
+    background: -o-linear-gradient(top, #333 0, transparent 100%);
+    background: -ms-linear-gradient(top, #333 0, transparent 100%);
+    background: linear-gradient(to bottom, #333 0, transparent 100%);
+    opacity: .5;
+    height: 0\9
+}
+.sep-shadow-bottom {
+    height: 4px;
+    position: absolute;
+    z-index: 30;
+    bottom: 0;
+    background: #eaf1f6;
+    background: -moz-linear-gradient(top, transparent 0, #333 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, transparent), color-stop(100%, #333));
+    background: -webkit-linear-gradient(top, transparent 0, #333 100%);
+    background: -o-linear-gradient(top, transparent 0, #333 100%);
+    background: -ms-linear-gradient(top, transparent 0, #333 100%);
+    background: linear-gradient(to bottom, transparent 0, #333 100%);
+    opacity: .25;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr '#edecec', endColorstr='#aaaaaa', GradientType=0)
+}
+.slot-viewer .action-panel {
+    background: #ececec
+}
+.slot-loader {
+    text-align: center;
+    display: block;
+    background: #efefef;
+    border-bottom: 1px solid #c6c6c6;
+    position: relative
+}
+.slot-loader img {
+    width: 18px;
+    height: 30px;
+    margin: 30px 30px 10px 30px;
+    animation: slotloader 1s linear infinite;
+    -moz-animation: slotloader 1s linear infinite;
+    -webkit-animation: slotloader 1s linear infinite;
+    -o-animation: slotloader 1s linear infinite
+}
+.hidden {
+    display: none
+}
+.padleft_28 {
+    padding-left: 28px
+}
+.abs_enabled {
+    width: 28px;
+    display: inline-block;
+    height: 36px;
+    text-align: center;
+    overflow: hidden
+}
+.abs_enabled img {
+    animation: easein 2s linear;
+    -moz-animation: easein 2s linear;
+    -webkit-animation: easein 2s linear;
+    -o-animation: easein 2s linear
+}
+.disabled-overlay {
+    opacity: 0;
+    color: #FFF;
+    position: absolute;
+    display: inline-block
+}
+@-o-keyframes slotloader {
+0 {
+    opacity: .25
+}
+50% {
+    opacity: 1
+}
+100% {
+    opacity: .25
+}
+}
+@-webkit-keyframes slotloader {
+0 {
+    opacity: .25
+}
+50% {
+    opacity: 1
+}
+100% {
+    opacity: .25
+}
+}
+@-moz-keyframes slotloader {
+0 {
+    opacity: .25
+}
+50% {
+    opacity: 1
+}
+100% {
+    opacity: .25
+}
+}
+@keyframes slotloader {
+0 {
+    opacity: .25
+}
+50% {
+    opacity: 1
+}
+100% {
+    opacity: .25
+}
+}
+@-moz-keyframes easein {
+0 {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    margin-top: 18px;
+    margin-left: 12px
+}
+70% {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    margin-top: 18px;
+    margin-left: 12px
+}
+80% {
+    opacity: 1;
+    width: 28px;
+    height: 42px;
+    margin-top: -6px;
+    margin-left: -2px
+}
+90% {
+    opacity: 1;
+    width: 24px;
+    height: 36px;
+    margin-left: 0;
+    margin-top: 0
+}
+100% {
+    opacity: 1;
+    width: 24px;
+    height: 36px;
+    margin-left: 0;
+    margin-top: 0
+}
+}
+@-webkit-keyframes easein {
+0 {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    margin-top: 18px;
+    margin-left: 12px
+}
+70% {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    margin-top: 18px;
+    margin-left: 12px
+}
+80% {
+    opacity: 1;
+    width: 28px;
+    height: 42px;
+    margin-top: -6px;
+    margin-left: -2px
+}
+90% {
+    opacity: 1;
+    width: 24px;
+    height: 36px;
+    margin-left: 0;
+    margin-top: 0
+}
+100% {
+    opacity: 1;
+    width: 24px;
+    height: 36px;
+    margin-left: 0;
+    margin-top: 0
+}
+}
+@-o-keyframes easein {
+0 {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    margin-top: 18px;
+    margin-left: 12px
+}
+70% {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    margin-top: 18px;
+    margin-left: 12px
+}
+80% {
+    opacity: 1;
+    width: 28px;
+    height: 42px;
+    margin-top: -6px;
+    margin-left: -2px
+}
+90% {
+    opacity: 1;
+    width: 24px;
+    height: 36px;
+    margin-left: 0;
+    margin-top: 0
+}
+100% {
+    opacity: 1;
+    width: 24px;
+    height: 36px;
+    margin-left: 0;
+    margin-top: 0
+}
+}
+@-keyframes easein {
+0 {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    margin-top: 18px;
+    margin-left: 12px
+}
+70% {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    margin-top: 18px;
+    margin-left: 12px
+}
+80% {
+    opacity: 1;
+    width: 28px;
+    height: 42px;
+    margin-top: -6px;
+    margin-left: -2px
+}
+90% {
+    opacity: 1;
+    width: 24px;
+    height: 36px;
+    margin-left: 0;
+    margin-top: 0
+}
+100% {
+    opacity: 1;
+    width: 24px;
+    height: 36px;
+    margin-left: 0;
+    margin-top: 0
+}
+}
+.suggest_abs_icon {
+    height: 15px;
+    width: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    background: url('/bundles/practopractoapp/images/icons/abs_15.png') no-repeat
+}
+.booking-link-container {
+    margin-left: 26px
+}
+.book-toggle-button.abs-enabled .instant-icon {
+    height: 33px;
+    overflow: hidden;
+    width: 44px;
+    background: url('/bundles/practopractoapp/images/icons/instant-icon.png') center center no-repeat, linear-gradient(#8dea47, #60c85b);
+    box-shadow: 0 1px 0 #3ab143;
+    float: left
+}
+.booking-link-container .ui-button-text {
+    padding: 0
+}
+.booking-link-container .button-text {
+    padding: 8px 0;
+    text-align: center;
+    display: block;
+    height: 33px;
+    vertical-align: middle;
+    box-sizing: border-box
+}
+.ui-button.book-toggle-button.ui-state-hover .instant-icon {
+    background: url('/bundles/practopractoapp/images/icons/instant-icon.png') center center no-repeat, -webkit-linear-gradient(#99eb46, #52ba4f);
+    background: url('/bundles/practopractoapp/images/icons/instant-icon.png') center center no-repeat, -o-linear-gradient(#99eb46, #52ba4f);
+    background: url('/bundles/practopractoapp/images/icons/instant-icon.png') center center no-repeat, linear-gradient(#99eb46, #52ba4f)
+}
+.ui-button.book-toggle-button.ui-state-active .instant-icon {
+    background: url('/bundles/practopractoapp/images/icons/instant-icon.png') center center no-repeat, -webkit-linear-gradient(#64b658, #79c64e);
+    background: url('/bundles/practopractoapp/images/icons/instant-icon.png') center center no-repeat, -o-linear-gradient(#64b658, #79c64e);
+    background: url('/bundles/practopractoapp/images/icons/instant-icon.png') center center no-repeat, linear-gradient(#64b658, #79c64e);
+    box-shadow: 0 3px 3px #517f4c inset
+}
+.vn_patient,
+.locality_select {
+    padding: 10px;
+    background-color: #ececec;
+    position: relative;
+    min-height: 194px
+}
+.locality_select {
+    padding-left: 40px;
+    min-height: 60px;
+    max-height: 110px;
+    overflow: auto;
+    background-color: #fefdfd;
+    border-bottom: 1px solid #c9c9c9
+}
+.locality_select>div {
+    padding-bottom: 15px;
+    padding-top: 20px
+}
+.locality-list-item {
+    margin-top: 15px;
+    display: inline-block;
+    width: 150px;
+    height: 15px;
+    color: #49b1d1;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden
+}
+.locality-list-item:hover {
+    text-decoration: underline;
+    cursor: pointer
+}
+.location-selection-filter {
+    width: 200px;
+    padding-left: 25px
+}
+.locality-search-container {
+    float: right;
+    margin-right: 30px;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important
+}
+.choose-location {
+    padding-top: 5px
+}
+.vn_patient .vn_patient_form label {
+    float: left;
+    width: 30%
+}
+.vn_patient .vn_patient_form label input {
+    padding: 6px
+}
+.change-location {
+    display: block !important
+}
+@media screen and (max-width: 768px) {
+    .vn_patient .vn_patient_form label {
+        clear: both;
+        margin-bottom: 20px;
+        width: 100%
+    }
+    .vn_patient .vn_patient_form label input {
+        width: 90%
+    }
+    .vn_patient .vn_patient_form .submit {
+        margin-left: 26%
+    }
+}
+@media screen and (max-width: 480px) {
+    .locality-list-item {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 10px
+    }
+    .locality-search-container {
+        float: none
+    }
+}
+.vn_patient .vn_patient_form {
+    margin-top: 20px
+}
+.vn_patient .vn_patient_form .submit {
+    margin-left: -110px;
+    margin-top: 20px;
+    padding: 10px;
+    position: relative;
+    left: 50%
+}
+.vn_patient h3 {
+    padding-left: 0
+}
+.vn_patient .terms-conditions {
+    clear: both;
+    padding-top: 10px;
+    color: #666
+}
+.vn_patient .terms-conditions a {
+    color: #666;
+    text-decoration: underline
+}
+.vn_patient .notch,
+.show-phonenumber .notch {
+    display: block;
+    position: absolute;
+    top: -6px;
+    right: 100px;
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #ececec
+}
+.show-phonenumber {
+    padding: 10px;
+    text-align: center
+}
+.show-phonenumber .phone_and_ext {
+    font-size: 1.6em;
+    margin-top: 26px;
+    margin-bottom: 36px
+}
+.show-phonenumber .help_message {
+    margin-bottom: 15px
+}
+.show-phonenumber .help_message a {
+    color: inherit;
+    text-decoration: none
+}
+.show-phonenumber .help_message .help_timing {
+    color: #777
+}
+.show-phonenumber .phone_and_ext b {
+    font-weight: 800
+}
+.show-phonenumber .phone_and_ext .phone a {
+    color: inherit;
+    text-decoration: none
+}
+.virtual-number .vn-call-icon {
+    background: url('../lab/vn-call.png') center center no-repeat, -webkit-linear-gradient(#3a8ca5, #047ba0);
+    background: url('../lab/vn-call.png') center center no-repeat, -o-linear-gradient(#3a8ca5, #047ba0);
+    background: url('../lab/vn-call.png') center center no-repeat, linear-gradient(#3a8ca5, #047ba0);
+    height: 33px;
+    overflow: hidden;
+    width: 44px;
+    box-shadow: 0 1px 0 #3a8ca5;
+    float: left
+}
+.vn_patient .overlay {
+    display: none;
+    background: #ccc;
+    opacity: .6;
+    position: absolute;
+    z-index: 1;
+    vertical-align: middle;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0
+}
+.vn_patient .getting-phone-text {
+    display: none;
+    z-index: 9;
+    background: #ececec;
+    font-size: 1.5em;
+    position: absolute;
+    padding: 11px;
+    border-radius: 2px;
+    margin-top: 23px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 228px;
+    left: 0;
+    right: 0
+}
+.ui-button.book-toggle-button.ui-state-active .vn-call-icon {
+    background: url('../lab/vn-call.png') center center no-repeat, -webkit-linear-gradient(#3a8ca5, #047ba0);
+    background: url('../lab/vn-call.png') center center no-repeat, -o-linear-gradient(#3a8ca5, #047ba0);
+    background: url('../lab/vn-call.png') center center no-repeat, linear-gradient(#3a8ca5, #047ba0);
+    box-shadow: 0 3px 3px #346776 inset
+}
+.vn_patient .error {
+    color: red
+}
+@media screen and (min-width: 980px) {
+    .slot-viewer {
+        width: 708px
+    }
+    .slot-viewer .inside-group {
+        display: none
+    }
+    .slot-viewer .slot-header {
+        width: 609px
+    }
+    .slot-viewer .slot-header .morning {
+        width: 145px
+    }
+    .slot-viewer .slot-header .afternoon,
+    .slot-viewer .slot-header .evening {
+        width: 168px
+    }
+    .slot-viewer .slot-header .night {
+        width: 53px
+    }
+    .slot-viewer .day-row .day-label {
+        width: 88px
+    }
+    .slot-viewer .day-row .day-slot-column {
+        width: 76px
+    }
+    .slot-viewer .day-label .week-day {
+        width: 88px
+    }
+    .slot-viewer .sep-shadow-top {
+        width: 708px
+    }
+    .sep-shadow-bottom {
+        width: 708px
+    }
+    .slot-viewer .action-panel {
+        position: relative
+    }
+    .slot-viewer .slots-group {
+        display: table;
+        empty-cells: show
+    }
+    .slot-viewer .day-row {
+        display: table-row
+    }
+    .slot-viewer .day-row .day-label {
+        display: table-cell
+    }
+    .slot-viewer .day-row .day-slot-column {
+        display: table-cell
+    }
+    .button.day-switcher {
+        display: block;
+        padding: 0 4px 0 24px;
+        width: 70px;
+        text-align: left;
+        line-height: 27px;
+        font-size: 12px;
+        color: #565656;
+        cursor: pointer;
+        border: 0;
+        outline: 0;
+        margin: 0;
+        border-radius: 0;
+        background-color: #f5f5f5;
+        background-image: -moz-linear-gradient(top, #fff, #e6e6e6);
+        background-image: -ms-linear-gradient(top, #fff, #e6e6e6);
+        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#e6e6e6));
+        background-image: -webkit-linear-gradient(top, #fff, #e6e6e6);
+        background-image: -o-linear-gradient(top, #fff, #e6e6e6);
+        background-image: linear-gradient(top, #fff, #e6e6e6);
+        background-repeat: repeat-x;
+        filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0)
+    }
+    .ui-button.book-slot {
+        width: 75px
+    }
+    .button.day-switcher.prev {
+        background: url('/bundles/practopractoapp/images/icons/up_arrow.png') 0 0 no-repeat
+    }
+    .button.day-switcher.prev:hover,
+    .button.day-switcher.prev:focus {
+        background: url('/bundles/practopractoapp/images/icons/up_arrow.png') 0 -27px no-repeat
+    }
+    .button.day-switcher.prev:active {
+        background: url('/bundles/practopractoapp/images/icons/up_arrow.png') 0 -54px no-repeat
+    }
+    .button.day-switcher.prev.disabled,
+    .button.day-switcher.prev.disabled:hover,
+    .button.day-switcher.prev.disabled:active {
+        background: url('/bundles/practopractoapp/images/icons/up_arrow.png') 0 -81px no-repeat;
+        color: #b3b3b3
+    }
+    .button.day-switcher.next {
+        position: absolute;
+        top: -29px;
+        left: 0;
+        border-top: 1px solid #c6c6c6;
+        background: url('/bundles/practopractoapp/images/icons/down_arrow.png') 0 0 no-repeat
+    }
+    .button.day-switcher.next:hover,
+    .button.day-switcher.next:focus {
+        background: url('/bundles/practopractoapp/images/icons/down_arrow.png') 0 -27px no-repeat
+    }
+    .button.day-switcher.next:active {
+        background: url('/bundles/practopractoapp/images/icons/down_arrow.png') 0 -54px no-repeat
+    }
+    .button.day-switcher.next.disabled,
+    .button.day-switcher.next.disabled:hover,
+    .button.day-switcher.next.disabled:active {
+        background: url('/bundles/practopractoapp/images/icons/down_arrow.png') 0 -81px no-repeat;
+        color: #b3b3b3
+    }
+    .slot-viewer .day-row .day-label {
+        text-transform: uppercase;
+        border: 0;
+        border-right: 1px solid #cecece;
+        background: #edecec;
+        min-height: 103px;
+        position: relative;
+        text-align: center;
+        padding: 5px;
+        margin: 0;
+        outline: 0;
+        -moz-box-sizing: content-box;
+        -webkit-box-sizing: content-box;
+        -o-box-sizing: content-box;
+        -ms-box-sizing: content-box;
+        box-sizing: content-box
+    }
+    .slot-viewer .day-row:hover .day-label {
+        background: #fafafa
+    }
+    .slot-viewer .notch {
+        display: block;
+        position: absolute;
+        top: -6px;
+        right: 100px;
+        width: 0;
+        height: 0;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        border-bottom: 7px solid #565787
+    }
+    .slot-viewer .prev-day {
+        float: left;
+        width: 99px;
+        border-right: 1px solid #cecece;
+        background: #edecec;
+        height: 28px;
+        border-bottom: 1px solid #cecece;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .slot-viewer .slots-group {
+        clear: both;
+        border-bottom: 1px solid #cecece
+    }
+    .slot-viewer .day-row {
+        border-bottom: 1px solid #cecece
+    }
+    .slot-viewer .day-row:hover .day-slot-column {
+        background: #fafafa;
+        border-top: 10px solid #fafafa;
+        border-bottom: 10px solid #fafafa
+    }
+    .slot-viewer .day-row .day-slot-column {
+        text-align: center;
+        padding: 0 6px;
+        border-right: 1px solid #e6e6e6;
+        background: #f4f4f4;
+        border-top: 10px solid #f4f4f4;
+        border-bottom: 10px solid #f4f4f4;
+        -moz-box-sizing: content-box;
+        -webkit-box-sizing: content-box;
+        -o-box-sizing: content-box;
+        -ms-box-sizing: content-box;
+        box-sizing: content-box
+    }
+    .slot-viewer .day-row .day-slot-column:nth-child(2) {
+        padding-left: 10px
+    }
+    .slot-viewer .day-row .day-slot-column:last-child {
+        border-right: 0;
+        padding-right: 9px
+    }
+    .slot-viewer .day-label .week-day {
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 1;
+        margin-top: 5px;
+        color: #333
+    }
+    .slot-viewer .day-label .rel-day {
+        background: #b5b5b5;
+        color: #fff;
+        display: inline;
+        text-align: center;
+        border-radius: 10px;
+        padding: 0 10px;
+        font-size: 12px;
+        line-height: 19px;
+        font-weight: bold
+    }
+    .slot-viewer .day-label .date {
+        width: 88px;
+        min-height: 50px;
+        font-weight: bold
+    }
+}
+
+
+.premium-clinic-label {
+    float: left;
+    width: 100px;
+    margin: 6px 0;
+    color: #818181;
+    font-size: 11px
+}
+.premium-get-lead-link {
+    float: right;
+    cursor: pointer;
+    text-align: right;
+    width: 100px;
+    margin: 6px 0;
+    color: #818181;
+    text-decoration: none;
+    font-size: 11px
+}
+.premium-get-lead-link:hover,
+.premium-get-lead-link:active {
+    text-decoration: underline
+}
+
+.photo-cloud-clinic-logo {
+    width: 238px;
+    display: inline-block;
+    text-align: center;
+    height: 70px
+}
+.photo-cloud-clinic-logo.no-promo-text {
+    margin-top: 40px
+}
+.photo-cloud-clinic-logo img {
+    border: 2px solid #a8a8a8;
+    float: none;
+    height: 70px;
+    text-align: center;
+    border-radius: 5px;
+    width: auto;
+    max-width: 200px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+@media screen and (min-width: 980px) {
+    .doc-suggestion {
+        margin-top: 20px;
+        font-size: 14px
+    }
+    .doc-suggestion-label-short {
+        display: none
+    }
+    .doc-suggestion-label {
+        width: 960px;
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #cecece
+    }
+    .suggested-doctor {
+        float: left;
+        margin-left: 15px;
+        width: 310px
+    }
+    .suggested-doctor a {
+        color: #287792
+    }
+    .suggested-doctor.first {
+        margin-left: 0
+    }
+    .suggested-doctor .suggested-doctor-photo {
+        width: 70px;
+        float: left;
+        margin-right: 10px
+    }
+    .suggested-doctor .suggested-doctor-details {
+        width: 230px;
+        float: left
+    }
+    .suggested-doctor .suggested-doctor-name {
+        margin-top: 10px;
+        font-weight: 600;
+        margin-bottom: 5px
+    }
+    .suggested-doctor .suggested-doctor-qualification {
+        color: #999
+    }
+    .more-suggestions-container {
+        width: 960px;
+        text-align: right
+    }
+    .more-suggestion-link {
+        font-weight: 600;
+        font-size: 13px;
+        background: url('/bundles/practopractoapp/images/icons/link-right-arrow.png') no-repeat right center;
+        padding-right: 20px
+    }
+}
+@media screen and (min-width: 740px) and (max-width: 979px) {
+    .doc-suggestion {
+        margin-top: 30px;
+        font-size: 15px
+    }
+    .doc-suggestion-label-short {
+        width: 700px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        padding-bottom: 5px
+    }
+    .doc-suggestion-label {
+        display: none
+    }
+    .suggested-doctor {
+        width: 700px;
+        padding: 10px 0;
+        border-top: 1px solid #cecece
+    }
+    .suggested-doctor a {
+        color: #287792
+    }
+    .suggested-doctor.first {
+        margin-top: 0;
+        border-top: 0
+    }
+    .suggested-doctor .suggested-doctor-photo {
+        width: 70px;
+        float: left;
+        margin-right: 10px
+    }
+    .suggested-doctor .suggested-doctor-details {
+        width: 620px;
+        float: left
+    }
+    .suggested-doctor .suggested-doctor-name {
+        margin-top: 10px;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 5px
+    }
+    .suggested-doctor .suggested-doctor-qualification {
+        color: #999
+    }
+    .more-suggestions-container {
+        width: 700px;
+        text-align: right
+    }
+    .more-suggestion-link {
+        font-weight: 600;
+        font-size: 14px;
+        background: url('/bundles/practopractoapp/images/icons/link-right-arrow.png') no-repeat right center;
+        padding-right: 20px
+    }
+}
+@media screen and (min-width: 600px) and (max-width: 739px) {
+    .doc-suggestion {
+        margin-top: 30px;
+        font-size: 15px
+    }
+    .doc-suggestion-label-short {
+        font-weight: bold;
+        width: 560px;
+        margin-bottom: 10px;
+        padding-bottom: 5px
+    }
+    .doc-suggestion-label {
+        display: none
+    }
+    .suggested-doctor {
+        width: 560px;
+        padding: 10px 0;
+        border-top: 1px solid #cecece
+    }
+    .suggested-doctor a {
+        color: #287792
+    }
+    .suggested-doctor.first {
+        margin-top: 0;
+        border-top: 0
+    }
+    .suggested-doctor .suggested-doctor-photo {
+        width: 70px;
+        float: left;
+        margin-right: 10px
+    }
+    .suggested-doctor .suggested-doctor-details {
+        width: 480px;
+        float: left
+    }
+    .suggested-doctor .suggested-doctor-name {
+        margin-top: 10px;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 5px
+    }
+    .suggested-doctor .suggested-doctor-qualification {
+        color: #999
+    }
+    .more-suggestions-container {
+        width: 560px;
+        text-align: right
+    }
+    .more-suggestion-link {
+        font-weight: 600;
+        font-size: 14px;
+        background: url('/bundles/practopractoapp/images/icons/link-right-arrow.png') no-repeat right center;
+        padding-right: 20px
+    }
+}
+@media screen and (min-width: 480px) and (max-width: 599px) {
+    .doc-suggestion {
+        margin-top: 30px;
+        font-size: 15px
+    }
+    .doc-suggestion-label-short {
+        font-weight: bold;
+        width: 440px;
+        margin-bottom: 10px;
+        padding-bottom: 5px
+    }
+    .doc-suggestion-label {
+        display: none
+    }
+    .suggested-doctor {
+        width: 440px;
+        padding: 10px 0;
+        border-top: 1px solid #cecece
+    }
+    .suggested-doctor a {
+        color: #287792
+    }
+    .suggested-doctor.first {
+        margin-top: 0;
+        border-top: 0
+    }
+    .suggested-doctor .suggested-doctor-photo {
+        width: 70px;
+        float: left;
+        margin-right: 10px
+    }
+    .suggested-doctor .suggested-doctor-details {
+        width: 360px;
+        float: left
+    }
+    .suggested-doctor .suggested-doctor-name {
+        margin-top: 10px;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 5px
+    }
+    .suggested-doctor .suggested-doctor-qualification {
+        color: #999
+    }
+    .more-suggestions-container {
+        width: 440px;
+        text-align: right
+    }
+    .more-suggestion-link {
+        font-weight: 600;
+        font-size: 14px;
+        background: url('/bundles/practopractoapp/images/icons/link-right-arrow.png') no-repeat right center;
+        padding-right: 20px
+    }
+}
+@media screen and (max-width: 479px) {
+    .doc-suggestion {
+        margin-top: 30px;
+        font-size: 14px
+    }
+    .doc-suggestion-label-short {
+        font-weight: bold;
+        width: 280px;
+        margin-bottom: 10px;
+        padding-bottom: 5px
+    }
+    .doc-suggestion-label {
+        display: none
+    }
+    .suggested-doctor {
+        width: 280px;
+        padding: 10px 0;
+        border-top: 1px solid #cecece
+    }
+    .suggested-doctor a {
+        color: #287792
+    }
+    .suggested-doctor.first {
+        margin-top: 0;
+        border-top: 0
+    }
+    .suggested-doctor .suggested-doctor-photo {
+        width: 70px;
+        float: left;
+        margin-right: 10px
+    }
+    .suggested-doctor .suggested-doctor-details {
+        width: 200px;
+        float: left
+    }
+    .suggested-doctor .suggested-doctor-name {
+        margin-top: 10px;
+        font-size: 15px;
+        font-weight: 600;
+        margin-bottom: 5px
+    }
+    .suggested-doctor .suggested-doctor-qualification {
+        color: #999
+    }
+    .more-suggestions-container {
+        width: 280px;
+        text-align: right
+    }
+    .more-suggestion-link {
+        font-weight: 600;
+        font-size: 14px;
+        background: url('/bundles/practopractoapp/images/icons/link-right-arrow.png') no-repeat right center;
+        padding-right: 20px
+    }
+}
+.diag-price {
+    font-weight: bold
+}
+.diag-top-margin {
+    margin-top: 8px
+}
+.diag-fees .icon-cash {
+    display: block;
+    float: left;
+    font-size: 20px;
+    font-size: 17px;
+    line-height: 21px;
+    float: left
+}
+.diag-fees .fees-wrapper {
+    margin-left: 29px
+}
+.diag-fees .price-wrapper {
+    display: block;
+    margin-left: 10px;
+    float: left
+}
+.diag-timings .icon-clock {
+    margin-right: 5px
+}
+.diag-timings .timing-wrapper {
+    display: block;
+    float: left;
+    margin-left: 5px;
+    margin-bottom: 10px
+}
+.listing-row .accredit .icon-shield {
+    font-size: 20px;
+    float: left
+}
+.listing-row .home-sample .icon-homesample {
+    font-size: 19px;
+    line-height: 23px
+}
+.listing-row .online-reports .icon-online-reports {
+    font-size: 19px;
+    line-height: 23px
+}
+.listing-row {
+    position: relative
+}
+.listing-row .accredit .accredit-text {
+    float: left;
+    margin-left: 5px
+}
+.seg-profile-container .slotviewer-container.diag-slotviewer {
+    margin-top: 0;
+    margin-bottom: 0
+}
+.profile-container .centers-block.diag-center {
+    min-height: auto
+}
+.photo-count-container {
+    position: absolute;
+    right: 0;
+    bottom: 2px;
+    width: 44px;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border-bottom-right-radius: 3px;
+    padding-bottom: 3px
+}
+.photo-count-container .photos-icon {
+    vertical-align: bottom;
+    margin: 0 2px
+}
+.photo-count-container .photos-count {
+    line-height: 20px
+}
+.diagnostic-link {
+    color: #49b1d1;
+    text-decoration: none
+}
+.listing_filters_master_tests {
+    max-width: 160px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+.results-bar-multi-test {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: inline-block;
+    max-width: 306px;
+    vertical-align: bottom
+}
+.test-container {
+    margin-bottom: 20px;
+    border-radius: 3px;
+    display: none
+}
+.test-container .test-tags-row {
+    max-height: 40px;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 14px;
+    color: #7f7f7f;
+    background-color: #fbfbfb
+}
+.test-tag-scroller {
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: inline-block;
+    max-width: 649px;
+    padding-top: 13px;
+    margin-left: 5px
+}
+.test-scroller-narrow {
+    max-width: 607px
+}
+.test-scroller-mid {
+    max-width: 649px
+}
+.test-scroller-wide {
+    max-width: 691px
+}
+.diag-test-tag {
+    color: #7f7f7f;
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    margin-right: 20px;
+    max-width: 160px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: top;
+    padding-bottom: 1px;
+    cursor: pointer
+}
+.diag-test-tag:last-child {
+    margin-right: 0
+}
+.test-arrows {
+    font-size: 12px;
+    padding-top: 14px;
+    color: #a7a7a7;
+    cursor: pointer
+}
+.test-exp-coll {
+    padding-top: 20px
+}
+.test-arrows:hover {
+    color: #636363
+}
+.close-test-button {
+    float: right;
+    margin-left: 20px
+}
+.test-left-arrow {
+    float: left;
+    margin-right: 15px;
+    margin-left: 0
+}
+.test-right-arrow {
+    float: right;
+    margin-left: 20px;
+    margin-right: 0
+}
+.test-container .test-content-row {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 14px;
+    padding-bottom: 14px
+}
+.test-sub-heading {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10px;
+    color: #ababab;
+    margin-bottom: 6px
+}
+.test-sub-content {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 18px;
+    font-size: 12px;
+    color: #4a4a4a;
+    padding-bottom: 6px
+}
+.diag-desc-col {
+    max-width: 220px;
+    margin-right: 25px;
+    display: inline-block;
+    vertical-align: top
+}
+.diag-desc-col:last-child {
+    margin-right: 0
+}
+.test-tag-selected {
+    color: #636363;
+    font-weight: bold;
+    border-bottom: 2px solid;
+    padding-bottom: 12px
+}
+.test-desc-expand,
+.test-desc-collapse {
+    text-align: center
+}
+.test-disclaimer {
+    font-size: 10px;
+    color: #ababab;
+    font-style: italic;
+    margin-top: 20px
+}
+::-webkit-scrollbar {
+    display: none
+}
+@media screen and (min-width: 980px) {
+    .photo-count-container {
+        width: 26px;
+        height: 13px
+    }
+    .photo-count-container .photos-icon {
+        margin: 0 1px;
+        height: 11px
+    }
+    .photo-count-container .photos-count {
+        line-height: 11px;
+        font-size: 8px
+    }
+    .diag_avatar,
+    .estab-avatar {
+        max-width: 200px;
+        max-height: auto;
+        border-radius: 3px
+    }
+    .diag-photo-container {
+        width: 215px;
+        min-height: 112px;
+        float: left;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .diag-details-block {
+        width: 263px;
+        margin-right: 10px;
+        float: left;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .listing-row .accredit {
+        line-height: 20px;
+        margin-bottom: 3px
+    }
+    .listing-row .home-sample {
+        line-height: 20px;
+        margin-bottom: 3px
+    }
+    .listing-row .online-reports {
+        line-height: 20px;
+        margin-bottom: 3px
+    }
+    .listing-row {
+        position: relative;
+        padding: 15px;
+        border-bottom: 1px solid #d6d6d6
+    }
+    .listing-row:last-child {
+        border-bottom: none !important
+    }
+    .listing-row h2 {
+        color: #49b1d1;
+        font-size: 16px;
+        margin: 0;
+        line-height: 22px
+    }
+    .listing-row .timings {
+        margin-bottom: 8px;
+        line-height: 1.2;
+        display: inline-block
+    }
+    .listing-row .timings .icon-clock {
+        font-size: 24px;
+        float: left;
+        margin-left: -4px
+    }
+    .listing-row .timings .timings-block {
+        float: left;
+        margin-left: 5px
+    }
+    .listing-row .fees {
+        line-height: 20px;
+        margin-bottom: 8px
+    }
+    .listing-row .fees .icon-cash {
+        font-size: 19px;
+        margin-left: -2px
+    }
+    .listing-row .fees .fees-amount {
+        margin-left: 4px
+    }
+    .listing-row .locality {
+        line-height: 20px;
+        margin-bottom: 8px
+    }
+    .listing-row .locality .icon-pin {
+        font-size: 18px
+    }
+    .listing-row .locality .link {
+        padding-left: 5px;
+        display: inline-block;
+        width: 90%;
+        vertical-align: top
+    }
+    .test-container {
+        display: block
+    }
+}
+@media screen and (max-width: 979px) {
+    .listing-row .timings .timings-block {
+        float: left;
+        margin-left: 5px
+    }
+    .listing-row .timings {
+        margin-bottom: 8px;
+        line-height: 1.2;
+        display: inline-block;
+        float: left
+    }
+    .listing-row {
+        border-bottom: 1px solid #d6d6d6
+    }
+    .listing-row:last-child {
+        border-bottom: none !important
+    }
+    .listing-row h2 {
+        color: #49b1d1;
+        margin: 0;
+        line-height: 22px
+    }
+    .listing-row .accredit .icon-shield,
+    .listing-row .home-sample .icon-homesample,
+    .listing-row .online-reports .icon-online-reports {
+        color: #02a6db;
+        float: left
+    }
+    .listing-row .icon-pin,
+    .listing-row .icon-cash,
+    .listing-row .icon-clock,
+    .listing-row .icon-stetho,
+    .listing-row .icon-comment {
+        color: #02a6db;
+        vertical-align: middle
+    }
+    .listing-row .timings .icon-clock {
+        font-size: 24px;
+        float: left;
+        margin-left: -4px;
+        color: #02a6db
+    }
+    .listing-row .accredit {
+        line-height: 20px;
+        margin-bottom: 3px
+    }
+    .listing-row .home-sample {
+        line-height: 20px;
+        margin-bottom: 3px
+    }
+    .listing-row .home-sample .practo-icon,
+    .listing-row .accredit .practo-icon,
+    .listing-row .online-reports .practo-icon {
+        float: left;
+        font-size: 20px;
+        margin-left: -3px
+    }
+    .listing-row .home-sample .home-sample-text,
+    .listing-row .accredit .accredit-text,
+    .listing-row .online-reports .online-reports-text {
+        float: left;
+        margin-left: 11px;
+        width: 60%
+    }
+    .listing-row .online-reports {
+        line-height: 20px;
+        margin-bottom: 3px
+    }
+    .diag_avatar {
+        max-height: auto;
+        border-radius: 3px
+    }
+    .diag-photo-container {
+        float: left;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box
+    }
+}
+@media screen and (min-width: 740px) and (max-width: 979px) {
+    .diag_avatar {
+        max-width: 110px
+    }
+    .diag-photo-container {
+        width: 120px;
+        float: left
+    }
+    .listing-row .diag-fees.fees {
+        margin-left: 0
+    }
+    .listing-row {
+        padding: 15px
+    }
+    .listing-row h2 {
+        font-size: 16px
+    }
+}
+@media screen and (min-width: 600px) and (max-width: 739px) {
+    .diag_avatar {
+        max-width: 110px
+    }
+    .diag-photo-container {
+        width: 120px;
+        float: left
+    }
+    .listing-row .diag-fees.fees {
+        margin-left: 0
+    }
+    .listing-row {
+        padding: 15px
+    }
+    .listing-row h2 {
+        font-size: 16px
+    }
+}
+@media screen and (min-width: 480px) and (max-width: 599px) {
+    .diagnostic-listing-row .booking-link-container {
+        display: block;
+        text-align: right
+    }
+    .diag_avatar {
+        max-width: 110px
+    }
+    .diag-photo-container {
+        width: 120px;
+        float: left
+    }
+    .listing-row .diag-fees.fees {
+        margin-left: 0
+    }
+    .listing-row {
+        padding: 15px
+    }
+    .listing-row h2 {
+        font-size: 16px
+    }
+}
+@media screen and (max-width: 479px) {
+    .diag_avatar {
+        max-width: 80px;
+        max-height: auto;
+        border-radius: 6px
+    }
+    .diag-photo-container {
+        width: 85px;
+        float: left;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .diag-details-block {
+        width: 162px;
+        margin-right: 10px;
+        float: left;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .diag-details-block .accredit,
+    .diag-details-block .online-reports,
+    .diag-details-block .home-sample {
+        width: 240px
+    }
+    .listing-row .home-sample .home-sample-text,
+    .listing-row .accredit .accredit-text,
+    .listing-row .online-reports .online-reports-text {
+        width: 200px
+    }
+    .listing-row {
+        padding: 10px
+    }
+    .listing-row h2 {
+        font-size: 14px
+    }
+}
+
+.app-download-banner img {
+    cursor: pointer
+}
+.app-download-banner .download-form {
+    margin-top: 10px;
+    width: 178px;
+    text-align: center
+}
+.app-download-banner .download-form .input-text {
+    border: 1px solid #c3c3c3;
+    text-indent: 10px;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px
+}
+.app-download-banner .download-form .input-text.invalid {
+    border: 1px solid #ff005b
+}
+.app-download-banner .download-form .input-text.focus {
+    border: 1px solid #02a6d8
+}
+.app-download-banner .download-form .input-text,
+.app-download-banner .sucess-msg span {
+    width: 148px;
+    font-size: 10px;
+    padding: 5px 1px
+}
+.app-download-banner .download-form .input-text:focus,
+.app-download-banner .download-form .submit:focus {
+    outline: 0
+}
+.app-download-banner .submit {
+    width: 154px;
+    height: 27px;
+    font-size: 10px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 0;
+    background-color: #02a6d8;
+    color: #fff;
+    margin-top: 6px;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px
+}
+.app-download-banner .sucess-msg {
+    display: none;
+    width: 178px;
+    text-align: center;
+    margin-top: 10px
+}
+.app-download-banner .sucess-msg span {
+    display: block;
+    border: 1px solid #7ed321;
+    line-height: 16px;
+    color: #7ed321;
+    margin: auto
+}
+.app-download-banner .sucess-msg span img {
+    vertical-align: bottom
+}
+.load-bar-container {
+    width: 178px;
+    display: none;
+    margin-top: 50px
+}
+.load-bar-container .load-bar {
+    height: 5px;
+    position: relative;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
+    margin: auto;
+    width: 154px;
+    background-color: #d8d8d8
+}
+.load-bar-container .load-bar>span {
+    display: block;
+    height: 100%;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: #02a6d8;
+    background-image: linear-gradient(center bottom, #2bc253 37%, #54f054 69%);
+    box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.3), inset 0 -2px 6px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden
+}
+@media screen and (max-width: 979px) {
+    .app-download-banner {
+        display: none
+    }
+}
+.consult-snap {
+    margin-bottom: 20px
+}
