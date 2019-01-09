@@ -10,10 +10,59 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190105172635) do
+ActiveRecord::Schema.define(version: 20190109082522) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "customers", force: :cascade do |t|
+    t.string   "title",        limit: 50
+    t.string   "first_name",   limit: 200
+    t.string   "middle_name",  limit: 200
+    t.string   "last_name",    limit: 200
+    t.string   "suffix",       limit: 50
+    t.string   "display_name", limit: 200
+    t.string   "email",        limit: 200
+    t.string   "company_name", limit: 200
+    t.string   "phone",        limit: 20
+    t.string   "mobile",       limit: 20
+    t.string   "notes",        limit: 255
+    t.string   "address1",     limit: 200
+    t.string   "city",         limit: 50
+    t.string   "state",        limit: 50
+    t.string   "country",      limit: 50
+    t.string   "postal_code",  limit: 6
+    t.boolean  "status",                   default: true
+    t.datetime "created_at",                              null: false
+    t.datetime "updated_at",                              null: false
+  end
+
+  create_table "sales_receipt_details", force: :cascade do |t|
+    t.integer  "sales_receipt_id"
+    t.string   "product_name",        limit: 200
+    t.string   "product_description", limit: 200
+    t.integer  "qty"
+    t.integer  "rate"
+    t.integer  "amt"
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+  end
+
+  create_table "sales_receipts", force: :cascade do |t|
+    t.integer  "customer_id"
+    t.string   "email",           limit: 200
+    t.jsonb    "billing_address"
+    t.datetime "receipt_date"
+    t.string   "place_of_supply", limit: 100
+    t.string   "payment_method",  limit: 100
+    t.string   "reference_no",    limit: 100
+    t.string   "deposit_to",      limit: 100
+    t.string   "message",         limit: 200
+    t.integer  "total_qty"
+    t.integer  "total_amt"
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "prefix",     limit: 6

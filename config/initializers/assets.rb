@@ -22,4 +22,6 @@ Rails.application.config.assets.precompile += %w( idangerous.swiper.css )
 Rails.application.config.assets.precompile += %w( style.css )
 Rails.application.config.assets.precompile << /\.(?:svg|eot|woff|ttf)\z/
 Rails.application.config.assets.precompile += %w( home.css )
-
+Rails.application.config.assets.precompile += %w( admin/clockpicker.js )
+Rails.application.config.assets.precompile += %w( admin/daterangepicker.js )
+Rails.application.config.assets.precompile += %w( admin/datepicker.js )

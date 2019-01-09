@@ -1,0 +1,122 @@
+<div class="wrapper wrapper-content animated fadeInRight">
+<%= render :partial => "shared/notifier"%>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="tabs-container">
+        <div class="ibox-title">
+          <h5><%= @customer.new_record? ? 'Add Customer Details' :  'Edit Customer Details' %></h5>
+        </div>
+
+        <div class="tab-content">
+          <div id="tab-1" class="tab-pane active">
+            <div class="panel-body">
+              <%= form_for @customer,:html => {:id => 'submit_customer'} do |f| %>
+                  <fieldset class="form-horizontal">
+
+                    <div class="form-group"><label class="col-sm-2 control-label">Full Name:</label>
+                      <div class="col-sm-1">
+                        <%= f.select :title, options_for_select(Customer::TITLE, :selected => @customer.title),{},{:class => 'form-control'} %>
+                      </div>
+                      <div class="col-sm-3">
+                        <%= f.text_field :first_name,:class => 'form-control',:placeholder => "First name" %>
+                      </div>
+                       <div class="col-sm-2">
+                        <%= f.text_field :middle_name,:class => 'form-control',:placeholder => "Middle name" %>
+                      </div>
+                       <div class="col-sm-3">
+                        <%= f.text_field :last_name,:class => 'form-control',:placeholder => "Last name" %>
+                      </div>
+                      <div class="col-sm-1">
+                        <%= f.select :suffix, options_for_select(Customer::SUFFIX, :selected => @customer.suffix),{},{:class => 'form-control'} %>
+                      </div>
+                    </div>
+
+                   
+
+                    <div class="form-group"><label class="col-sm-2 control-label">Company/Display Name:</label>
+                      <div class="col-sm-5">
+                        <%= f.text_field :company_name,:class => 'form-control',:placeholder => "Company name" %>
+                      </div>
+                      <div class="col-sm-5">
+                        <%= f.text_field :display_name,:class => 'form-control',:placeholder => "Display name" %>
+                      </div>
+                    </div>
+
+
+                    <div class="form-group"><label class="col-sm-2 control-label">Email:</label>
+                      <div class="col-sm-10">
+                        <%= f.email_field :email,:class => 'form-control',:placeholder => "Email" %>
+                      </div>
+                    </div>
+
+                    <div class="form-group"><label class="col-sm-2 control-label">Phone/Mobile:</label>
+                      <div class="col-sm-5">
+                        <%= f.text_field :phone,:class => 'form-control',:placeholder => "Phone" %>
+                      </div>
+                      <div class="col-sm-5">
+                        <%= f.text_field :mobile,:class => 'form-control',:placeholder => "Mobile" %>
+                      </div>
+                    </div>
+
+
+                    <div class="form-group"><label class="col-sm-2 control-label">Notes:</label>
+                      <div class="col-sm-10">
+                        <div class="summernote">
+                          <%= f.text_area :notes,:class =>  "form-control",:placeholder => 'Please Enter Notes' %>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div class="form-group"><label class="col-sm-2 control-label">Address:</label>
+                      <div class="col-sm-10">
+                        <%= f.text_field :address1,:class => 'form-control',:placeholder => "Address" %>
+                      </div>
+                    </div>
+
+                    <div class="form-group"><label class="col-sm-2 control-label">Locality:</label>
+                      <div class="col-sm-4">
+                        <%= f.text_field :city,:class => 'form-control',:placeholder => "City" %>
+                      </div>
+                      <div class="col-sm-3">
+                        <%= f.text_field :state,:class => 'form-control',:placeholder => "State" %>
+                      </div>
+                      <div class="col-sm-3">
+                        <%= f.text_field :country,:class => 'form-control',:placeholder => "Country" %>
+                      </div>
+                    </div>
+
+                    <div class="form-group"><label class="col-sm-2 control-label">Postal Code / Status</label>
+                      <div class="col-sm-5">
+                        <%= f.number_field :postal_code,:class => 'form-control',:placeholder => "Postal Code" %>
+                      </div>
+                      <div class="col-sm-5">
+                        <%= f.select :status, options_for_select(Customer::STATUSES,:selected => @customer.status),{},{:class => 'form-control'} %>
+                      </div>
+                    </div>
+
+                    <div class="form-group"><label class="col-sm-2 control-label"></label>
+                      <button class="btn btn-primary " type="button" id="submit_button"><i class="fa fa-check"></i>&nbsp;Submit</button>
+                      <button class="btn btn-white btn-sm" type="button" id="cancel_category_button">Cancel</button>
+                    </div>
+                  </fieldset>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script type="text/javascript">
+    $( document ).ready(function() {
+        $("#submit_button").click(function(){
+            $('#submit_customer').submit()
+        });
+        $("#cancel_category_button").click(function(){
+            location.href ="<%= customers_path %>"
+        });
+    });
+</script>

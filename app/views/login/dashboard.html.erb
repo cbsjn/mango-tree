@@ -1,2 +1,11 @@
 Welcome : <%= session[:user_name] %> <br/>
 Role : <%= session[:role] %>
+
+
+<script type="text/javascript" src="https://appcenter.intuit.com/Content/IA/intuit.ipp.anywhere.js"></script>
+<script>
+
+      intuit.ipp.anywhere.setup({menuProxy: '/path/to/blue-dot', grantUrl: '<%= quick_books_authenticate_path %>'});
+
+</script>
+<ipp:connectToIntuit></ipp:connectToIntuit>

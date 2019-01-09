@@ -1,0 +1,72 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+  <div class="col-lg-10">
+    <h2>Customers</h2>
+  </div>
+</div>
+<div class="wrapper wrapper-content animated fadeInRight">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="ibox">
+      	<div class="ibox-title">
+           <h5>Customers List</h5>
+            <div class="ibox-tools">
+               <%= link_to 'Create New Customer',new_customer_path, :class => "btn btn-w-m btn-primary", :title => "Add Customer"%>
+            </div>
+        </div>
+        <div class="ibox-content">
+		   <%= render :partial => "shared/notifier"%>
+          <% if @customers.present? %>
+              <table class="footable table table-stripped toggle-arrow-tiny" data-page-size="15">
+                <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Company Name</th>
+                  <th>Mobile</th>
+                  <th>Email</th>
+                  <th>Status</th>
+                  <th>Created At</th>
+                  <th class="text-right">Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <% @customers.each do |customer| %>
+                    <tr>
+                      <td>
+                        <%= customer.first_name %> <%= customer.middle_name %> <%= customer.last_name %>
+                      </td>
+                       <td>
+                        <%= customer.company_name %>
+                      </td>
+                      <td>
+                        <%= customer.mobile %>
+                      </td>
+                      <td>
+                        <%= customer.email %>
+                      </td>
+                      <td>
+                        <%= Customer::STATUSES.key(customer.status) %>
+                      </td>
+                      <td>
+                        <%= customer.created_at %>
+                      </td>
+                      <td class="project-actions">
+                        <%= link_to '<i class="fa fa-pencil"></i> Edit'.html_safe,edit_customer_path(customer),:class => 'btn btn-white btn-sm'%>
+                        <%= link_to '<i class="fa fa-cloud-upload"></i> Sync to Quickbook'.html_safe,sync_to_quickbook_customers_path(customer),:class => 'btn btn-white btn-sm'%>
+                        <%= link_to '<i class="fa fa-trash-o"></i> Destroy'.html_safe,customer_path(customer),  :method => 'delete', :class => 'btn btn-white btn-sm', data: { confirm: 'Are you sure?' }%>
+                      </td>
+                    </tr>
+                <% end %>
+                </tbody>
+              </table>
+          <% else %>
+              <div class="alert alert-danger" style="text-align: center;"> No Customer Added Yet</div>
+          <% end %>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
