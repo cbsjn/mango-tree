@@ -41,7 +41,20 @@ class CustomersController < ApplicationController
   end
 
   def sync_to_quickbook
-  	flash[:notice] = "Customer Synced successfully to Quickbook."
+  	customer = Customer.find(params[:id])
+  	qb_customer_service = Quickbooks::Service::Customer.new
+		qb_customer_service.company_id = COMPANY_ID 
+		qb_customer_service.access_token = qb_token.token
+
+  	qb_customer = Quickbooks::Model::Customer.new
+		qb_customer.display_name = customer.display_name
+		qb_customer.email_address = customer.email
+		qb_customer.primary_phone = customer.phone
+		created_customer = qb_customer_service.create(qb_customer)
+
+		created_customer_id = created_customer.id
+		created_customer_name = created_customer.display_name
+  	flash[:notice] = "Customer Synced successfully to Quickbook. #{created_customer_id}"
   	redirect_to customers_path
   end
 

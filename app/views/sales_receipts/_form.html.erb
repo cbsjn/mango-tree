@@ -1,0 +1,96 @@
+<div class="wrapper wrapper-content animated fadeInRight">
+<%= render :partial => "shared/notifier"%>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="tabs-container">
+        <div class="ibox-title">
+          <h5><%= @sales_receipt.new_record? ? 'Add Sales Receipt Details' :  'Edit Sales Receipt Details' %></h5>
+        </div>
+
+        <div class="tab-content">
+          <div id="tab-1" class="tab-pane active">
+            <div class="panel-body">
+              <%= form_for @sales_receipt,:html => {:id => 'submit_sales_receipt'} do |f| %>
+                  <fieldset class="form-horizontal">
+
+                    <div class="form-group"><label class="col-sm-2 control-label">Customer:</label>
+                      <div class="col-sm-3">
+                        <%= f.select :customer_id, options_for_select(get_customers, :selected => @sales_receipt.customer_id),{:prompt => '-Select Customer-'},{:class => 'form-control'} %>
+                      </div>
+                      <div class="col-sm-3">
+                        <%= f.email_field :email,:class => 'form-control',:placeholder => "Email" %>
+                      </div>
+                       <div class="col-sm-3">
+                        <%= f.date_field :receipt_date,:class => 'form-control',:placeholder => "Receipt Date" %>
+                      </div>
+                    </div>
+
+                   
+
+                    <div class="form-group"><label class="col-sm-2 control-label">Billing Address:</label>
+                      <div class="col-sm-5">
+                        <%= f.text_field :billing_address,:class => 'form-control',:placeholder => "Billing Address" %>
+                      </div>
+                      <div class="col-sm-5">
+                        <%= f.select :place_of_supply, options_for_select(SalesReceipt::PLACE_OF_SUPPLY, :selected => @sales_receipt.place_of_supply),{},{:class => 'form-control'} %>
+                      </div>
+                    </div>
+
+
+                    <div class="form-group"><label class="col-sm-2 control-label">Payment Details:</label>
+                      <div class="col-sm-3">
+                        <%= f.select :payment_method, options_for_select(SalesReceipt::PAYMENT_METHOD, :selected => @sales_receipt.payment_method),{:prompt => '-Select Payment Method-'},{:class => 'form-control'} %>
+                      </div>
+                       <div class="col-sm-4">
+                         <%= f.text_field :reference_no,:class => 'form-control',:placeholder => "Reference No." %>
+                      </div>
+                       <div class="col-sm-3">
+                        <%= f.select :deposit_to, options_for_select(SalesReceipt::DEPOSIT_TO, :selected => @sales_receipt.deposit_to),{:prompt => '-Select Deposit To-'},{:class => 'form-control'} %>
+                      </div>
+                    </div>
+
+
+                    <div class="form-group"><label class="col-sm-2 control-label">Message:</label>
+                      <div class="col-sm-10">
+                        <div class="summernote">
+                          <%= f.text_area :message,:class =>  "form-control",:placeholder => 'Please Enter Message' %>
+                        </div>
+                      </div>
+                    </div>
+
+                    <% unless @sales_receipt.new_record? %>
+                      <div class="form-group"><label class="col-sm-2 control-label">Total Qty/Amt:</label>
+                        <div class="col-sm-5">
+                          <%= f.number_field :total_qty,:class => 'form-control',:placeholder => "Total Quantity" %>
+                        </div>
+                        <div class="col-sm-5">
+                         <%= f.number_field :total_amt,:class => 'form-control',:placeholder => "Total Amount" %>
+                        </div>
+                      </div>
+                    <% end %>
+
+                    <div class="form-group"><label class="col-sm-2 control-label"></label>
+                      <button class="btn btn-primary " type="button" id="submit_button"><i class="fa fa-check"></i>&nbsp;Submit</button>
+                      <button class="btn btn-white btn-sm" type="button" id="cancel_category_button">Cancel</button>
+                    </div>
+                  </fieldset>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script type="text/javascript">
+    $( document ).ready(function() {
+        $("#submit_button").click(function(){
+            $('#submit_sales_receipt').submit()
+        });
+        $("#cancel_category_button").click(function(){
+            location.href ="<%= sales_receipts_path %>"
+        });
+    });
+</script>

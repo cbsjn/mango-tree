@@ -12,4 +12,8 @@ class ApplicationController < ActionController::Base
   def current_user
     session[:id].present? ?  User.find(session[:id]) : []
   end
+
+  def qb_token
+    OAuth::AccessToken.new(QB_OAUTH_CONSUMER, OAUTH_CONSUMER_KEY, OAUTH_CONSUMER_SECRET )
+  end
 end

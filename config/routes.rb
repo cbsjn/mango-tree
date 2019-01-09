@@ -16,7 +16,11 @@ Rails.application.routes.draw do
       get 'sync_to_quickbook'
     end
   end
-  resources :sales_receipts
+  resources :sales_receipts do
+    collection do
+      get 'sync_to_quickbook'
+    end
+  end
   get 'quick_books/authenticate'
   get 'quick_books/oauth_callback'
 end

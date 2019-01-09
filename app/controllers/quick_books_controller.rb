@@ -3,6 +3,14 @@ class QuickBooksController < ApplicationController
 	def index 
 	end 
 	
+
+  def authenticate
+    callback = quickbooks_oauth_callback_url
+    token = QB_OAUTH_CONSUMER.get_request_token(:oauth_callback => callback)
+    session[:qb_request_token] = token
+    redirect_to("https://appcenter.intuit.com/Connect/Begin?oauth_token=#{token.token}") and return
+  end
+
 	def create_customer 
 		@customer_service = Quickbooks::Service::Customer.new 
 		access_token = OAuth::AccessToken.new(QB_OAUTH_CONSUMER, session[:token], session[:secret] ) 
@@ -17,6 +25,7 @@ class QuickBooksController < ApplicationController
     session[:token] = at.token  # Insert Quickbooks Access token into Session
     session[:secret] = at.secret # Insert Quickbooks Secret into Session
     session[:realm_id] = params['realmId'] # Insert Company ID into Session
+    raise at.inspect
     self.create_customer()  # Call Create Customer Function
     self.destory_sesssion() # Destroy the Current Session
     redirect_to root_url

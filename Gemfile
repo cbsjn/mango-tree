@@ -19,8 +19,9 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 gem 'will_paginate'
-gem 'quickbooks-ruby'
+gem 'quickbooks-ruby', git: 'git://github.com/ruckus/quickbooks-ruby.git'
 gem 'sendgrid-ruby'
+gem 'oauth-plugin'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 

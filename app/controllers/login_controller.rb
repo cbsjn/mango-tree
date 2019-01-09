@@ -21,7 +21,7 @@ class LoginController < ApplicationController
       flash[:notice] = 'User details have been created successfully.'
       redirect_to dashboard_login_index_path
     else
-      flash['warning'] = @user.errors.full_messages
+      flash[:warning] = @user.errors.full_messages
       redirect_to new_login_path
     end
   end
