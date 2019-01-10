@@ -5,15 +5,15 @@ class QuickBooksController < ApplicationController
 	
 
   def authenticate
-    callback = quickbooks_oauth_callback_url
-    token = QB_OAUTH_CONSUMER.get_request_token(:oauth_callback => callback)
+    callback = quick_books_oauth_callback_url
+    token = $qb_consumer.get_request_token(:oauth_callback => callback)
     session[:qb_request_token] = token
     redirect_to("https://appcenter.intuit.com/Connect/Begin?oauth_token=#{token.token}") and return
   end
 
 	def create_customer 
 		@customer_service = Quickbooks::Service::Customer.new 
-		access_token = OAuth::AccessToken.new(QB_OAUTH_CONSUMER, session[:token], session[:secret] ) 
+		access_token = OAuth::AccessToken.new($qb_consumer, session[:token], session[:secret] ) 
 		@customer_service.access_token = access_token 
 		@customer_service.company_id = session[:realm_id] # realm_id is your company_id customer = Quickbooks::Model::Customer.new customer.given_name = "test" # Customer Name (Unique) customer.email_address = "test@buffercode.in" # Customer Email @customer_id = @customer_service.create(customer) if(!@customer_id.blank?) self.create_invoice(@customer_id) # Call Invoice Create Function end end def authenticate callback = quick_books_oauth_callback_url token = QB_OAUTH_CONSUMER.get_request_token(:oauth_callback => callback)
     session[:qb_request_token] = Marshal.dump(token)
@@ -25,14 +25,11 @@ class QuickBooksController < ApplicationController
     session[:token] = at.token  # Insert Quickbooks Access token into Session
     session[:secret] = at.secret # Insert Quickbooks Secret into Session
     session[:realm_id] = params['realmId'] # Insert Company ID into Session
-    raise at.inspect
-    self.create_customer()  # Call Create Customer Function
-    self.destory_sesssion() # Destroy the Current Session
     redirect_to root_url
   end
 
   def create_invoice(customer)
-    access_token = OAuth::AccessToken.new(QB_OAUTH_CONSUMER, session[:token], session[:secret] )
+    access_token = OAuth::AccessToken.new($qb_consumer, session[:token], session[:secret] )
     invoice = Quickbooks::Model::Invoice.new
     invoice.customer_id = customer.id # Customer Id
     invoice.txn_date = Date.civil(2016, 10, 04) # Date of Invoice

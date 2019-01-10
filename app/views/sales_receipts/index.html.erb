@@ -56,6 +56,7 @@
                       </td>
                       <td class="project-actions">
                         <%= link_to '<i class="fa fa-pencil"></i> Edit'.html_safe,edit_sales_receipt_path(sales_receipt),:class => 'btn btn-white btn-sm'%>
+                        <%= link_to "<i class='fa fa-plus'></i> Add Items(#{sales_receipt.sales_receipt_details.count})".html_safe, sales_receipt_details_path(sales_receipt_id: sales_receipt),:class => 'btn btn-white btn-sm'%>
                         <%= link_to '<i class="fa fa-cloud-upload"></i> Sync to Quickbook'.html_safe,sync_to_quickbook_sales_receipts_path(id: sales_receipt),:class => 'btn btn-white btn-sm'%>
                         <%= link_to '<i class="fa fa-trash-o"></i> Destroy'.html_safe,sales_receipt_path(sales_receipt),  :method => 'delete', :class => 'btn btn-white btn-sm', data: { confirm: 'Are you sure?' }%>
                       </td>

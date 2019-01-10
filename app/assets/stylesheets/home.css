@@ -7,7 +7,7 @@ ul, ol {list-style:none;}
 a {text-decoration:none;}
 a img {border:none;}
 .clr {height:1px; clear:both; overflow:hidden;}
-.logo {width:179px;height:30px;background:url(home/logo.png) no-repeat 0 0; float:left;margin:8px 50px 0 27px; }
+.logo {width:179px;height:43px;background:url(home/logo.png) no-repeat 0 0; float:left;margin:-3px 50px 0 25px; }
 nav-home {display:block;}
 header {height:50px;}
 nav-home ul {list-style:none; padding-top:20px; float:left;display:block;width:auto;}

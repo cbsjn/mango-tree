@@ -10,7 +10,7 @@ Rails.application.routes.draw do
       get 'sign_out'
     end
   end
-  resources :quick_books
+  #resources :quick_books
   resources :customers do
     collection do
       get 'sync_to_quickbook'
@@ -21,6 +21,7 @@ Rails.application.routes.draw do
       get 'sync_to_quickbook'
     end
   end
+  resources :sales_receipt_details
   get 'quick_books/authenticate'
   get 'quick_books/oauth_callback'
 end
