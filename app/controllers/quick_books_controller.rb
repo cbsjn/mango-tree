@@ -4,6 +4,16 @@ class QuickBooksController < ApplicationController
 	end 
 	
 
+  def oauth2_client
+    Rack::OAuth2::Client.new(
+      identifier: OAUTH_CONSUMER_KEY,
+      secret: OAUTH_CONSUMER_SECRET,
+      redirect_uri: "http://localhost:3000/oauth_callback",
+      authorization_endpoint: "https://appcenter.intuit.com/connect/oauth2",
+      token_endpoint: "https://oauth.platform.intuit.com/oauth2/v1/tokens/bearer"
+    )
+  end
+
   def authenticate
     callback = quick_books_oauth_callback_url
     token = $qb_consumer.get_request_token(:oauth_callback => callback)
@@ -21,15 +31,25 @@ class QuickBooksController < ApplicationController
   end
 
   def oauth_callback
-    at = Marshal.load(session[:qb_request_token]).get_access_token(:oauth_verifier => params[:oauth_verifier])
-    session[:token] = at.token  # Insert Quickbooks Access token into Session
-    session[:secret] = at.secret # Insert Quickbooks Secret into Session
-    session[:realm_id] = params['realmId'] # Insert Company ID into Session
-    redirect_to root_url
+    #raise "#{oauth2_client.access_token!}---".inspect
+    # at = Marshal.load(session[:qb_request_token]).get_access_token(:oauth_verifier => params[:oauth_verifier])
+    # at = session[:qb_request_token].get_access_token(:oauth_verifier => params[:oauth_verifier])
+    resp = oauth2_client.access_token!
+    #raise"---ACCESS TOKEN --- #{resp.access_token}------REFRESH TOKEN ---- #{resp.refresh_token}"
+    session[:token] = resp.access_token  # Insert Quickbooks Access token into Session
+    session[:secret] = OAUTH_CONSUMER_SECRET # Insert Quickbooks Secret into Session
+    session[:realm_id] = params[:realmId] # Insert Company ID into Session
+    session[:code] = params[:code]
+    create_invoice()
+    puts session[:token].inspect
+    puts '----------------------------------'
+    render json: {'STATUS' => 'Succesfull'}
   end
 
-  def create_invoice(customer)
-    access_token = OAuth::AccessToken.new($qb_consumer, session[:token], session[:secret] )
+  def create_invoice()
+    customer = Customer.first
+    #access_token = OAuth::AccessToken.new($qb_consumer, session[:token], session[:secret] )
+    access_token = session[:token]
     invoice = Quickbooks::Model::Invoice.new
     invoice.customer_id = customer.id # Customer Id
     invoice.txn_date = Date.civil(2016, 10, 04) # Date of Invoice

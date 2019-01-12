@@ -43,13 +43,13 @@ class CustomersController < ApplicationController
   def sync_to_quickbook
   	customer = Customer.find(params[:id])
   	qb_customer_service = Quickbooks::Service::Customer.new
-		qb_customer_service.company_id = COMPANY_ID 
-		qb_customer_service.access_token = qb_token.token
-
+		qb_customer_service.company_id = session[:realm_id] 
+		qb_customer_service.access_token = session[:token]
+raise qb_customer_service.inspect
   	qb_customer = Quickbooks::Model::Customer.new
 		qb_customer.display_name = customer.display_name
 		qb_customer.email_address = customer.email
-		qb_customer.primary_phone = customer.phone
+		#qb_customer.primary_phone = customer.phone
 		created_customer = qb_customer_service.create(qb_customer)
 
 		created_customer_id = created_customer.id

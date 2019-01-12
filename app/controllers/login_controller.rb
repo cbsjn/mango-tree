@@ -48,7 +48,21 @@ class LoginController < ApplicationController
   end
 
   def dashboard
+    #session[:state] = SecureRandom.uuid
+    #session[:response_type] = 'code'
+    #@client = oauth2_client
+    @state = SecureRandom.uuid
+    @redirect_uri = 'http://localhost:3000/quick_books/oauth_callback'
+  end
 
+  def oauth2_client
+    Rack::OAuth2::Client.new(
+      identifier: OAUTH_CONSUMER_KEY,
+      secret: OAUTH_CONSUMER_SECRET,
+      redirect_uri: "http://localhost:3000/quick_books/oauth_callback",
+      authorization_endpoint: "https://appcenter.intuit.com/connect/oauth2",
+      token_endpoint: "https://oauth.platform.intuit.com/oauth2/v1/tokens/bearer"
+    )
   end
 
   private
