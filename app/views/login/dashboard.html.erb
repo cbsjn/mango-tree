@@ -1,16 +1,15 @@
 Welcome : <%= session[:user_name] %> <br/>
 Role : <%= session[:role] %>
-<!--
-<ipp:connectToIntuit></ipp:connectToIntuit>
-<script type="text/javascript" src="https://appcenter.intuit.com/Content/IA/intuit.ipp.anywhere-1.3.1.js"></script>
+
+<script type="text/javascript" src="https://appcenter.intuit.com/Content/IA/intuit.ipp.anywhere.js"></script>
 <script>
 
       intuit.ipp.anywhere.setup({menuProxy: '/path/to/blue-dot', grantUrl: '<%= quick_books_authenticate_url %>'});
 
 </script>
--->
 
 
+<!--
 <script type="text/javascript" src="<%= APP_CENTER_BASE %>/Content/IA/intuit.ipp.anywhere-1.3.1.js"></script>
 <script>
   intuit.ipp.anywhere.setup({
@@ -20,4 +19,7 @@ Role : <%= session[:role] %>
     }
   });
 </script>
-<ipp:connectToIntuit></ipp:connectToIntuit>
+-->
+<% if session[:token] %>
+	<ipp:connectToIntuit></ipp:connectToIntuit>
+<% end %>

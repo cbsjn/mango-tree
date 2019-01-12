@@ -48,9 +48,6 @@ class LoginController < ApplicationController
   end
 
   def dashboard
-    #session[:state] = SecureRandom.uuid
-    #session[:response_type] = 'code'
-    #@client = oauth2_client
     @state = SecureRandom.uuid
     @redirect_uri = 'http://localhost:3000/quick_books/oauth_callback'
   end

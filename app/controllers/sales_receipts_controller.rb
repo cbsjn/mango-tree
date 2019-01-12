@@ -41,19 +41,33 @@ class SalesReceiptsController < ApplicationController
   end
 
   def sync_to_quickbook
+    user = current_user
   	sales_receipt = SalesReceipt.find(params[:id])
-  	qb_sales_receipt_service = Quickbooks::Service::SalesReceipt.new
-		qb_sales_receipt_service.company_id = COMPANY_ID 
-		qb_sales_receipt_service.access_token = qb_token.token
 
-  	qb_sales_receipt = Quickbooks::Model::SalesReceipt.new
-		qb_sales_receipt.display_name = SalesReceipt.display_name
-		qb_sales_receipt.email_address = SalesReceipt.email
-		qb_sales_receipt.primary_phone = SalesReceipt.phone
-		created_sales_receipt = qb_SalesReceipt_service.create(qb_SalesReceipt)
+    salesreceipt = Quickbooks::Model::SalesReceipt.new({
+      customer_id: sales_receipt.customer.id,
+      txn_date: Date.civil(2019, 01, 13),
+      payment_ref_number: sales_receipt.reference_no, #optional payment reference number/string - e.g. stripe token
+      deposit_to_account_id: 222, #The ID of the Account entity you want the SalesReceipt to be deposited to
+      payment_method_id: 333 #The ID of the PaymentMethod entity you want to be used for this transaction
+    })
+    salesreceipt.auto_doc_number! #allows Intuit to auto-generate the transaction number
 
-		created_sales_receipt_id = created_sales_receipt.id
-		created_sales_receipt_name = created_sales_receipt.display_name
+    line_item = Quickbooks::Model::Line.new
+    line_item.amount = 50
+    line_item.description = "Plush Baby Doll"
+    line_item.sales_item! do |detail|
+      detail.unit_price = 50
+      detail.quantity = 1
+      detail.item_id = 500 # Item (Product/Service) ID here
+    end
+
+    salesreceipt.line_items << line_item
+
+    service = Quickbooks::Service::SalesReceipt.new({access_token: user.qb_token, company_id: user.realm_id })
+    created_receipt = service.create(salesreceipt)
+
+
   	flash[:notice] = "SalesReceipt Synced successfully to Quickbook. #{created_sales_receipt.id}"
   	redirect_to sales_receipts_path
   end

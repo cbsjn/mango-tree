@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190109082522) do
+ActiveRecord::Schema.define(version: 20190112184114) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 20190109082522) do
     t.boolean  "status",                   default: true
     t.datetime "created_at",                              null: false
     t.datetime "updated_at",                              null: false
+    t.integer  "qb_cust_id"
   end
 
   create_table "sales_receipt_details", force: :cascade do |t|
@@ -65,19 +66,26 @@ ActiveRecord::Schema.define(version: 20190109082522) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "prefix",     limit: 6
-    t.string   "first_name", limit: 200
-    t.string   "last_name",  limit: 200
+    t.string   "prefix",             limit: 6
+    t.string   "first_name",         limit: 200
+    t.string   "last_name",          limit: 200
     t.integer  "age"
     t.integer  "sex"
-    t.string   "mobile",     limit: 20
-    t.string   "email",      limit: 200
+    t.string   "mobile",             limit: 20
+    t.string   "email",              limit: 200
     t.string   "password"
     t.integer  "role_id"
     t.string   "created_by"
     t.string   "updated_by"
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.text     "qb_token"
+    t.text     "secret"
+    t.string   "realm_id"
+    t.string   "code"
+    t.string   "state"
+    t.datetime "token_generated_at"
+    t.text     "refresh_token"
   end
 
 end

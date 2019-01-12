@@ -41,21 +41,49 @@ class CustomersController < ApplicationController
   end
 
   def sync_to_quickbook
-  	customer = Customer.find(params[:id])
-  	qb_customer_service = Quickbooks::Service::Customer.new
-		qb_customer_service.company_id = session[:realm_id] 
-		qb_customer_service.access_token = session[:token]
-raise qb_customer_service.inspect
-  	qb_customer = Quickbooks::Model::Customer.new
-		qb_customer.display_name = customer.display_name
-		qb_customer.email_address = customer.email
-		#qb_customer.primary_phone = customer.phone
-		created_customer = qb_customer_service.create(qb_customer)
+    user = current_user
+    cust = Customer.where(id: params[:id]).first
+    access_token = OAuth2::AccessToken.new($qb_consumer, user.qb_token, {refresh_token: user.refresh_token})
+    new_access_token = access_token.refresh!
+    # raise "#{new_access_token.token} ------------ #{new_access_token.refresh_token}"
+    redirect_to customers_path if cust&.qb_cust_id.present?
+    cust_json = {
+                  'FullyQualifiedName' => "#{cust.first_name} #{cust.last_name}", 
+                  'PrimaryEmailAddr' => {
+                    'Address' => cust.email
+                  }, 
+                  'DisplayName' => cust.display_name, 
+                  'Suffix' => cust.suffix, 
+                  'Title' => cust.title, 
+                  'MiddleName' => cust.middle_name, 
+                  'Notes' => cust.notes, 
+                  'FamilyName' => cust.last_name, 
+                  'PrimaryPhone' => {
+                    'FreeFormNumber' => cust.phone
+                  }, 
+                  'CompanyName' => cust.company_name, 
+                  'BillAddr' => {
+                    'CountrySubDivisionCode' => cust.state, 
+                    'City' => cust.city, 
+                    'PostalCode' => cust.postal_code, 
+                    'Line1' => cust.address1, 
+                    'Country' => cust.country
+                  }, 
+                  'GivenName' => cust.first_name
+                }
 
-		created_customer_id = created_customer.id
-		created_customer_name = created_customer.display_name
-  	flash[:notice] = "Customer Synced successfully to Quickbook. #{created_customer_id}"
-  	redirect_to customers_path
+
+      @result = HTTParty.post("https://sandbox-quickbooks.api.intuit.com/v3/company/#{user.realm_id}/customer", 
+          :body => cust_json.to_json,
+          :headers => { 'content-type' => 'application/json',
+                        'Content-Type' => 'application/json',
+                        Authorization: "Bearer #{new_access_token.token}" } 
+          )
+      result = Hash.from_xml(@result.body)
+      qb_cust_id = result['IntuitResponse']['Customer']['Id']
+      cust.update_attributes(qb_cust_id: qb_cust_id)
+      flash[:notice] = "Customer Synced successfully to Quickbook with id : #{qb_cust_id}"
+      redirect_to customers_path
   end
 
   private
