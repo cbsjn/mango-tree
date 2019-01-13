@@ -42,34 +42,45 @@ class SalesReceiptsController < ApplicationController
 
   def sync_to_quickbook
     user = current_user
-  	sales_receipt = SalesReceipt.find(params[:id])
+    sales_receipt = SalesReceipt.where(id: params[:id]).first
+    access_token = OAuth2::AccessToken.new($qb_consumer, user.qb_token, {refresh_token: user.refresh_token})
+    new_access_token = access_token.refresh!
+    redirect_to sales_receipts_path if sales_receipt&.qb_receipt_id.present?
+    sales_json = {
+                    'Line' => [
+                      {
+                        'Description' => sales_receipt.message, 
+                        'DetailType' => 'SalesItemLineDetail', 
+                        'SalesItemLineDetail' => {
+                          'TaxCodeRef' => {
+                            'value' => '2'
+                          }, 
+                          'Qty' => 1, 
+                          'UnitPrice' => sales_receipt.total_amt, 
+                          'ItemRef' => {
+                            'name' => 'Consultancy', 
+                            'value' => '6'
+                          }
+                        }, 
+                        'LineNum' => 1, 
+                        'Amount' => sales_receipt.total_amt, 
+                        'Id' => '1'
+                      }
+                    ]
+                  }
 
-    salesreceipt = Quickbooks::Model::SalesReceipt.new({
-      customer_id: sales_receipt.customer.id,
-      txn_date: Date.civil(2019, 01, 13),
-      payment_ref_number: sales_receipt.reference_no, #optional payment reference number/string - e.g. stripe token
-      deposit_to_account_id: 222, #The ID of the Account entity you want the SalesReceipt to be deposited to
-      payment_method_id: 333 #The ID of the PaymentMethod entity you want to be used for this transaction
-    })
-    salesreceipt.auto_doc_number! #allows Intuit to auto-generate the transaction number
+    @result = HTTParty.post("https://sandbox-quickbooks.api.intuit.com/v3/company/#{user.realm_id}/salesreceipt", 
+        :body => sales_json.to_json,
+        :headers => { 'content-type' => 'application/json',
+                      'Content-Type' => 'application/json',
+                      Authorization: "Bearer #{new_access_token.token}" } 
+        )
+    result = Hash.from_xml(@result.body)
+    qb_receipt_id = result['IntuitResponse']['SalesReceipt']['Id']
+    sales_receipt.update_attributes(qb_receipt_id: qb_receipt_id)
 
-    line_item = Quickbooks::Model::Line.new
-    line_item.amount = 50
-    line_item.description = "Plush Baby Doll"
-    line_item.sales_item! do |detail|
-      detail.unit_price = 50
-      detail.quantity = 1
-      detail.item_id = 500 # Item (Product/Service) ID here
-    end
-
-    salesreceipt.line_items << line_item
-
-    service = Quickbooks::Service::SalesReceipt.new({access_token: user.qb_token, company_id: user.realm_id })
-    created_receipt = service.create(salesreceipt)
-
-
-  	flash[:notice] = "SalesReceipt Synced successfully to Quickbook. #{created_sales_receipt.id}"
-  	redirect_to sales_receipts_path
+    flash[:notice] = "SalesReceipt Synced successfully to Quickbook with ID : #{qb_receipt_id}"
+    redirect_to sales_receipts_path
   end
 
   private
