@@ -20,7 +20,7 @@
               <table class="footable table table-stripped toggle-arrow-tiny" data-page-size="15">
                 <thead>
                 <tr>
-                  <th>Product Name</th>
+                  <th>Item Name</th>
                   <th>Description</th>
                   <th>Quantity</th>
                   <th>Rate</th>
@@ -32,12 +32,12 @@
                 <% @sales_receipt_details.each do |sales_receipt_detail| %>
                     <tr>
                       <td>
-                        <%= sales_receipt_detail.product_name %>
+                        <%= sales_receipt_detail.item&.name %>
                       </td>
                       <td>
                         <%= sales_receipt_detail.product_description %>
                       </td>
-                       <td>
+                      <td>
                         <%= sales_receipt_detail.qty %>
                       </td>
                       

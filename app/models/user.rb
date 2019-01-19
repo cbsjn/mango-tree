@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
   attr_accessor :token
-
+  has_many :customers
+  has_many :items
+  has_many :tax_codes
   validates :email,:uniqueness => true
   validates :email, :presence => true
   validates :password, :presence => true

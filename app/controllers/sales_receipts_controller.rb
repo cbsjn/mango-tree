@@ -69,7 +69,7 @@ class SalesReceiptsController < ApplicationController
                     ]
                   }
 
-    @result = HTTParty.post("https://sandbox-quickbooks.api.intuit.com/v3/company/#{user.realm_id}/salesreceipt", 
+    @result = HTTParty.post("#{BASE_API_URL}/company/#{user.realm_id}/salesreceipt", 
         :body => sales_json.to_json,
         :headers => { 'content-type' => 'application/json',
                       'Content-Type' => 'application/json',

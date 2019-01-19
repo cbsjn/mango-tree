@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190113173436) do
+ActiveRecord::Schema.define(version: 20190119084918) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,7 +35,32 @@ ActiveRecord::Schema.define(version: 20190113173436) do
     t.boolean  "status",                   default: true
     t.datetime "created_at",                              null: false
     t.datetime "updated_at",                              null: false
-    t.integer  "qb_cust_id"
+    t.integer  "qbo_id"
+    t.integer  "user_id"
+  end
+
+  create_table "deposits", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "user_id"
+    t.integer  "qbo_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "items", force: :cascade do |t|
+    t.integer  "qbo_id"
+    t.string   "name",       limit: 200
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.integer  "user_id"
+  end
+
+  create_table "payment_methods", force: :cascade do |t|
+    t.string   "name",       limit: 200
+    t.integer  "user_id"
+    t.integer  "qbo_id"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "sales_receipt_details", force: :cascade do |t|
@@ -47,23 +72,37 @@ ActiveRecord::Schema.define(version: 20190113173436) do
     t.integer  "amt"
     t.datetime "created_at",                      null: false
     t.datetime "updated_at",                      null: false
+    t.integer  "item_id"
+    t.integer  "tax_code_id"
+    t.integer  "user_id"
   end
 
   create_table "sales_receipts", force: :cascade do |t|
     t.integer  "customer_id"
-    t.string   "email",           limit: 200
+    t.string   "email",             limit: 200
     t.jsonb    "billing_address"
     t.datetime "receipt_date"
-    t.string   "place_of_supply", limit: 100
-    t.string   "payment_method",  limit: 100
-    t.string   "reference_no",    limit: 100
-    t.string   "deposit_to",      limit: 100
-    t.string   "message",         limit: 200
+    t.string   "place_of_supply",   limit: 100
+    t.string   "payment_method",    limit: 100
+    t.string   "reference_no",      limit: 100
+    t.string   "deposit_to",        limit: 100
+    t.string   "message",           limit: 200
     t.integer  "total_qty"
     t.integer  "total_amt"
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
     t.integer  "qb_receipt_id"
+    t.integer  "payment_method_id"
+    t.integer  "deposit_to_id"
+    t.integer  "user_id"
+  end
+
+  create_table "tax_codes", force: :cascade do |t|
+    t.string   "name",       limit: 200
+    t.integer  "user_id"
+    t.integer  "qbo_id"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "users", force: :cascade do |t|

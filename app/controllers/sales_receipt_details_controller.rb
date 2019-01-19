@@ -13,7 +13,7 @@ class SalesReceiptDetailsController < ApplicationController
     @sales_receipt_detail = SalesReceiptDetail.new(sales_receipt_detail_params)
     if @sales_receipt_detail.save
       flash[:notice] = "SalesReceiptItem created successfully."
-      redirect_to sales_receipt_details_path
+      redirect_to sales_receipt_details_path(sales_receipt_id: session[:sales_receipt_id])
     else
     	flash[:warning] = @sales_receipt_detail.errors.full_messages
       render :new
@@ -39,7 +39,7 @@ class SalesReceiptDetailsController < ApplicationController
   	@sales_receipt_detail = SalesReceiptDetail.find(params[:id])
 	  @sales_receipt_detail.destroy
 	  flash[:notice] = "SalesReceiptItem deleted successfully."
-	  redirect_to sales_receipt_details_path
+	  redirect_to sales_receipt_details_path(sales_receipt_id: session[:sales_receipt_id])
   end
 
   private

@@ -51,7 +51,7 @@
                       </td>
                       <td class="project-actions">
                         <%= link_to '<i class="fa fa-pencil"></i> Edit'.html_safe,edit_customer_path(customer),:class => 'btn btn-white btn-sm'%>
-                        <% if customer.qb_cust_id.present? %>
+                        <% if customer.qbo_id.present? %>
                             <span class="btn btn-sm btn-info">Already Synced</span>
                         <% else %>
                         <%= link_to '<i class="fa fa-cloud-upload"></i> Sync to Quickbook'.html_safe,sync_to_quickbook_customers_path(id: customer),:class => 'btn btn-white btn-sm'%>

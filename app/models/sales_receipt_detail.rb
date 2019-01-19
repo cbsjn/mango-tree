@@ -1,5 +1,6 @@
 class SalesReceiptDetail < ApplicationRecord
 	belongs_to :sales_receipt
+	belongs_to :item
 	before_save :save_amount
 	after_save :save_total_qty_and_amt
 

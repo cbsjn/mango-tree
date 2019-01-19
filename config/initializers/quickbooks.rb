@@ -5,7 +5,7 @@ COMPANY_ID = 123146245982354
 APP_CENTER_BASE            = 'https://appcenter.intuit.com'
 APP_CENTER_URL             =  APP_CENTER_BASE + '/Connect/Begin?oauth_token='
 APP_CONNECTION_URL         = APP_CENTER_BASE + '/api/v1/connection'
- 
+BASE_API_URL = 'https://sandbox-quickbooks.api.intuit.com/v3'
 =begin  
 # OAUTH_CONSUMER_KEY = 'Q0g1nvFjRn5Yrm0XFMJLCM9lb71UFxnqoa6UyUb4DoTQY9Tp7P'
 # OAUTH_CONSUMER_SECRET = '9lkICZLKe7AirxoRp54kNAP6U3IhZKQD3imwPH8J'

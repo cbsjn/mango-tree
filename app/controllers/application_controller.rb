@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
 
   def init_session(obj)
     session[:id] = obj.id
+    session[:user_id] = obj.id
     session[:user_name] = "#{obj.first_name} #{obj.last_name}"
     session[:email] = obj.email
     session[:role] = User::ROLES.key(obj.role_id)
