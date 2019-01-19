@@ -47,31 +47,47 @@ class SalesReceiptsController < ApplicationController
   def sync_to_quickbook
     user = current_user
     sales_receipt = SalesReceipt.where(id: params[:id]).first
+    redirect_to sales_receipts_path if sales_receipt&.qb_receipt_id.present?
+
     access_token = OAuth2::AccessToken.new($qb_consumer, user.qb_token, {refresh_token: user.refresh_token})
     new_access_token = access_token.refresh!
-    redirect_to sales_receipts_path if sales_receipt&.qb_receipt_id.present?
+
     sales_json = {
-                    'Line' => [
-                      {
-                        'Description' => sales_receipt.message, 
-                        'DetailType' => 'SalesItemLineDetail', 
-                        'SalesItemLineDetail' => {
-                          'TaxCodeRef' => {
-                            'value' => '2'
-                          }, 
-                          'Qty' => 1, 
-                          'UnitPrice' => sales_receipt.total_amt, 
-                          'ItemRef' => {
-                            'name' => 'Consultancy', 
-                            'value' => '6'
-                          }
-                        }, 
-                        'LineNum' => 1, 
-                        'Amount' => sales_receipt.total_amt, 
-                        'Id' => '1'
-                      }
-                    ]
+                  'TxnDate' => sales_receipt.receipt_date.strftime('%Y-%m-%d'),
+                  'PaymentRefNum' => sales_receipt.reference_no, 
+                  'TotalAmt' => sales_receipt.total_amt,
+                  'PrivateNote' => sales_receipt.message, 
+                  'PaymentMethodRef' => {
+                                          'name' => sales_receipt.payment_method&.name,
+                                          'value' => sales_receipt.payment_method_id
+                                        },
+                  'CustomerRef' => {
+                                      'name' => sales_receipt.customer&.display_name, 
+                                      'value' => sales_receipt.customer&.qbo_id
+                                    },
+
+                  'Line' => []
                   }
+    sales_receipt.sales_receipt_details.each_with_index do |sd, index|
+      sales_json['Line'] << { 
+                              'Id' => index + 1,
+                              'LineNum' => index + 1,
+                              'Amount' => sd.amt,
+                              'Description' => sd.product_description,
+                              'DetailType' => 'SalesItemLineDetail',
+                              'SalesItemLineDetail' => {
+                                                        'Qty' => sd.qty,
+                                                        'UnitPrice' => sd.rate,
+                                                        'TaxCodeRef' => {
+                                                          'value' => sd.tax_code_id
+                                                        },
+                                                        'ItemRef' => {
+                                                          'value' => sd.item_id,
+                                                          'name' => sd.item&.name
+                                                        }
+                              }
+                            }
+    end
 
     @result = HTTParty.post("#{BASE_API_URL}/company/#{user.realm_id}/salesreceipt", 
         :body => sales_json.to_json,

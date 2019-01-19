@@ -49,12 +49,15 @@
                       </div>
                     </div>
 
-                    <div class="form-group"><label class="col-sm-2 control-label">Phone/Mobile:</label>
-                      <div class="col-sm-5">
+                    <div class="form-group"><label class="col-sm-2 control-label">Phone/Mobile/Status:</label>
+                      <div class="col-sm-4">
                         <%= f.text_field :phone,:class => 'form-control',:placeholder => "Phone" %>
                       </div>
-                      <div class="col-sm-5">
+                      <div class="col-sm-4">
                         <%= f.text_field :mobile,:class => 'form-control',:placeholder => "Mobile" %>
+                      </div>
+                      <div class="col-sm-2">
+                        <%= f.select :status, options_for_select(Customer::STATUSES,:selected => @customer.status),{},{:class => 'form-control'} %>
                       </div>
                     </div>
 
@@ -89,16 +92,16 @@
                       </div>
                     </div>
 
-                    <div class="form-group"><label class="col-sm-2 control-label">Payment Method / Status</label>
+                    <!--<div class="form-group"><label class="col-sm-2 control-label">Payment Method / Status</label>
                       <div class="col-sm-5">
-                        <%= f.select :payment_method_id, options_for_select(get_payment_methods, :selected => @customer.payment_method_id),{:prompt => '-Select Payment Method-'},{:class => 'form-control'} %>
+                        <%#= f.select :payment_method_id, options_for_select(get_payment_methods, :selected => @customer.payment_method_id),{:prompt => '-Select Payment Method-'},{:class => 'form-control'} %>
 
                       </div>
 
                       <div class="col-sm-5">
-                        <%= f.select :status, options_for_select(Customer::STATUSES,:selected => @customer.status),{},{:class => 'form-control'} %>
+                        <%#= f.select :status, options_for_select(Customer::STATUSES,:selected => @customer.status),{},{:class => 'form-control'} %>
                       </div>
-                    </div>
+                    </div>-->
 
                     <div class="form-group"><label class="col-sm-2 control-label"></label>
                       <button class="btn btn-primary " type="button" id="submit_button"><i class="fa fa-check"></i>&nbsp;Submit</button>
