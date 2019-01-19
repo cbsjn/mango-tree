@@ -12,7 +12,7 @@
             <div class="panel-body">
               <%= form_for @customer,:html => {:id => 'submit_customer'} do |f| %>
                   <fieldset class="form-horizontal">
-
+                    <%= f.hidden_field :user_id,:class => 'form-control', :value => session[:user_id] %>
                     <div class="form-group"><label class="col-sm-2 control-label">Full Name:</label>
                       <div class="col-sm-1">
                         <%= f.select :title, options_for_select(Customer::TITLE, :selected => @customer.title),{},{:class => 'form-control'} %>

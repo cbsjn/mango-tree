@@ -13,6 +13,7 @@
               <%= form_for @sales_receipt_detail,:html => {:id => 'submit_sales_receipt'} do |f| %>
                   <fieldset class="form-horizontal">
                     <%= f.hidden_field :sales_receipt_id,:class => 'form-control', :value => session[:sales_receipt_id] %>
+                    <%= f.hidden_field :user_id,:class => 'form-control', :value => session[:user_id] %>
                     <div class="form-group"><label class="col-sm-2 control-label">Item Name:</label>
                       <div class="col-sm-5">
                         <%= f.select :item_id, options_for_select(get_items, :selected => @sales_receipt_detail.item_id),{:prompt => '-Select Item-'},{:class => 'form-control'} %>

@@ -21,7 +21,11 @@ class SalesReceiptDetailsController < ApplicationController
   end
 
   def edit
-    @sales_receipt_detail = SalesReceiptDetail.find(params[:id])
+    @sales_receipt_detail = SalesReceiptDetail.where(id: params[:id], user_id: session[:user_id]).first
+    unless @sales_receipt_detail.present?
+      flash[:warning] = 'Restricted Access'
+      redirect_to sales_receipt_details_path(sales_receipt_id: session[:sales_receipt_id])
+    end
   end
 
   def update

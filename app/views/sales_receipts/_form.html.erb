@@ -12,7 +12,7 @@
             <div class="panel-body">
               <%= form_for @sales_receipt,:html => {:id => 'submit_sales_receipt'} do |f| %>
                   <fieldset class="form-horizontal">
-
+                    <%= f.hidden_field :user_id,:class => 'form-control', :value => session[:user_id] %>
                     <div class="form-group"><label class="col-sm-2 control-label">Customer:</label>
                       <div class="col-sm-3">
                         <%= f.select :customer_id, options_for_select(get_customers, :selected => @sales_receipt.customer_id),{:prompt => '-Select Customer-'},{:class => 'form-control'} %>

@@ -1,6 +1,6 @@
 class SalesReceiptsController < ApplicationController
 	def index
-    @sales_receipts = SalesReceipt.all
+    @sales_receipts = SalesReceipt.where(user_id: session[:user_id])
   end
 
   def new
@@ -19,7 +19,11 @@ class SalesReceiptsController < ApplicationController
   end
 
   def edit
-    @sales_receipt = SalesReceipt.find(params[:id])
+    @sales_receipt = SalesReceipt.where(id: params[:id], user_id: session[:user_id]).first
+    unless @sales_receipt.present?
+      flash[:warning] = 'Restricted Access'
+      redirect_to sales_receipts_path
+    end
   end
 
   def update
