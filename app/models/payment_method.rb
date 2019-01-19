@@ -1,6 +1,7 @@
 class PaymentMethod < ApplicationRecord
 	belongs_to :user
 	has_many :sales_receipts
+  has_many :customers
 
   def self.synced(user)
     self.where("user_id = ? and qbo_id IS NOT NULL", user.id).order(:name)

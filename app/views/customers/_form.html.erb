@@ -75,21 +75,26 @@
                     </div>
 
                     <div class="form-group"><label class="col-sm-2 control-label">Locality:</label>
-                      <div class="col-sm-4">
+                      <div class="col-sm-3">
                         <%= f.text_field :city,:class => 'form-control',:placeholder => "City" %>
                       </div>
                       <div class="col-sm-3">
                         <%= f.text_field :state,:class => 'form-control',:placeholder => "State" %>
                       </div>
-                      <div class="col-sm-3">
+                      <div class="col-sm-2">
                         <%= f.text_field :country,:class => 'form-control',:placeholder => "Country" %>
+                      </div>
+                      <div class="col-sm-2">
+                        <%= f.number_field :postal_code,:class => 'form-control',:placeholder => "Postal Code" %>
                       </div>
                     </div>
 
-                    <div class="form-group"><label class="col-sm-2 control-label">Postal Code / Status</label>
+                    <div class="form-group"><label class="col-sm-2 control-label">Payment Method / Status</label>
                       <div class="col-sm-5">
-                        <%= f.number_field :postal_code,:class => 'form-control',:placeholder => "Postal Code" %>
+                        <%= f.select :payment_method_id, options_for_select(get_payment_methods, :selected => @customer.payment_method_id),{:prompt => '-Select Payment Method-'},{:class => 'form-control'} %>
+
                       </div>
+
                       <div class="col-sm-5">
                         <%= f.select :status, options_for_select(Customer::STATUSES,:selected => @customer.status),{},{:class => 'form-control'} %>
                       </div>

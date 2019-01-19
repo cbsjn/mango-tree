@@ -1,6 +1,6 @@
 class CustomersController < ApplicationController
 	def index
-    @customers = Customer.all
+    @customers = Customer.where(user_id: session[:user_id]).order("first_name, last_name")
   end
 
   def new
@@ -19,7 +19,11 @@ class CustomersController < ApplicationController
   end
 
   def edit
-    @customer = Customer.find(params[:id])
+    @customer = Customer.where(id: params[:id], user_id: session[:user_id]).first
+    unless @customer.present?
+      flash[:warning] = 'Restricted Access'
+      redirect_to customers_path
+    end
   end
 
   def update

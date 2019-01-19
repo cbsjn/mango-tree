@@ -3,6 +3,7 @@ class Customer < ApplicationRecord
   validates :first_name, :last_name, :display_name, :email, :company_name, :address1, :city, :state, :postal_code, :presence => true
   has_many :sales_receipts, dependent: :destroy
   belongs_to :user
+  belongs_to :payment_method
 
   STATUSES = {'Active' => true, 'DeActive' => false}
   TITLE = ['Mr.', 'Mrs.', 'Dr.']

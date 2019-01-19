@@ -10,33 +10,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190119084918) do
+ActiveRecord::Schema.define(version: 20190119114832) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "customers", force: :cascade do |t|
-    t.string   "title",        limit: 50
-    t.string   "first_name",   limit: 200
-    t.string   "middle_name",  limit: 200
-    t.string   "last_name",    limit: 200
-    t.string   "suffix",       limit: 50
-    t.string   "display_name", limit: 200
-    t.string   "email",        limit: 200
-    t.string   "company_name", limit: 200
-    t.string   "phone",        limit: 20
-    t.string   "mobile",       limit: 20
-    t.string   "notes",        limit: 255
-    t.string   "address1",     limit: 200
-    t.string   "city",         limit: 50
-    t.string   "state",        limit: 50
-    t.string   "country",      limit: 50
-    t.string   "postal_code",  limit: 6
-    t.boolean  "status",                   default: true
-    t.datetime "created_at",                              null: false
-    t.datetime "updated_at",                              null: false
+    t.string   "title",             limit: 50
+    t.string   "first_name",        limit: 200
+    t.string   "middle_name",       limit: 200
+    t.string   "last_name",         limit: 200
+    t.string   "suffix",            limit: 50
+    t.string   "display_name",      limit: 200
+    t.string   "email",             limit: 200
+    t.string   "company_name",      limit: 200
+    t.string   "phone",             limit: 20
+    t.string   "mobile",            limit: 20
+    t.string   "notes",             limit: 255
+    t.string   "address1",          limit: 200
+    t.string   "city",              limit: 50
+    t.string   "state",             limit: 50
+    t.string   "country",           limit: 50
+    t.string   "postal_code",       limit: 6
+    t.boolean  "status",                        default: true
+    t.datetime "created_at",                                   null: false
+    t.datetime "updated_at",                                   null: false
     t.integer  "qbo_id"
     t.integer  "user_id"
+    t.integer  "payment_method_id"
   end
 
   create_table "deposits", force: :cascade do |t|
