@@ -2,7 +2,7 @@ class SalesReceiptDetailsController < ApplicationController
 	def index
 		redirect_to sales_receipts_path unless params[:sales_receipt_id].present?
 		session[:sales_receipt_id] = params[:sales_receipt_id]
-    @sales_receipt_details = SalesReceiptDetail.where(user_id: session[:user_id])
+    @sales_receipt_details = SalesReceiptDetail.where(user_id: session[:user_id], sales_receipt_id: params[:sales_receipt_id])
   end
 
   def new
