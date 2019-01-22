@@ -21,6 +21,7 @@
                 <tr>
                   <th>Name</th>
                   <th>Company Name</th>
+                  <th>Source</th>
                   <!--<th>Payment Method</th>-->
                   <th>Mobile</th>
                   <th>Email</th>
@@ -37,6 +38,9 @@
                       </td>
                       <td>
                         <%= customer.company_name %>
+                      </td>
+                      <td>
+                        <%= Customer::SOURCE.key(customer.source) %>
                       </td>
                       <!--<td>
                         <%#= customer.payment_method&.name %>

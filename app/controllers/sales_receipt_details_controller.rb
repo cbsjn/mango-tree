@@ -40,9 +40,13 @@ class SalesReceiptDetailsController < ApplicationController
   end
 
   def show
-  	@sales_receipt_detail = SalesReceiptDetail.find(params[:id])
-	  @sales_receipt_detail.destroy
-	  flash[:notice] = "SalesReceiptItem deleted successfully."
+  	@sales_receipt_detail = SalesReceiptDetail.where(id: params[:id], user_id: session[:user_id]).first
+    if @sales_receipt_detail.present?
+      @sales_receipt_detail.destroy
+      flash[:notice] = "SalesReceiptItem deleted successfully."
+    else
+      flash[:warning] = 'Restricted Access'
+    end
 	  redirect_to sales_receipt_details_path(sales_receipt_id: session[:sales_receipt_id])
   end
 

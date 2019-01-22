@@ -38,9 +38,13 @@ class CustomersController < ApplicationController
   end
 
   def show
-  	@customer = Customer.find(params[:id])
-	  @customer.destroy
-	  flash[:notice] = "Customer deleted successfully."
+  	@customer = Customer.where(id: params[:id], user_id: session[:user_id]).first
+    if @customer.present?
+  	  @customer.destroy
+  	  flash[:notice] = "Customer deleted successfully."
+    else
+      flash[:warning] = 'Restricted Access'
+    end
 	  redirect_to customers_path
   end
 

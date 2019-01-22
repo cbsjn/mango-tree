@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Customer.where("source IS NULL").update_all(source: Customer::SOURCE['Quickbook'])
+PaymentMethod.where("source IS NULL").update_all(source: PaymentMethod::SOURCE['Quickbook'])
+Item.where("source IS NULL").update_all(source: Item::SOURCE['Quickbook'])

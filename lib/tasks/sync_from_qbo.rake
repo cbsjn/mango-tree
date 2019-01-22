@@ -12,6 +12,7 @@ namespace :sync_from_qbo  do
 	    		item = Item.find_or_create_by(qbo_id: qbo_item_id)
 	    		item.name = qbo_item_name
 	    		item.user_id = u.id
+	    		item.source = Item::SOURCE['Quickbook'] if item.new_record?
 	    		item.save!
 	    		puts "Synced Item : #{qbo_item_name} with Id : #{qbo_item_id}"
 	    	end
@@ -43,7 +44,7 @@ namespace :sync_from_qbo  do
     end
   end
 
-  desc "Sync Tax Codes From QBO"
+  desc "Sync Payment Methods From QBO"
   task :sync_payment_methods => :environment do
     User.all.each do |u|
     	begin
@@ -56,6 +57,7 @@ namespace :sync_from_qbo  do
 	    		payment_method = PaymentMethod.find_or_create_by(qbo_id: qbo_id)
 	    		payment_method.name = qbo_name
 	    		payment_method.user_id = u.id
+	    		payment_method.source = PaymentMethod::SOURCE['Quickbook'] if payment_method.new_record?
 	    		payment_method.save!
 	    		puts "Synced PaymentMethod : #{qbo_name} with Id : #{qbo_id}"
 	    	end
@@ -97,6 +99,7 @@ namespace :sync_from_qbo  do
 		    		customer.postal_code = addr_obj["PostalCode"]
 	    		end
 	    		customer.user_id = u.id
+	    		customer.source = Customer::SOURCE['Quickbook'] if customer.new_record?
 	    		if customer.save
 	    			puts "Synced Customer : #{customer.first_name} #{customer.last_name} with Id : #{qbo_id}"
 		    	else

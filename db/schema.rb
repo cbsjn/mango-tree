@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190119114832) do
+ActiveRecord::Schema.define(version: 20190122153834) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 20190119114832) do
     t.integer  "qbo_id"
     t.integer  "user_id"
     t.integer  "payment_method_id"
+    t.integer  "source"
   end
 
   create_table "deposits", force: :cascade do |t|
@@ -54,6 +55,7 @@ ActiveRecord::Schema.define(version: 20190119114832) do
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
     t.integer  "user_id"
+    t.integer  "source"
   end
 
   create_table "payment_methods", force: :cascade do |t|
@@ -62,6 +64,8 @@ ActiveRecord::Schema.define(version: 20190119114832) do
     t.integer  "qbo_id"
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+    t.integer  "source"
+    t.string   "code"
   end
 
   create_table "sales_receipt_details", force: :cascade do |t|
@@ -107,19 +111,19 @@ ActiveRecord::Schema.define(version: 20190119114832) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "prefix",             limit: 6
-    t.string   "first_name",         limit: 200
-    t.string   "last_name",          limit: 200
+    t.string   "prefix",                limit: 6
+    t.string   "first_name",            limit: 200
+    t.string   "last_name",             limit: 200
     t.integer  "age"
     t.integer  "sex"
-    t.string   "mobile",             limit: 20
-    t.string   "email",              limit: 200
+    t.string   "mobile",                limit: 20
+    t.string   "email",                 limit: 200
     t.string   "password"
     t.integer  "role_id"
     t.string   "created_by"
     t.string   "updated_by"
-    t.datetime "created_at",                     null: false
-    t.datetime "updated_at",                     null: false
+    t.datetime "created_at",                                                        null: false
+    t.datetime "updated_at",                                                        null: false
     t.text     "qb_token"
     t.text     "secret"
     t.string   "realm_id"
@@ -127,6 +131,9 @@ ActiveRecord::Schema.define(version: 20190119114832) do
     t.string   "state"
     t.datetime "token_generated_at"
     t.text     "refresh_token"
+    t.string   "cb_access_token"
+    t.string   "cb_refresh_token"
+    t.datetime "cb_token_generated_at",             default: '2019-01-22 12:09:31'
   end
 
 end

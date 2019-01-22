@@ -9,12 +9,25 @@ class User < ActiveRecord::Base
   validates :password, :presence => true
   validates :password, :confirmation => true, :presence => true, :on => :create
 
-  scope :active, -> { where(status: ACTIVE_STATUS) }
-
   ROLES = {'Admin' => 1}
 
   before_create :encrypt_password
 
+  def self.cloudbed_users
+    self.where("cb_refresh_token IS NOT NULL")
+  end
+
+  def self.sync_access_tokens_from_cloudbeds(user)
+    sleep 1 # cloudbeds allow max 5 calls / seconds so for safer side adding 1 call / second
+    response = HTTParty.post("#{CLOUDBEDS_BASE_API_URL}/access_token", {
+                          body: "client_id=#{CLIENT_ID}&client_secret=#{CLIENT_SECRET}&refresh_token=#{user.cb_refresh_token}&grant_type=refresh_token",
+                          headers: {
+                            'Content-Type' => 'application/x-www-form-urlencoded',
+                            'charset' => 'utf-8'
+                          }
+                        })
+    return response
+  end
 
   def self.authenticate(username, password)
     password = User::encrypt(password)

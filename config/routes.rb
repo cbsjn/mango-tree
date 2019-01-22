@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'cloudbeds/oauth_callback'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: 'login#index'
 
@@ -24,4 +26,5 @@ Rails.application.routes.draw do
   resources :sales_receipt_details
   get 'quick_books/authenticate'
   get 'quick_books/oauth_callback'
+  get 'cloudbeds/oauth_callback'
 end

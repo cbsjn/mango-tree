@@ -1,6 +1,7 @@
 class Item < ApplicationRecord
 	belongs_to :user
 	has_many :sales_receipt_details
+  SOURCE = {'Quickbook' => 1, 'Cloudbeds' => 2, 'Website' => 3}
 
   def self.synced(user)
     self.where("user_id = ? and qbo_id IS NOT NULL", user.id).order(:name)

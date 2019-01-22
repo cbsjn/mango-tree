@@ -4,6 +4,7 @@ class Customer < ApplicationRecord
   has_many :sales_receipts, dependent: :destroy
   belongs_to :user
   # belongs_to :payment_method
+  SOURCE = {'Quickbook' => 1, 'Cloudbeds' => 2, 'Website' => 3}
 
   STATUSES = {'Active' => true, 'DeActive' => false}
   TITLE = ['Mr.', 'Mrs.', 'Dr.']
