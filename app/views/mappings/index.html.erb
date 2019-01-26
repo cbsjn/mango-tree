@@ -1,0 +1,34 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+  <div class="col-lg-10">
+    <h2>Mappings</h2>
+  </div>
+</div>
+<div class="wrapper wrapper-content animated fadeInRight">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="ibox">
+
+      <%= render 'create' %>
+
+      	<div class="ibox-title">
+           <h5>Filter Mappings Data</h5>
+            <div class="ibox-tools">
+             <%= form_tag(mappings_path, method: 'get', remote: true ) do %>
+             		<%= select('', 'name',Mapping::MAPPING_TYPES, {prompt: '-Select Mapping Type-', selected: params[:name]}, {class: 'btn btn-white btn-w-m', id: 'name'}) %>
+             		<%= submit_tag('Filter', class: 'btn btn-w-m btn-primary') %>
+             <% end %>
+            </div>
+        </div>
+        <% unless params[:name].present? %>
+          <span id="mappings_list">
+            <div class="alert alert-danger" style="text-align: center;">Please select filter to search for mappings or Create New Mapping.</div>
+          </span>
+        <% end %>
+        <%= render 'mapping_list', :locals => {:mappings => @mappings, :message => @message} %>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+

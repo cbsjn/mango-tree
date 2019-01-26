@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190122153834) do
+ActiveRecord::Schema.define(version: 20190125141458) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -56,6 +56,16 @@ ActiveRecord::Schema.define(version: 20190122153834) do
     t.datetime "updated_at",             null: false
     t.integer  "user_id"
     t.integer  "source"
+    t.string   "code"
+  end
+
+  create_table "mappings", force: :cascade do |t|
+    t.integer  "cloudbed_id"
+    t.integer  "user_id"
+    t.integer  "qbo_id"
+    t.string   "name"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "payment_methods", force: :cascade do |t|
@@ -66,6 +76,24 @@ ActiveRecord::Schema.define(version: 20190122153834) do
     t.datetime "updated_at",             null: false
     t.integer  "source"
     t.string   "code"
+  end
+
+  create_table "room_types", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "cloudbed_roomtype_id"
+    t.integer  "property_id"
+    t.string   "name"
+    t.string   "code",                 limit: 50
+    t.text     "description"
+    t.boolean  "is_private"
+    t.integer  "max_guests"
+    t.integer  "max_adults"
+    t.integer  "max_childrens"
+    t.integer  "total_rooms"
+    t.integer  "available_rooms"
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+    t.integer  "source"
   end
 
   create_table "sales_receipt_details", force: :cascade do |t|

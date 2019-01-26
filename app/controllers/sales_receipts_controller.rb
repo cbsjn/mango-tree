@@ -1,6 +1,6 @@
 class SalesReceiptsController < ApplicationController
 	def index
-    @sales_receipts = SalesReceipt.where(user_id: session[:user_id])
+    @sales_receipts = SalesReceipt.where(user_id: session[:user_id]).paginate(page: params[:page], per_page: PAGINATION_COUNT).order("receipt_date")
   end
 
   def new

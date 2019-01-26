@@ -18,7 +18,6 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
-gem 'will_paginate'
 gem 'quickbooks-ruby', '~> 0.6.5'
 gem 'sendgrid-ruby'
 gem 'oauth-plugin'
@@ -28,6 +27,10 @@ gem 'httparty'
 
 gem 'oauth', '~> 0.4.7'
 gem 'oauth2', '~> 1.4.0'
+
+# pagination
+gem 'will_paginate'
+gem 'will_paginate-bootstrap' 
 
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby

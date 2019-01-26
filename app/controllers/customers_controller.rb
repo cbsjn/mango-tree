@@ -1,6 +1,6 @@
 class CustomersController < ApplicationController
 	def index
-    @customers = Customer.where(user_id: session[:user_id]).order("first_name, last_name")
+    @customers = Customer.where(user_id: session[:user_id]).paginate(page: params[:page], per_page: PAGINATION_COUNT).order("first_name, last_name")
   end
 
   def new

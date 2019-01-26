@@ -16,6 +16,7 @@
         <div class="ibox-content">
 		   <%= render :partial => "shared/notifier"%>
           <% if @customers.present? %>
+              <%= will_paginate @customers , renderer: BootstrapPagination::Rails %>
               <table class="footable table table-stripped toggle-arrow-tiny" data-page-size="15">
                 <thead>
                 <tr>

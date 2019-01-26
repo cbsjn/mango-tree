@@ -3,16 +3,17 @@ namespace :sync_from_qbo  do
   task :sync_items => :environment do
     User.all.each do |u|
     	begin
+    		source = Item::SOURCE['Quickbook']
 	    	access_token = OAuth2::AccessToken.new($qb_consumer, u.qb_token, {refresh_token: u.refresh_token})
 	    	new_access_token = access_token.refresh!
 	    	result = Item.sync_items_from_qbo(new_access_token.token, u.realm_id)
 	    	result['IntuitResponse']['QueryResponse']['Item'].each do |qbo_item|
 	    		qbo_item_id = qbo_item["Id"]
 	    		qbo_item_name = qbo_item["Name"]
-	    		item = Item.find_or_create_by(qbo_id: qbo_item_id)
+	    		item = Item.find_or_create_by(qbo_id: qbo_item_id, source: source)
 	    		item.name = qbo_item_name
 	    		item.user_id = u.id
-	    		item.source = Item::SOURCE['Quickbook'] if item.new_record?
+	    		item.source = source if item.new_record?
 	    		item.save!
 	    		puts "Synced Item : #{qbo_item_name} with Id : #{qbo_item_id}"
 	    	end
@@ -48,16 +49,17 @@ namespace :sync_from_qbo  do
   task :sync_payment_methods => :environment do
     User.all.each do |u|
     	begin
+    		source = PaymentMethod::SOURCE['Quickbook']
 	    	access_token = OAuth2::AccessToken.new($qb_consumer, u.qb_token, {refresh_token: u.refresh_token})
 	    	new_access_token = access_token.refresh!
 	    	result = PaymentMethod.sync_payment_methods_from_qbo(new_access_token.token, u.realm_id)
 	    	result['IntuitResponse']['QueryResponse']['PaymentMethod'].each do |qbo_obj|
 	    		qbo_id = qbo_obj["Id"]
 	    		qbo_name = qbo_obj["Name"]
-	    		payment_method = PaymentMethod.find_or_create_by(qbo_id: qbo_id)
+	    		payment_method = PaymentMethod.find_or_create_by(qbo_id: qbo_id, source: source)
 	    		payment_method.name = qbo_name
 	    		payment_method.user_id = u.id
-	    		payment_method.source = PaymentMethod::SOURCE['Quickbook'] if payment_method.new_record?
+	    		payment_method.source = source if payment_method.new_record?
 	    		payment_method.save!
 	    		puts "Synced PaymentMethod : #{qbo_name} with Id : #{qbo_id}"
 	    	end
@@ -71,13 +73,14 @@ namespace :sync_from_qbo  do
   task :sync_customers => :environment do
     User.all.each do |u|
     	begin
+    		source = Customer::SOURCE['Quickbook']
 	    	access_token = OAuth2::AccessToken.new($qb_consumer, u.qb_token, {refresh_token: u.refresh_token})
 	    	new_access_token = access_token.refresh!
 	    	result = Customer.sync_customers_from_qbo(new_access_token.token, u.realm_id)
 	    	result['IntuitResponse']['QueryResponse']['Customer'].each do |qbo_obj|
 	    		next unless qbo_obj["PrimaryEmailAddr"].present?
 	    		qbo_id = qbo_obj["Id"]
-	    		customer = Customer.find_or_create_by(qbo_id: qbo_id)
+	    		customer = Customer.find_or_create_by(qbo_id: qbo_id, source: source)
 
 	    		customer.title = qbo_obj["Title"]
 	    		customer.first_name = qbo_obj["GivenName"]
@@ -99,7 +102,7 @@ namespace :sync_from_qbo  do
 		    		customer.postal_code = addr_obj["PostalCode"]
 	    		end
 	    		customer.user_id = u.id
-	    		customer.source = Customer::SOURCE['Quickbook'] if customer.new_record?
+	    		customer.source = source if customer.new_record?
 	    		if customer.save
 	    			puts "Synced Customer : #{customer.first_name} #{customer.last_name} with Id : #{qbo_id}"
 		    	else

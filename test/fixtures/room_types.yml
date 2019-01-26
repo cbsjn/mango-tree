@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  code: MyString
+  description: MyText
+  is_private: false
+  max_guest: 1
+  adults_count: 1
+  childrens_count: 1
+  total_rooms: 1
+  available_rooms: 1
+
+two:
+  name: MyString
+  code: MyString
+  description: MyText
+  is_private: false
+  max_guest: 1
+  adults_count: 1
+  childrens_count: 1
+  total_rooms: 1
+  available_rooms: 1

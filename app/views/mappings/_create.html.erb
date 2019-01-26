@@ -1,0 +1,40 @@
+<div class="ibox-title">
+	<h5>Create New Mapping</h5>
+	<div class="ibox-tools">
+		<%= form_tag(mappings_path, method: 'post', remote: true ) do %>
+			<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+			<%= hidden_field_tag 'mapping[user_id]', session[:user_id] %>
+	 		<%= select('mapping', 'name', Mapping::MAPPING_TYPES, {prompt: '-Select Mapping Type-'}, {class: 'btn btn-white btn-w-m'}) %>
+	 		<span id="dynamic_dropdown"></span>
+	 		<%= submit_tag('Create Mapping', class: 'btn btn-w-m btn-primary') %>
+	 	<% end %>
+ 	</div>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+    $('#mapping_name').change(
+    	function(){
+	    	var mapping_name = $('#mapping_name').val();
+	    	if (mapping_name == '') {
+	    		$('#dynamic_dropdown').hide();
+	    		return true
+	    	}
+	    	$.ajax({
+			     type: "GET",// GET in place of POST
+			     url: "/mappings/change_dropdown_values?mapping_name="+mapping_name,
+			     dataType: "script",
+			     success: function (result) {
+			        //do somthing here
+			        // window.alert("success!!");
+			     },
+			     error: function (){
+			     		$('#dynamic_dropdown').hide();
+			        window.alert("something wrong!");
+			     }
+				});
+    	}
+    )
+	});
+
+</script>

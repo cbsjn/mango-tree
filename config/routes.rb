@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  get 'mappings/index'
+
+  get 'mappings/create'
+
+  get 'mappings/update'
+
+  get 'mappings/edit'
+
+  get 'mappings/destroy'
+
   get 'cloudbeds/oauth_callback'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
@@ -24,6 +34,12 @@ Rails.application.routes.draw do
     end
   end
   resources :sales_receipt_details
+  resources :mappings do
+    collection do
+      get 'change_dropdown_values'
+      get 'mapping_list'
+    end
+  end
   get 'quick_books/authenticate'
   get 'quick_books/oauth_callback'
   get 'cloudbeds/oauth_callback'

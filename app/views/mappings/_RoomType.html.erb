@@ -1,0 +1,7 @@
+<% qbo_items = items(Item::SOURCE['Quickbook']) %>
+<% cloudbed_room_types = room_types(Item::SOURCE['Cloudbeds']) %>
+
+<span id="dynamic_dropdown">
+	<%= select('mapping', 'cloudbed_id', cloudbed_room_types, {prompt: '-Select Cloudbed RoomType-'}, {class: 'btn btn-white btn-w-m'}) %>
+	<%= select('mapping', 'qbo_id', qbo_items, {prompt: '-Select Quickbook Item-'}, {class: 'btn btn-white btn-w-m'}) %>
+</span>

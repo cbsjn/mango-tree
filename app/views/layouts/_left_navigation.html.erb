@@ -6,8 +6,9 @@
         <li class="">
           <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">Admin</span><span class="fa arrow"></span></a>
           <ul class="nav nav-second-level collapse"id="admin_menu"  style="height: 0px;">
-            <li class="active"><a href="<%= customers_path %>">Manage Customers</a></li>
-            <li class="active"><a href="<%= sales_receipts_path %>">Manage Sales Receipts</a></li>
+            <li class="active"><a href="<%= customers_path %>">Customers</a></li>
+            <li class="active"><a href="<%= sales_receipts_path %>">Sales Receipts</a></li>
+            <li class="active"><a href="<%= mappings_path %>">Mappings</a></li>
 
             <% if session[:email].present? %>
                 <li class="active"><a href="<%= sign_out_login_index_path %>">Logout</a></li>

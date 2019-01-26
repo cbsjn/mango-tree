@@ -16,4 +16,18 @@ class Item < ApplicationRecord
     result = Hash.from_xml(result.body)
     result
 	end
+
+  def self.sync_item_categories_from_cloudbeds(user)
+    sleep 1
+    response = HTTParty.get("#{CLOUDBEDS_BASE_API_URL}/getItemCategories", {
+                          headers: {
+                            'Authorization' => "Bearer #{user.cb_access_token}"
+                          }
+                        })
+    return response
+  end
+
+  def self.items(user, source)
+    self.select(:id, :name).where("user_id = ? and source = ?", user.id, source)
+  end
 end

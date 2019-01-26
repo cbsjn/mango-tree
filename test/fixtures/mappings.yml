@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cloudbed_id: 1
+  user_id: 1
+  qbo_id: 1
+  name: MyString
+
+two:
+  cloudbed_id: 1
+  user_id: 1
+  qbo_id: 1
+  name: MyString

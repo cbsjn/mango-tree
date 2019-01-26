@@ -1,0 +1,7 @@
+<% qbo_payment_methods = payment_methods(PaymentMethod::SOURCE['Quickbook']) %>
+<% cloudbed_payment_methods = payment_methods(PaymentMethod::SOURCE['Cloudbeds']) %>
+
+<span id="dynamic_dropdown">
+	<%= select('mapping', 'cloudbed_id', cloudbed_payment_methods, {prompt: '-Select Cloudbed PaymentMethod-'}, {class: 'btn btn-white btn-w-m'}) %>
+	<%= select('mapping', 'qbo_id', qbo_payment_methods, {prompt: '-Select Quickbook PaymentMethod-'}, {class: 'btn btn-white btn-w-m'}) %>
+</span>
