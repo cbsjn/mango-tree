@@ -2,6 +2,8 @@ class CloudbedsController < ApplicationController
   def oauth_callback
   	access_token = params['access_token']
   	refresh_token = params['refresh_token']
+    puts "Params : #{params.inspect}"
+    puts "**********************************"
   	puts "New Access Token : #{access_token}"
   	puts "New RefreshToken : #{refresh_token}"
   	if refresh_token.present? && access_token.present?
