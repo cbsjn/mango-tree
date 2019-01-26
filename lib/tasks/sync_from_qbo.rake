@@ -10,7 +10,7 @@ namespace :sync_from_qbo  do
 	    	result['IntuitResponse']['QueryResponse']['Item'].each do |qbo_item|
 	    		qbo_item_id = qbo_item["Id"]
 	    		qbo_item_name = qbo_item["Name"]
-	    		item = Item.find_or_create_by(qbo_id: qbo_item_id, source: source)
+	    		item = Item.find_or_create_by(qbo_id: qbo_item_id, source: source, user_id: u.id)
 	    		item.name = qbo_item_name
 	    		item.user_id = u.id
 	    		item.source = source if item.new_record?
@@ -33,7 +33,7 @@ namespace :sync_from_qbo  do
 	    	result['IntuitResponse']['QueryResponse']['TaxCode'].each do |qbo_obj|
 	    		qbo_id = qbo_obj["Id"]
 	    		qbo_name = qbo_obj["Name"]
-	    		tax_code = TaxCode.find_or_create_by(qbo_id: qbo_id)
+	    		tax_code = TaxCode.find_or_create_by(qbo_id: qbo_id, user_id: u.id)
 	    		tax_code.name = qbo_name
 	    		tax_code.user_id = u.id
 	    		tax_code.save!
@@ -56,7 +56,7 @@ namespace :sync_from_qbo  do
 	    	result['IntuitResponse']['QueryResponse']['PaymentMethod'].each do |qbo_obj|
 	    		qbo_id = qbo_obj["Id"]
 	    		qbo_name = qbo_obj["Name"]
-	    		payment_method = PaymentMethod.find_or_create_by(qbo_id: qbo_id, source: source)
+	    		payment_method = PaymentMethod.find_or_create_by(qbo_id: qbo_id, source: source, user_id: u.id)
 	    		payment_method.name = qbo_name
 	    		payment_method.user_id = u.id
 	    		payment_method.source = source if payment_method.new_record?
@@ -80,7 +80,7 @@ namespace :sync_from_qbo  do
 	    	result['IntuitResponse']['QueryResponse']['Customer'].each do |qbo_obj|
 	    		next unless qbo_obj["PrimaryEmailAddr"].present?
 	    		qbo_id = qbo_obj["Id"]
-	    		customer = Customer.find_or_create_by(qbo_id: qbo_id, source: source)
+	    		customer = Customer.find_or_create_by(qbo_id: qbo_id, source: source, user_id: u.id)
 
 	    		customer.title = qbo_obj["Title"]
 	    		customer.first_name = qbo_obj["GivenName"]

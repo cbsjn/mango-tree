@@ -37,7 +37,7 @@ namespace :sync_from_cloudbeds  do
 		    	result['data']['methods'].each do |obj|
 		    		code = obj["method"]
 		    		name = obj["name"]
-		    		payment_method = PaymentMethod.find_or_create_by(source: source, code: code)
+		    		payment_method = PaymentMethod.find_or_create_by(source: source, code: code, user_id: u.id)
 		    		payment_method.name = name
 		    		payment_method.user_id = u.id
 		    		payment_method.source = source if payment_method.new_record?
@@ -65,7 +65,7 @@ namespace :sync_from_cloudbeds  do
 		    		id = obj["categoryID"]
 		    		code = obj["categoryCode"]
 		    		name = obj["categoryName"]
-		    		item = Item.find_or_create_by(source: source, qbo_id: id)
+		    		item = Item.find_or_create_by(source: source, qbo_id: id, user_id: u.id)
 		    		item.name = name
 		    		item.code = code
 		    		item.user_id = u.id
@@ -103,7 +103,7 @@ namespace :sync_from_cloudbeds  do
 		    		total_rooms = obj["roomTypeUnits"]
 		    		available_rooms = obj["roomsAvailable"]
 
-		    		room_type = RoomType.find_or_create_by(source: source, cloudbed_roomtype_id: id)
+		    		room_type = RoomType.find_or_create_by(source: source, cloudbed_roomtype_id: id, user_id: u.id)
 		    		room_type.name = name
 		    		room_type.code = code
 		    		room_type.property_id = property_id	
