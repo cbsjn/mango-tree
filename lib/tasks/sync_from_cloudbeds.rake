@@ -41,8 +41,11 @@ namespace :sync_from_cloudbeds  do
 		    		payment_method.name = name
 		    		payment_method.user_id = u.id
 		    		payment_method.source = source if payment_method.new_record?
-		    		payment_method.save!
-		    		puts "Synced PaymentMethod : #{name}"
+		    		if payment_method.save
+		    			puts "Synced PaymentMethod : #{name}"
+		    		else
+			    		puts "Validation Failed : #{payment_method.errors.full_messages}"
+			    	end
 		    	end
 	    	else
 		    	puts "Status : #{result['error']}"
@@ -70,8 +73,11 @@ namespace :sync_from_cloudbeds  do
 		    		item.code = code
 		    		item.user_id = u.id
 		    		item.source = source if item.new_record?
-		    		item.save!
-		    		puts "Synced ItemCategory : #{name}"
+		    		if item.save
+		    			puts "Synced ItemCategory : #{name}"
+		    		else
+			    		puts "Validation Failed : #{item.errors.full_messages}"
+			    	end
 		    	end
 		    else
 		    	puts "Status : #{result['error']}"
@@ -117,8 +123,11 @@ namespace :sync_from_cloudbeds  do
 
 		    		room_type.user_id = u.id
 		    		room_type.source = source if room_type.new_record?
-		    		room_type.save!
-		    		puts "Synced RoomType : #{name}"
+		    		if room_type.save
+		    			puts "Synced RoomType : #{name}"
+		    		else
+			    		puts "Validation Failed : #{room_type.errors.full_messages}"
+			    	end
 		    	end
 		    else
 		    	puts "Status : #{result['error']}"
@@ -176,8 +185,11 @@ namespace :sync_from_cloudbeds  do
 		    		end
 
 
-		    		customer.save!
-		    		puts "Synced Guest : #{display_name}"
+		    		if customer.save
+		    			puts "Synced Guest : #{display_name}"
+			    	else
+			    		puts "Validation Failed : #{customer.errors.full_messages}"
+			    	end
 		    	end
 		    else
 		    	puts "Status : #{result['error']}"
@@ -226,8 +238,11 @@ namespace :sync_from_cloudbeds  do
 									transaction.transaction_category = obj['transactionCategory']
 					    		transaction.sub_reservation_id = obj['subReservationID']
 
-					    		transaction.save!
-					    		puts "Synced Transaction : #{transaction_id}"
+						    	if transaction.save
+						    		puts "Synced Transaction : #{transaction_id}"
+					    		else
+						    		puts "Validation Failed : #{transaction.errors.full_messages}"
+						    	end
 					    	else
 					    		puts "Transaction# #{transaction_id} is already synced on Quickbook with ID : #{transaction.qbo_id}"
 					    	end
