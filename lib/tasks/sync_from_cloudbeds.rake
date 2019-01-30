@@ -129,4 +129,119 @@ namespace :sync_from_cloudbeds  do
 	    end
     end
   end
+
+  desc "Sync CheckedOutGuests From Cloudbeds"
+  task :sync_checked_out_guests => :environment do
+    User.cloudbed_users.each do |u|
+    	begin
+    		checkout_date = (Time.now - 1.day).strftime('%Y-%m-%d')
+	    	result = Customer.sync_checked_out_guests(u, checkout_date)
+	    	source = Item::SOURCE['Cloudbeds']
+	    	if result['data'].present?
+		    	result['data'].each do |obj|
+		    		id = obj["guestID"]
+		    		reservation_id = obj['reservationID']
+
+		    		customer = Customer.find_or_create_by(source: source, cloudbed_guest_id: id, user_id: u.id)
+		    		customer.first_name = obj['guestFirstName']
+		    		customer.last_name = obj['guestLastName']
+		    		customer.email = obj['guestEmail'].strip
+		    		user_name = customer.email.split('@').first
+		    		display_name = user_name.present? ? "#{user_name}-#{id}" : "#{first_name}-#{id}"
+		    		customer.display_name = display_name.strip
+		    		customer.phone = obj['guestPhone']
+		    		customer.mobile = obj['guestCellPhone'] || phone
+		    		customer.company_name = obj['companyName'].present? ? obj['companyName'] : display_name
+		    		customer.notes = obj['guestNotes'].present? ? obj['guestNotes'].join(', ') : 'N/A'
+		    		address1 = (obj['guestAddress1'] + ', ' + obj['guestAddress2'])
+		    		customer.address1 = address1.present? ? address1 : 'N/A'
+		    		customer.city = obj['guestCity'].present? ? obj['guestCity'] : 'N/A'
+		    		customer.state = obj['guestState'].present? ? obj['guestState'] : 'N/A'
+		    		customer.country = obj['guestCountry'].present? ? obj['guestCountry'] : 'N/A'
+		    		customer.postal_code = obj['guestZip'].present? ? obj['guestZip'] : 'N/A'
+
+		    		customer.user_id = u.id
+		    		customer.source = source if customer.new_record?
+
+		    		## create reservation details
+		    		reservation = Reservation.where(user_id: customer.user_id, reservation_id: reservation_id).first
+		    		unless reservation.present?
+			    		customer.reservations.build(
+			    																user_id: customer.user_id,
+			    																reservation_id: reservation_id,
+			    																guest_id: customer.cloudbed_guest_id,
+			    																status: obj['status'],
+			    																checkout_date: checkout_date
+																	    	)
+		    		end
+
+
+		    		customer.save!
+		    		puts "Synced Guest : #{display_name}"
+		    	end
+		    else
+		    	puts "Status : #{result['error']}"
+		    	puts "Message : #{result['message']}"
+		    end
+	    rescue Exception => ex
+	    	puts "Exception : #{ex.inspect}"
+	    end
+    end
+  end
+
+  desc "Sync Transactions From Cloudbeds"
+  task :sync_transactions => :environment do
+    User.cloudbed_users.each do |u|
+    	source = Item::SOURCE['Cloudbeds']
+    	u.customers.each do |customer|
+    		customer.reservations.each do |reservation|
+    			next if reservation.transactions.present?
+    			reservation_id = reservation.id	
+		    	begin
+			    	result = Transaction.sync_transactions_from_cloudbeds(u, reservation.reservation_id)
+			    	if result['data'].present?
+				    	result['data'].each do |obj|
+				    		room_type = RoomType.where(cloudbed_roomtype_id: obj['roomTypeID']).first
+
+				    		transaction_id = obj["transactionID"]
+				    		transaction = Transaction.find_or_create_by(source: source, user_id: u.id, customer_id: customer.id, transaction_id: transaction_id, reservation_id: reservation_id)
+								unless transaction.qbo_id.present?
+									transaction.property_id = obj['propertyID']
+									transaction.guest_id = obj['guestID']
+									transaction.property_name = obj['propertyName']
+									transaction.transaction_date = obj['transactionDateTime']
+									transaction.guest_checkin = obj['guestCheckIn']
+									transaction.guest_checkout = obj['guestCheckOut']
+									transaction.room_type_id = room_type&.id
+									transaction.room_type_name = obj['roomTypeName']
+									transaction.room_name = obj['roomName']
+									transaction.guest_name = obj['guestName']
+									transaction.description = obj['description']
+									transaction.category = obj['category']
+									transaction.quantity = obj['quantity']
+									transaction.amount = obj['amount']
+									transaction.currency = obj['currency']
+									transaction.username = obj['userName']
+									transaction.transaction_type = obj['transactionType']
+									transaction.transaction_category = obj['transactionCategory']
+					    		transaction.sub_reservation_id = obj['subReservationID']
+
+					    		transaction.save!
+					    		puts "Synced Transaction : #{transaction_id}"
+					    	else
+					    		puts "Transaction# #{transaction_id} is already synced on Quickbook with ID : #{transaction.qbo_id}"
+					    	end
+				    	end
+				    else
+				    	puts "Status : #{result['error']}"
+				    	puts "Message : #{result['message']}"
+				    end
+			    rescue Exception => ex
+			    	puts "Exception : #{ex.inspect}"
+			    end
+    		end
+    	end	
+    end
+  end
+
 end

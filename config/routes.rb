@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'transactions/index'
+
+  get 'transactions/show'
+
+  get 'transactions/sync_to_quickbook'
+
   get 'mappings/index'
 
   get 'mappings/create'
@@ -40,6 +46,12 @@ Rails.application.routes.draw do
       get 'mapping_list'
     end
   end
+  resources :transactions do
+    collection do
+      get 'sync_to_quickbook'
+    end
+  end
+
   get 'quick_books/authenticate'
   get 'quick_books/oauth_callback'
   get 'cloudbeds/oauth_callback'

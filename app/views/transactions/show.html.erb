@@ -1,0 +1,66 @@
+<div class="wrapper wrapper-content" style="margin-top: 10px;">
+  <div class="row animated fadeInRight">
+    <div class="col-md-6">
+
+			<div class="ibox float-e-margins">
+        <div class="ibox-title">
+          <h5 style="font-size: 24px;color: #0780EA;">Guest Details</h5>
+        </div>
+	    </div>
+            
+	     <div class="ibox float-e-margins">
+          	<div class="ibox-content no-padding border-left-right">
+	            <div class="ibox-content profile-content">
+                <div class="media-body ">
+                  <h4><strong><%= @transaction.guest_name %></strong></h4>
+                  <p><i class="fa fa-calendar"></i>&nbsp;<%= @transaction.guest_checkin.strftime('%Y-%m-%d') %> - <%= @transaction.guest_checkout.strftime('%Y-%m-%d') %></p>
+                  <strong>Description:</strong> <%= @transaction.description %><br/>
+                  <strong>Room Name:</strong> <%= @transaction.room_name %><br/>
+                  <strong>Room Type:</strong> <%= @transaction.room_type_name %><br/>
+                  <strong>Category:</strong> <%= @transaction.category %><br/>
+                  <strong>Property Name:</strong> <%= @transaction.property_name %><br/>
+                  <strong>User Name:</strong> <%= @transaction.username %>
+                  
+                </div>
+	            </div>
+	          </div>
+	      </div>
+    </div>
+
+
+    <div class="col-md-6">
+
+			<div class="ibox float-e-margins">
+        <div class="ibox-title">
+          <h5 style="font-size: 24px;color: #0780EA;">Reservation Details</h5>
+        </div>
+	    </div>
+            
+	     <div class="ibox float-e-margins">
+          	<div class="ibox-content no-padding border-left-right">
+	            <div class="ibox-content profile-content">
+                <div class="media-body ">
+                  <strong>Transaction Date:</strong> <%= @transaction.transaction_date %><br/>
+                  <strong>Transaction ID:</strong> <%= @transaction.transaction_id %><br/>
+                  <strong>Category:</strong> <%= @transaction.transaction_category %><br/>
+                  <strong>Type:</strong> <%= @transaction.transaction_type %><br/>
+                  <strong>Qty:</strong> <%= @transaction.quantity %><br/>
+                  <strong>Amount:</strong> <%= @transaction.amount %> <%= @transaction.currency %>
+                  <strong>Property ID:</strong> <%= @transaction.property_id %><br/>
+                  <strong>Guest ID:</strong> <%= @transaction.guest_id %><br/>
+                  <strong>Reservation ID:</strong> <%= @transaction.sub_reservation_id %><br/>
+                </div>
+	            </div>
+	          </div>
+	      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="ibox-title">
+    <div class="ibox-tools">
+       <%= link_to 'Back To Transactions', transactions_path, :class => "btn btn-w-m btn-primary" %>
+    </div>
+</div>
+

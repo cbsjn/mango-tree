@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customer_id: 1
+  user_id: 1
+  reservation_id: MyString
+  guest_id: MyString
+  status: MyString
+  checkout_date: 2019-01-27 16:32:57
+
+two:
+  customer_id: 1
+  user_id: 1
+  reservation_id: MyString
+  guest_id: MyString
+  status: MyString
+  checkout_date: 2019-01-27 16:32:57

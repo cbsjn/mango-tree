@@ -6,6 +6,9 @@ class User < ActiveRecord::Base
   has_many :sales_receipts
   has_many :room_types
   has_many :mappings
+  has_many :transactions
+  has_many :reservations
+  
   validates :email,:uniqueness => true
   validates :email, :presence => true
   validates :password, :presence => true

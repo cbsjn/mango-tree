@@ -22,4 +22,12 @@ module ApplicationHelper
 		end
 		items_hash
 	end
+
+	def cloudbed_customers
+		cust_hash = {}
+		Customer.cloudbed_customers(current_user).each do |c|
+			cust_hash["#{c.title} #{c.first_name} #{c.middle_name} #{c.last_name} (#{c.display_name})"] = c.id
+		end
+		cust_hash
+	end
 end

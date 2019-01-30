@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customer_id: 1
+  user_id: 1
+  reservation_id: MyString
+  sub_reservation_id: MyString
+  guest_id: MyString
+  room_type_id: MyString
+  amount: 9.99
+  currency: MyString
+  username: MyString
+  transaction_type: MyString
+  transaction_category: MyString
+  transaction_date: 2019-01-28 21:17:45
+
+two:
+  customer_id: 1
+  user_id: 1
+  reservation_id: MyString
+  sub_reservation_id: MyString
+  guest_id: MyString
+  room_type_id: MyString
+  amount: 9.99
+  currency: MyString
+  username: MyString
+  transaction_type: MyString
+  transaction_category: MyString
+  transaction_date: 2019-01-28 21:17:45
