@@ -21,5 +21,6 @@ class TransactionsController < ApplicationController
   	customer_id = params[:customer_id]
   	condition = "user_id = #{session[:user_id]}"
   	condition += " and customer_id = #{customer_id}" if customer_id.present?
+  	condition
   end
 end
