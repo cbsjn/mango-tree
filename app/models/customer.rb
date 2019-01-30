@@ -13,7 +13,7 @@ class Customer < ApplicationRecord
   SUFFIX = ['Jr', 'Er']
 
   def self.synced(user)
-    self.where("user_id = ? and qbo_id IS NOT NULL", user.id).order(:first_name)
+    self.where("user_id = ? and qbo_id IS NOT NULL and qbo_id != '' ", user.id).order(:first_name)
   end
 
   def self.sync_customers_from_qbo(token, company_id)

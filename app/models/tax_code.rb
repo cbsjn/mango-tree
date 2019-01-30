@@ -3,7 +3,7 @@ class TaxCode < ApplicationRecord
 	has_many :sales_receipt_details
 
   def self.synced(user)
-    self.where("user_id = ? and qbo_id IS NOT NULL", user.id).order(:name)
+    self.where("user_id = ? and qbo_id IS NOT NULL and qbo_id != '' ", user.id).order(:name)
   end
 
 	def self.sync_tax_codes_from_qbo(token, company_id)

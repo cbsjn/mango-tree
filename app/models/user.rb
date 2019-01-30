@@ -19,7 +19,7 @@ class User < ActiveRecord::Base
   before_create :encrypt_password
 
   def self.cloudbed_users
-    self.where("cb_refresh_token IS NOT NULL")
+    self.where("cb_refresh_token IS NOT NULL AND cb_refresh_token != '' ")
   end
 
   def self.sync_access_tokens_from_cloudbeds(user)

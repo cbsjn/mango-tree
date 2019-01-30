@@ -3,7 +3,7 @@ class Deposit < ApplicationRecord
 	has_many :sales_receipts
 
   def self.synced(user)
-    self.where("user_id = ? and qbo_id IS NOT NULL", user.id).order(:name)
+    self.where("user_id = ? and qbo_id IS NOT NULL and qbo_id != '' ", user.id).order(:name)
   end
 
 	def self.sync_deposits_from_qbo(token, company_id)
