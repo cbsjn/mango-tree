@@ -5,7 +5,7 @@ class PaymentMethod < ApplicationRecord
   SOURCE = {'Quickbook' => 1, 'Cloudbeds' => 2, 'Website' => 3}
   
   def self.synced(user)
-    self.where("user_id = ? and source = ? and qbo_id IS NOT NULL and qbo_id != '' ", user.id, SOURCE['Quickbook']).order(:name)
+    self.where("user_id = ? and source = ? and qbo_id IS NOT NULL", user.id, SOURCE['Quickbook']).order(:name)
   end
 
 	def self.sync_payment_methods_from_qbo(token, company_id)

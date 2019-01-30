@@ -4,7 +4,7 @@ class Item < ApplicationRecord
   SOURCE = {'Quickbook' => 1, 'Cloudbeds' => 2, 'Website' => 3}
 
   def self.synced(user)
-    self.where("user_id = ? and qbo_id IS NOT NULL and qbo_id != '' ", user.id).order(:name)
+    self.where("user_id = ? and qbo_id IS NOT NULL ", user.id).order(:name)
   end
 
 	def self.sync_items_from_qbo(token, company_id)
