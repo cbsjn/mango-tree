@@ -8,8 +8,8 @@
         <thead>
         <tr>
           <th>Mapping Name</th>
-          <th>QuickBook Name</th>
           <th>Cloudbed Name</th>
+          <th>QuickBook Name</th>
           <th>QB ID</th>
           <th>Cloudbed ID</th>
           <th class="text-right">Actions</th>
@@ -22,10 +22,10 @@
                 <%= mapping.name %> 
               </td>
               <td>
-                <%= mapping.get_display_name(params[:name], mapping.qbo_id, 'QuickBook') %>
+                <%= mapping.get_display_name(params[:name], mapping.cloudbed_id, 'Cloudbed') %>
               </td>
               <td>
-                <%= mapping.get_display_name(params[:name], mapping.cloudbed_id, 'Cloudbed') %>
+                <%= mapping.get_display_name(params[:name], mapping.qbo_id, 'QuickBook') %>
               </td>
               <td>
                 <%= mapping.qbo_id %> 
