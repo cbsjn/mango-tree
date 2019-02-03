@@ -213,7 +213,7 @@ namespace :sync_from_cloudbeds  do
 			    	result = Transaction.sync_transactions_from_cloudbeds(u, reservation.reservation_id)
 			    	if result['data'].present?
 				    	result['data'].each do |obj|
-				    		room_type = RoomType.where(cloudbed_roomtype_id: obj['roomTypeID']).first
+				    		room_type = RoomType.where(cloudbed_roomtype_id: obj['roomTypeID'], user_id: u.id).first
 
 				    		transaction_id = obj["transactionID"]
 				    		transaction = Transaction.find_or_create_by(source: source, user_id: u.id, customer_id: customer.id, transaction_id: transaction_id, reservation_id: reservation_id)
