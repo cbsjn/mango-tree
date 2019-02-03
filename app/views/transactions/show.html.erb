@@ -49,6 +49,10 @@
                   <strong>Property ID:</strong> <%= @transaction.property_id %><br/>
                   <strong>Guest ID:</strong> <%= @transaction.guest_id %><br/>
                   <strong>Reservation ID:</strong> <%= @transaction.sub_reservation_id %><br/>
+                  <strong>Quickbook ID:</strong> <%= @transaction.qbo_id %><br/>
+                  <% if @transaction.transaction_type == 'debit' %>
+                    <strong>Quickbook Invoice Number:</strong> <%= @transaction.reservation.qbo_invoice_number %><br/>
+                  <% end %>
                 </div>
 	            </div>
 	          </div>

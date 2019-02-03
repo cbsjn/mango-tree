@@ -30,4 +30,16 @@ class Item < ApplicationRecord
   def self.items(user, source)
     self.select(:id, :name).where("user_id = ? and source = ?", user.id, source)
   end
+
+  def self.get_qbo_mapped_item(user_id, transaction)
+    categories = ['Items and Services', 'Fees', 'Poster', 'Room Revenue', 'Taxes']
+    category = transaction.category
+    if category == 'Room Revenue'
+      room_type_id = transaction.room_type_id
+      item_id = Mapping.where(user_id: user_id, cloudbed_id: room_type_id, name: 'RoomType').first&.qbo_id
+      Item.find(item_id).qbo_id
+    else
+      1
+    end
+  end
 end

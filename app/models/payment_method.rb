@@ -2,6 +2,8 @@ class PaymentMethod < ApplicationRecord
 	belongs_to :user
 	has_many :sales_receipts
   # has_many :customers
+  validates :name, uniqueness: { scope: [:user_id, :source], message: "PaymentMethod Already Exists." }
+
   SOURCE = {'Quickbook' => 1, 'Cloudbeds' => 2, 'Website' => 3}
   
   def self.synced(user)
@@ -30,5 +32,11 @@ class PaymentMethod < ApplicationRecord
 
   def self.payment_method(user, source)
     self.select(:id, :name).where("user_id = ? and source = ?", user.id, source)
+  end
+
+  def self.get_qbo_mapped_payment_method(user_id, cloudbed_payment_method)
+    cb_pm_id = self.where(name: cloudbed_payment_method, user_id: user_id, source: SOURCE['Cloudbeds']).first.id
+    qb_pm_id = Mapping.where(user_id: user_id, cloudbed_id: cb_pm_id, name: 'PaymentMethod').first&.qbo_id
+    self.find(qb_pm_id).qbo_id
   end
 end

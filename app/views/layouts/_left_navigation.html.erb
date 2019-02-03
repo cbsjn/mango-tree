@@ -9,7 +9,8 @@
             <li class="active"><a href="<%= customers_path %>">Customers</a></li>
             <li class="active"><a href="<%= sales_receipts_path %>">Sales Receipts</a></li>
             <li class="active"><a href="<%= mappings_path %>">Mappings</a></li>
-            <li class="active"><a href="<%= transactions_path %>">Transactions</a></li>
+            <li class="active"><a href="<%= reservations_path %>">Reservations</a></li>
+            <li class="active"><a href="<%= transactions_path %>">All Transactions</a></li>
 
             <% if session[:email].present? %>
                 <li class="active"><a href="<%= sign_out_login_index_path %>">Logout</a></li>

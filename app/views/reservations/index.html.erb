@@ -1,0 +1,73 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+  <div class="col-lg-10">
+    <h2>Reservations</h2>
+  </div>
+</div>
+<div class="wrapper wrapper-content animated fadeInRight">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="ibox">
+      	<div class="ibox-title">
+           <h5>Filter Reservations Data</h5>
+            <div class="ibox-tools">
+             <%= form_tag(reservations_path, method: 'get', remote: true ) do %>
+             		<%= select('', 'customer_id', cloudbed_customers, {prompt: '-Select Customer-', selected: params[:customer_id]}, {class: 'btn btn-white btn-w-m', id: 'customer_id'}) %>
+             		<%= submit_tag('Filter', class: 'btn btn-w-m btn-primary') %>
+             		<%= link_to 'Reset Filter',reservations_path,:class => 'btn btn-success'%>
+             <% end %>
+            </div>
+        </div>
+
+        <div class="ibox-content">
+		   <%= render :partial => "shared/notifier"%>
+          <% if @reservations.present? %>
+              <%= will_paginate @reservations , renderer: BootstrapPagination::Rails %>
+              <table class="footable table table-stripped toggle-arrow-tiny" data-page-size="15">
+                <thead>
+                <tr>
+                  <th>Guest Name</th>
+                  <th>Guest ID</th>
+                  <th>Reservation ID</th>
+                  <th>Checkout Date</th>
+                  <th>Status</th>
+                  <th class="text-center">Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <% @reservations.each do |reservation| %>
+                    <% new_class = reservation.qbo_invoice_id.present? ? 'text-success' : 'text-danger' %>
+                    <tr class="<%= new_class %>">
+                      <td>
+                      	<%= reservation.customer.first_name %> <%= reservation.customer.last_name %>
+                      </td>
+                      <td>
+                        <%= reservation.guest_id %>
+                      </td>
+                      <td>
+						<%= reservation.reservation_id %>
+                      </td>
+                      <td>
+                      	<%= reservation.checkout_date.strftime('%Y-%m-%d') %>
+                      </td>
+                      <td>
+                        <%= reservation.status %>
+                      </td>
+                      <td class="project-actions">
+                        <%= link_to '<i class="fa fa-eye"></i> View Transactions'.html_safe,transactions_path(reservation_id: reservation.id),  :method => 'get', :class => 'btn btn-white btn-sm' if reservation.transactions.present?%>
+                      </td>
+                    </tr>
+                <% end %>
+                </tbody>
+              </table>
+          <% else %>
+              <div class="alert alert-danger" style="text-align: center;"> No Reservations Created Yet</div>
+          <% end %>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+

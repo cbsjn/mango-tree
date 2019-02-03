@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'reservations/index'
+
+  get 'reservations/sync_invoice_to_quickbook'
+
   get 'transactions/index'
 
   get 'transactions/show'
@@ -49,6 +53,11 @@ Rails.application.routes.draw do
   resources :transactions do
     collection do
       get 'sync_to_quickbook'
+    end
+  end
+  resources :reservations do
+    collection do
+      get 'sync_invoice_to_quickbook'
     end
   end
 

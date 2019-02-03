@@ -1,6 +1,10 @@
 <div class="row wrapper border-bottom white-bg page-heading">
-  <div class="col-lg-10">
+  <div class="col-lg-9">
     <h2>Transactions</h2>
+  </div>
+  <div class="col-lg-3">
+    <% reservation = Reservation.where(id: params[:reservation_id]).first %>
+    <%= link_to 'Sync Invoice to Quickbook',sync_invoice_to_quickbook_reservations_path(id: params[:reservation_id]),:class => 'btn btn-success center-block', :style => "margin-top: 8%;" if reservation.present? && params[:reservation_id].present? && reservation.qbo_invoice_id.blank?%>
   </div>
 </div>
 <div class="wrapper wrapper-content animated fadeInRight">
@@ -14,12 +18,13 @@
              		<%= select('', 'customer_id', cloudbed_customers, {prompt: '-Select Customer-', selected: params[:customer_id]}, {class: 'btn btn-white btn-w-m', id: 'customer_id'}) %>
              		<%= submit_tag('Filter', class: 'btn btn-w-m btn-primary') %>
              		<%= link_to 'Reset Filter',transactions_path,:class => 'btn btn-success'%>
+                <%= link_to 'Reservations',reservations_path,:class => 'btn btn-info'%>
              <% end %>
             </div>
         </div>
 
         <div class="ibox-content">
-		   <%= render :partial => "shared/notifier"%>
+		    <%= render :partial => "shared/notifier"%>
           <% if @transactions.present? %>
               <%= will_paginate @transactions , renderer: BootstrapPagination::Rails %>
               <table class="footable table table-stripped toggle-arrow-tiny" data-page-size="15">
@@ -32,12 +37,14 @@
                   <th>Type</th>
                   <th>UserName</th>
                   <th>Transaction Date</th>
+                  <th>QBO ID</th>
                   <th class="text-center">Actions</th>
                 </tr>
                 </thead>
                 <tbody>
                 <% @transactions.each do |transaction| %>
-                    <tr>
+                    <% new_class = transaction.qbo_id.present? ? 'text-success' : 'text-danger' %>
+                    <tr class="<%= new_class %>">
                       <td>
                       	<%= transaction.guest_name %>
                       </td>
@@ -45,10 +52,10 @@
                         <%= transaction.room_name %>
                       </td>
                       <td>
-                        <%= transaction.guest_checkin.strftime('%Y-%m-%d') %> - <%= transaction.guest_checkout.strftime('%Y-%m-%d') %>
+                        <%= transaction.guest_checkin&.strftime('%Y-%m-%d') %> - <%= transaction.guest_checkout&.strftime('%Y-%m-%d') %>
                       </td>
                       <td>
-						<%= transaction.amount %> <%= transaction.currency %>
+						            <%= transaction.amount %> <%= transaction.currency %>
                       </td>
                       <td>
                       	<%= transaction.transaction_type %>
@@ -59,12 +66,15 @@
                       <td>
                         <%= transaction.created_at.strftime('%Y-%m-%d') %>
                       </td>
+                      <td><%= transaction.qbo_id %></td>
                       <td class="project-actions">
                         <%= link_to '<i class="fa fa-eye"></i> View'.html_safe,transaction_path(transaction),  :method => 'get', :class => 'btn btn-white btn-sm' %>
                         <% if transaction.qbo_id.present? %>
                             <span class="btn btn-sm btn-info">Already Synced</span>
                         <% else %>
-                        <%= link_to '<i class="fa fa-cloud-upload"></i> Sync to Quickbook'.html_safe,sync_to_quickbook_transactions_path(id: transaction),:class => 'btn btn-white btn-sm'%>
+                        <% if transaction.transaction_type == 'credit' %>
+                        	<%= link_to '<i class="fa fa-cloud-upload"></i> Sync to Quickbook'.html_safe,sync_to_quickbook_transactions_path(id: transaction),:class => 'btn btn-white btn-sm'%>
+                        <% end %>
                         <% end %>
                       </td>
                     </tr>

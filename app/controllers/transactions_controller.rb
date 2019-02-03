@@ -14,13 +14,74 @@ class TransactionsController < ApplicationController
   end
 
   def sync_to_quickbook
+  	transaction_id = params[:id]
+  	transaction = Transaction.where(id: transaction_id, user_id: session[:user_id]).first
+  	if transaction.present?
+      reservation = transaction.reservation
+      unless reservation.qbo_invoice_id.present?
+        flash[:warning] = 'Please Create Invoice for before Syncing Payment.'
+        redirect_to transactions_path(reservation_id: reservation.id) and return
+      end
+      redirect_to transactions_path(reservation_id: reservation.id) and return if transaction&.qbo_id.present?
+
+      user = current_user
+      access_token = OAuth2::AccessToken.new($qb_consumer, user.qb_token, {refresh_token: user.refresh_token})
+      new_access_token = access_token.refresh!
+
+      synced_invoices = Transaction.synced_invoices(user, reservation.id)
+      qbo_payment_method_id = PaymentMethod.get_qbo_mapped_payment_method(user.id, transaction.category)
+
+      if qbo_payment_method_id.present?
+        payment_json = {
+                        'TxnDate' => transaction.transaction_date.strftime('%Y-%m-%d'),
+                        'TotalAmt' => synced_invoices.sum(&:amount),
+                        'PaymentMethodRef' => {
+                                                'value' => qbo_payment_method_id
+                                              },
+                        'CustomerRef' => {
+                                            'value' => transaction.customer&.qbo_id
+                                          },
+
+                        'Line' => []
+                        }
+
+        payment_json['Line'] << { 
+                          'Amount' => synced_invoices.sum(&:amount),
+                          'Description' => reservation.qbo_invoice_number,
+                          'LinkedTxn' => [{
+                                            'TxnId' => reservation.qbo_invoice_id,
+                                            'TxnType' => 'Invoice'
+                                          }]
+                        }
+
+        @result = HTTParty.post("#{BASE_API_URL}/company/#{user.realm_id}/payment", 
+            :body => payment_json.to_json,
+            :headers => { 'content-type' => 'application/json',
+                          'Content-Type' => 'application/json',
+                          Authorization: "Bearer #{new_access_token.token}" } 
+            )
+        result = Hash.from_xml(@result.body)
+        qbo_payment_id = result['IntuitResponse']['Payment']['Id']
+        transaction.update_attributes(qbo_id: qbo_payment_id)
+
+        flash[:notice] = "Payment Synced Successfully with QBO ID : #{qbo_payment_id}."
+      else
+        flash[:warning] = 'Please Create Mapping of PaymentMethod before syncing.'
+      end
+      redirect_to transactions_path(reservation_id: reservation.id)
+  	else
+  		flash[:warning] = 'Restricted Access'
+      redirect_to transactions_path
+  	end
   end
 
   private
   def filter_condition
   	customer_id = params[:customer_id]
+  	reservation_id = params[:reservation_id]
   	condition = "user_id = #{session[:user_id]}"
   	condition += " and customer_id = #{customer_id}" if customer_id.present?
+  	condition += " and reservation_id = '#{reservation_id}'" if reservation_id.present?
   	condition
   end
 end
