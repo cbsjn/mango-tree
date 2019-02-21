@@ -10,11 +10,19 @@
       	<div class="ibox-title">
            <h5>Customers List</h5>
             <div class="ibox-tools">
-               <%= link_to 'Create New Customer',new_customer_path, :class => "btn btn-w-m btn-primary", :title => "Add Customer"%>
+             <%= form_tag(customers_path, method: 'get') do %>
+                <%= text_field_tag 'customer_details',  params[:customer_details],{class: '', placeholder: 'Enter First Name or Guest ID'} %>
+                <%= select('', 'month', months_dropdown, {prompt: '-Select Month-', selected: params[:month]}, {class: 'btn btn-white btn-w-m', id: 'month'}) %>
+                <%= submit_tag('Filter', class: 'btn btn-w-m btn-primary') %>
+                <%= link_to 'Reset Filter',customers_path,:class => 'btn btn-success'%>
+                <%= link_to 'Create New Customer',new_customer_path, :class => "btn btn-w-m btn-primary", :title => "Add Customer"%>
+             <% end %>
             </div>
+
+
         </div>
         <div class="ibox-content">
-		   <%= render :partial => "shared/notifier"%>
+		      <%= render :partial => "shared/notifier"%>
           <% if @customers.present? %>
               <%= will_paginate @customers , renderer: BootstrapPagination::Rails %>
               <table class="footable table table-stripped toggle-arrow-tiny" data-page-size="15">
@@ -35,7 +43,7 @@
                 <% @customers.each do |customer| %>
                     <tr>
                       <td>
-                        <%= customer.first_name %> <%= customer.middle_name %> <%= customer.last_name %>
+                        <%= customer.first_name %> <%= customer.middle_name %> <%= customer.last_name %> (<%= customer.cloudbed_guest_id %>)
                       </td>
                       <td>
                         <%= customer.company_name %>

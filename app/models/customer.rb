@@ -16,6 +16,10 @@ class Customer < ApplicationRecord
     self.where("user_id = ? and qbo_id IS NOT NULL ", user.id).order(:first_name)
   end
 
+  def self.months(user)
+    self.where("user_id = ?", user.id).pluck(:created_at).uniq
+  end
+
   def self.sync_customers_from_qbo(token, company_id)
     result = HTTParty.post("#{BASE_API_URL}/company/#{company_id}/query?query=select * from Customer", 
     :headers => { 'content-type' => 'application/json',

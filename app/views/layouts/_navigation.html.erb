@@ -2,6 +2,21 @@
   <div class="navbar-fixed-top">
     <a href="<%= root_url %>"> <div class="logo"></div></a>
   </div>
-
 </header>
 
+<div class="navbar-fixed-top">
+  <nav class="navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
+    <a href="<%= root_url %>"> <div class="logo"></div></a>
+    <% if session[:email].present? %>
+      <ul class="nav navbar-top-links navbar-right">
+          <li>
+              <span class="m-r-sm text-muted welcome-message">Welcome <%= session[:user_name] %></span>
+          </li>
+    
+          <li>
+            <a href="<%= sign_out_login_index_path %>"><i class="fa fa-sign-out"></i> Logout</a>
+          </li>
+      </ul>
+     <% end %>
+   </nav>
+</div>

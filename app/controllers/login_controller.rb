@@ -50,6 +50,8 @@ class LoginController < ApplicationController
   def dashboard
     @state = SecureRandom.uuid
     @redirect_uri = 'http://localhost:3000/quick_books/oauth_callback'
+    @customers = Customer.where('created_at >= ?', 2.week.ago)
+    @reservations = Reservation.where('created_at >= ?', 2.week.ago)
   end
 
   def oauth2_client

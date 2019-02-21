@@ -19,7 +19,7 @@
         </div>
 
         <div class="ibox-content">
-		   <%= render :partial => "shared/notifier"%>
+		      <%= render :partial => "shared/notifier"%>
           <% if @reservations.present? %>
               <%= will_paginate @reservations , renderer: BootstrapPagination::Rails %>
               <table class="footable table table-stripped toggle-arrow-tiny" data-page-size="15">
@@ -44,7 +44,7 @@
                         <%= reservation.guest_id %>
                       </td>
                       <td>
-						<%= reservation.reservation_id %>
+						            <%= reservation.reservation_id %>
                       </td>
                       <td>
                       	<%= reservation.checkout_date.strftime('%Y-%m-%d') %>

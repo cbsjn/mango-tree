@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190203065325) do
+ActiveRecord::Schema.define(version: 20190221170408) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20190203065325) do
     t.string   "city",              limit: 50
     t.string   "state",             limit: 50
     t.string   "country",           limit: 50
-    t.string   "postal_code",       limit: 6
+    t.string   "postal_code",       limit: 100
     t.boolean  "status",                        default: true
     t.datetime "created_at",                                   null: false
     t.datetime "updated_at",                                   null: false

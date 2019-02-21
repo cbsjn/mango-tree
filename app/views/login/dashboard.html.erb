@@ -1,5 +1,12 @@
-Welcome : <%= session[:user_name] %> <br/>
-Role : <%= session[:role] %>
+<%= render 'graph' %>
+<div class="row">
+	<%= render 'customers_list' %>
+	<%= render 'reservations_list' %>
+</div>
+
+
+
+
 
 <script type="text/javascript" src="https://appcenter.intuit.com/Content/IA/intuit.ipp.anywhere.js"></script>
 <script>

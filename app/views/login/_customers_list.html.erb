@@ -1,0 +1,35 @@
+<div class="col-lg-6">
+    <div class="ibox ">
+        <div class="ibox-title">
+            <h5>Customers </h5>
+        </div>
+        <div class="ibox-content">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>GuestID</th>
+                        <th>Created At</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                      <% @customers.where('created_at >= ?', 1.day.ago).each_with_index do |customer, index| %>
+                        <tr>
+                            <td><%= index + 1 %></td>
+                            <td><%= customer.first_name %> <%= customer.last_name %></td>
+                            <td><%= customer.email %></td>
+                            <td><%= customer.cloudbed_guest_id %></td>
+                            <td><%= customer.created_at.strftime('%b, %d %Y') %></td>
+                        </tr>
+                      <% end %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

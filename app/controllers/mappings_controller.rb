@@ -2,7 +2,7 @@ class MappingsController < ApplicationController
   def index
     @message = params[:message]
     @message_class = params[:message_class]
-    @mappings = Mapping.where(user_id: session[:user_id], name: params[:name])
+    @mappings = Mapping.where(filter_condition).paginate(page: params[:page], per_page: PAGINATION_COUNT)
   end
 
   def create
@@ -39,5 +39,11 @@ class MappingsController < ApplicationController
   private
   def mapping_params
     params.require(:mapping).permit!
+  end
+
+  def filter_condition
+    condition = "user_id = #{session[:user_id]}"
+    condition += " AND name = '#{params[:name]}'" if params[:name].present?
+    condition
   end
 end
