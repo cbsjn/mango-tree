@@ -16,6 +16,10 @@ class Customer < ApplicationRecord
     self.where("user_id = ? and qbo_id IS NOT NULL ", user.id).order(:first_name)
   end
 
+  def self.not_synced(user)
+    self.where("user_id = ? and qbo_id IS NULL ", user.id).order(:first_name)
+  end
+
   def self.months(user)
     self.where("user_id = ?", user.id).pluck(:created_at).uniq
   end
@@ -39,6 +43,45 @@ class Customer < ApplicationRecord
                           }
                         })
     return response
+  end
+
+  def self.sync_customers_to_qbo(user, cust)
+    access_token = OAuth2::AccessToken.new($qb_consumer, user.qb_token, {refresh_token: user.refresh_token})
+    new_access_token = access_token.refresh!
+    cust_json = {
+            'FullyQualifiedName' => "#{cust.first_name} #{cust.last_name}", 
+            'PrimaryEmailAddr' => {
+              'Address' => cust.email
+            }, 
+            'DisplayName' => cust.display_name, 
+            'Suffix' => cust.suffix, 
+            'Title' => cust.title, 
+            'MiddleName' => cust.middle_name, 
+            'Notes' => cust.notes, 
+            'FamilyName' => cust.last_name, 
+            'PrimaryPhone' => {
+              'FreeFormNumber' => cust.phone
+            }, 
+            'CompanyName' => cust.company_name, 
+            'BillAddr' => {
+              'CountrySubDivisionCode' => cust.state, 
+              'City' => cust.city, 
+              'PostalCode' => cust.postal_code, 
+              'Line1' => cust.address1, 
+              'Country' => cust.country
+            }, 
+            'GivenName' => cust.first_name
+          }
+
+    @result = HTTParty.post("#{BASE_API_URL}/company/#{user.realm_id}/customer", 
+        :body => cust_json.to_json,
+        :headers => { 'content-type' => 'application/json',
+                      'Content-Type' => 'application/json',
+                      Authorization: "Bearer #{new_access_token.token}" } 
+        )
+    result = Hash.from_xml(@result.body)
+    qbo_id = result['IntuitResponse']['Customer']['Id']
+    cust.update_attributes(qbo_id: qbo_id)
   end
 
   def self.cloudbed_customers(user)
