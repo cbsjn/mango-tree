@@ -60,7 +60,11 @@ Rails.application.routes.draw do
       get 'sync_invoice_to_quickbook'
     end
   end
-  resources :syncing_errors
+  resources :syncing_errors do
+    collection do
+      get 'delete_errors'
+    end
+  end
   get 'quick_books/authenticate'
   get 'quick_books/oauth_callback'
   get 'cloudbeds/oauth_callback'

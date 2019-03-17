@@ -21,4 +21,7 @@ class Transaction < ApplicationRecord
                         })
     return response
   end
+
+  def self.sync_payment_to_qbo(user, sales_receipt)
+  end
 end
