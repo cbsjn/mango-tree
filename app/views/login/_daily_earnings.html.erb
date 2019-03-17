@@ -1,0 +1,35 @@
+<div class="col-lg-12">
+    <div class="ibox ">
+        <div class="ibox-title">
+            <h5>Daily Earnings</h5>
+        </div>
+        <div class="ibox-content">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+
+                        <th>#</th>
+                        <th>Guest Name</th>
+                        <th>Guest ID</th>
+                        <th>Reservation ID</th>
+                        <th>Checkout Date</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                      <% @reservations.where('created_at >= ?', 1.day.ago).each_with_index do |reservation, index| %>
+                        <tr>
+                            <td><%= index + 1 %></td>
+                            <td><%= reservation.customer.first_name %> <%= reservation.customer.last_name %></td>
+                            <td><%= reservation.guest_id %></td>
+                            <td><%= reservation.reservation_id %></td>
+                            <td><%= reservation.checkout_date.strftime('%b, %d %Y') %></td>
+                        </tr>
+                      <% end %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

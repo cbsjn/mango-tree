@@ -6,6 +6,9 @@ class Customer < ApplicationRecord
   has_many :transactions
   belongs_to :user
   # belongs_to :payment_method
+
+  after_create :add_mailchimp_subscriber
+
   SOURCE = {'Quickbook' => 1, 'Cloudbeds' => 2, 'Website' => 3}
 
   STATUSES = {'Active' => true, 'DeActive' => false}
@@ -86,5 +89,11 @@ class Customer < ApplicationRecord
 
   def self.cloudbed_customers(user)
     self.where("user_id = ? and source = ?", user.id, SOURCE['Cloudbeds']).order(:first_name)
+  end
+
+  private
+  def add_mailchimp_subscriber
+    client = Mailchimp::API.new(MAILCHIMP_API_KEY)
+    client.lists.subscribe(MAILCHIMP_LIST_ID, {email: self.email}, {'FNAME' => self.first_name, 'LNAME' => self.last_name})
   end
 end

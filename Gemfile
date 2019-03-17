@@ -24,7 +24,7 @@ gem 'oauth-plugin'
 gem 'rack-oauth2'
 gem 'qbo_api'
 gem 'httparty'
-
+gem 'mailchimp-api', require: 'mailchimp'
 gem 'oauth', '~> 0.4.7'
 gem 'oauth2', '~> 1.4.0'
 
