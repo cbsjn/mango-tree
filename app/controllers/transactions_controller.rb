@@ -25,46 +25,17 @@ class TransactionsController < ApplicationController
       redirect_to transactions_path(reservation_id: reservation.id) and return if transaction&.qbo_id.present?
 
       user = current_user
-      access_token = OAuth2::AccessToken.new($qb_consumer, user.qb_token, {refresh_token: user.refresh_token})
-      new_access_token = access_token.refresh!
 
       synced_invoices = Transaction.synced_invoices(user, reservation.id)
       qbo_payment_method_id = PaymentMethod.get_qbo_mapped_payment_method(user.id, transaction.category)
 
       if qbo_payment_method_id.present?
-        payment_json = {
-                        'TxnDate' => transaction.transaction_date.strftime('%Y-%m-%d'),
-                        'TotalAmt' => synced_invoices.sum(&:amount),
-                        'PaymentMethodRef' => {
-                                                'value' => qbo_payment_method_id
-                                              },
-                        'CustomerRef' => {
-                                            'value' => transaction.customer&.qbo_id
-                                          },
-
-                        'Line' => []
-                        }
-
-        payment_json['Line'] << { 
-                          'Amount' => synced_invoices.sum(&:amount),
-                          'Description' => reservation.qbo_invoice_number,
-                          'LinkedTxn' => [{
-                                            'TxnId' => reservation.qbo_invoice_id,
-                                            'TxnType' => 'Invoice'
-                                          }]
-                        }
-
-        @result = HTTParty.post("#{BASE_API_URL}/company/#{user.realm_id}/payment", 
-            :body => payment_json.to_json,
-            :headers => { 'content-type' => 'application/json',
-                          'Content-Type' => 'application/json',
-                          Authorization: "Bearer #{new_access_token.token}" } 
-            )
-        result = Hash.from_xml(@result.body)
-        qbo_payment_id = result['IntuitResponse']['Payment']['Id']
-        transaction.update_attributes(qbo_id: qbo_payment_id)
-
-        flash[:notice] = "Payment Synced Successfully with QBO ID : #{qbo_payment_id}."
+        begin
+          Transaction.sync_payment_to_qbo(user, reservation, transaction, synced_invoices, qbo_payment_method_id)
+          flash[:notice] = "Payment Synced Successfully with QBO ID : #{qbo_payment_id}."
+        rescue Exception => ex
+          flash[:warning] = ex
+        end
       else
         flash[:warning] = 'Please Create Mapping of PaymentMethod before syncing.'
       end

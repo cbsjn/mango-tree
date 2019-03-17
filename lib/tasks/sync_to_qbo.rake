@@ -73,4 +73,36 @@ namespace :sync_to_qbo  do
       end
     end
   end
+
+  desc "Sync Payments To QBO"
+  task :sync_payments => :environment do
+    User.all.each do |u|
+      begin
+        payments = Transaction.payments(u)
+        payments.each do |transaction|
+          reservation = transaction.reservation
+          if reservation.qbo_invoice_id.present?
+            synced_invoices = Transaction.synced_invoices(u, reservation.id)
+            qbo_payment_method_id = PaymentMethod.get_qbo_mapped_payment_method(u.id, transaction.category)
+            if qbo_payment_method_id.present?
+              begin
+                Transaction.sync_payment_to_qbo(u, reservation, transaction, synced_invoices, qbo_payment_method_id)
+                puts "Synced payment #{transaction.id} successfully to QBO"
+              rescue Exception => ex
+                puts "Inner Loop Exception for Payment : #{transaction.id} => Message #{ex.inspect}"
+                SyncingError.create(user_id: u.id, error_type: SyncingError::SYNC_PAYMENT_TO_QBO, description: ex.message)
+              end 
+            else
+              puts "Please Create Mapping of PaymentMethod before syncing for transaction #{transaction.id}"
+            end
+          else
+            SyncingError.create(user_id: u.id, error_type: SyncingError::SYNC_PAYMENT_TO_QBO, description: "Please Sync Invoice for reservation : #{reservation.id} to QBO before syncing Payments.")
+            puts "Please create invoice before syncing payment for reservation : #{reservation.id}"
+          end
+        end
+      rescue Exception => ex
+        puts "Outer Loop Exception : #{ex.inspect}"
+      end
+    end
+  end
 end
