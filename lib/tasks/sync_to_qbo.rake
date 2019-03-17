@@ -57,7 +57,7 @@ namespace :sync_to_qbo  do
             invoices = Transaction.invoices(u, reservation.id)
             unless invoices.count.zero?
               begin
-                Reservation.sync_invoice_to_qbo(u, invoices)
+                Reservation.sync_invoice_to_qbo(u, invoices, reservation)
                 puts "Synced Reservation #{reservation.id} Succesfully to QBO"
               rescue Exception => ex
                 puts "Inner Loop Exception for Reservation : #{reservation.id} => Message #{ex.inspect}"

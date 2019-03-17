@@ -52,10 +52,10 @@ ActiveRecord::Schema.define(version: 20190315113155) do
 
   create_table "items", force: :cascade do |t|
     t.integer  "qbo_id"
-    t.integer  "user_id"
     t.string   "name",       limit: 200
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+    t.integer  "user_id"
     t.integer  "source"
     t.string   "code"
   end
@@ -96,7 +96,6 @@ ActiveRecord::Schema.define(version: 20190315113155) do
     t.integer  "user_id"
     t.integer  "cloudbed_roomtype_id"
     t.integer  "property_id"
-    t.integer  "source"
     t.string   "name"
     t.string   "code",                 limit: 50
     t.text     "description"
@@ -108,6 +107,7 @@ ActiveRecord::Schema.define(version: 20190315113155) do
     t.integer  "available_rooms"
     t.datetime "created_at",                      null: false
     t.datetime "updated_at",                      null: false
+    t.integer  "source"
   end
 
   create_table "sales_receipt_details", force: :cascade do |t|
@@ -162,10 +162,8 @@ ActiveRecord::Schema.define(version: 20190315113155) do
   end
 
   create_table "transactions", force: :cascade do |t|
-    t.integer  "source"
     t.integer  "customer_id"
     t.integer  "user_id"
-    t.integer  "qbo_id"
     t.string   "property_id"
     t.string   "reservation_id"
     t.string   "sub_reservation_id"
@@ -189,6 +187,8 @@ ActiveRecord::Schema.define(version: 20190315113155) do
     t.datetime "transaction_date"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
+    t.integer  "qbo_id"
+    t.integer  "source"
   end
 
   create_table "users", force: :cascade do |t|
@@ -206,15 +206,15 @@ ActiveRecord::Schema.define(version: 20190315113155) do
     t.datetime "created_at",                                                        null: false
     t.datetime "updated_at",                                                        null: false
     t.text     "qb_token"
-    t.text     "refresh_token"
     t.text     "secret"
     t.string   "realm_id"
     t.string   "code"
     t.string   "state"
     t.datetime "token_generated_at"
+    t.text     "refresh_token"
     t.string   "cb_access_token"
     t.string   "cb_refresh_token"
-    t.datetime "cb_token_generated_at",             default: '2019-03-04 13:55:29'
+    t.datetime "cb_token_generated_at",             default: '2019-01-22 12:09:31'
   end
 
 end

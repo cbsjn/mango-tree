@@ -31,7 +31,7 @@ class TransactionsController < ApplicationController
 
       if qbo_payment_method_id.present?
         begin
-          Transaction.sync_payment_to_qbo(user, reservation, transaction, synced_invoices, qbo_payment_method_id)
+          qbo_payment_id = Transaction.sync_payment_to_qbo(user, reservation, transaction, synced_invoices, qbo_payment_method_id)
           flash[:notice] = "Payment Synced Successfully with QBO ID : #{qbo_payment_id}."
         rescue Exception => ex
           flash[:warning] = ex

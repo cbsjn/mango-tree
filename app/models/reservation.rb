@@ -7,7 +7,7 @@ class Reservation < ApplicationRecord
     self.where("user_id = ? and qbo_invoice_id IS NULL ", user.id)
   end
 
-	def self.sync_invoice_to_qbo(user, invoices)
+	def self.sync_invoice_to_qbo(user, invoices, reservation)
 		access_token = OAuth2::AccessToken.new($qb_consumer, user.qb_token, {refresh_token: user.refresh_token})
 	  new_access_token = access_token.refresh!
 
@@ -52,5 +52,6 @@ class Reservation < ApplicationRecord
     qbo_invoice_number = result['IntuitResponse']['Invoice']['DocNumber']
     reservation.update_attributes(qbo_invoice_id: qbo_invoice_id, qbo_invoice_number: qbo_invoice_number)
     invoices.update_all(qbo_id: qbo_invoice_id)
+    qbo_invoice_number
 	end
 end

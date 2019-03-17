@@ -60,5 +60,6 @@ class Transaction < ApplicationRecord
     result = Hash.from_xml(@result.body)
     qbo_payment_id = result['IntuitResponse']['Payment']['Id']
     transaction.update_attributes(qbo_id: qbo_payment_id)
+    qbo_payment_id
   end
 end

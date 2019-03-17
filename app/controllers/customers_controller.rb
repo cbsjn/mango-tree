@@ -54,7 +54,7 @@ class CustomersController < ApplicationController
       cust = Customer.where(id: params[:id]).first
       # raise "#{new_access_token.token} ------------ #{new_access_token.refresh_token}"
       redirect_to customers_path if cust&.qbo_id.present?
-      Customer.sync_customers_to_qbo(user, cust)
+      qbo_id = Customer.sync_customers_to_qbo(user, cust)
       flash[:notice] = "Customer Synced successfully to Quickbook with id : #{qbo_id}"
     rescue Exception => ex
       flash[:warning] = ex

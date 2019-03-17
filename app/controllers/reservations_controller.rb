@@ -15,7 +15,7 @@ class ReservationsController < ApplicationController
         invoices = Transaction.invoices(user, id)
         unless invoices.count.zero?
           begin
-            Reservation.sync_invoice_to_qbo(user, invoices)
+            qbo_invoice_number = Reservation.sync_invoice_to_qbo(user, invoices, reservation)
             flash[:notice] = "Invoice Synced Successfully with Invoice Number : #{qbo_invoice_number}"
           rescue Exception => ex
             flash[:warning] = ex

@@ -85,6 +85,7 @@ class Customer < ApplicationRecord
     result = Hash.from_xml(@result.body)
     qbo_id = result['IntuitResponse']['Customer']['Id']
     cust.update_attributes(qbo_id: qbo_id)
+    qbo_id
   end
 
   def self.cloudbed_customers(user)
