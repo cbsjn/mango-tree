@@ -64,6 +64,23 @@ class LoginController < ApplicationController
     )
   end
 
+  def update
+    first_name = params[:user][:first_name]
+    mobile = params[:user][:mobile]
+    password = params[:user][:password]
+    if first_name.present? && mobile.present? && password.present?
+      name = first_name.split(' ')
+      first_name = name[0]
+      last_name = name[1..4].join(' ')
+      encrypted_pwd = User.encrypt(password)
+      current_user.update_attributes(first_name: first_name, last_name: last_name, mobile: mobile, password: encrypted_pwd)
+      flash[:notice] = 'User details have been updated successfully.'
+    else
+      flash[:warning] = 'Insufficient parameters'
+    end
+    render 'edit'
+  end
+
   private
   # Using a private method to encapsulate the permissible parameters is
   # just a good pattern since you'll be able to reuse the same permit
