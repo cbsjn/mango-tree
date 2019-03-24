@@ -1,4 +1,41 @@
 namespace :sync_from_qbo  do
+	# Schedule every 50 mins
+	desc "Sync Tokens From QBO"
+  task :sync_tokens => :environment do
+    User.all.each do |u|
+    	begin
+		 		url = URI('https://oauth.platform.intuit.com/oauth2/v1/tokens/bearer')
+		    queryparams = {
+		      'grant_type' => 'refresh_token',
+		      'refresh_token' => u.refresh_token.to_s
+		    }
+		    header_value = "Basic " + Base64.strict_encode64(OAUTH_CONSUMER_KEY.to_s + ":" + OAUTH_CONSUMER_SECRET.to_s)
+		    headers = {
+		      'Content-type' => "application/x-www-form-urlencoded",
+		      'Accept' => "application/json",
+		      'Authorization' => header_value
+		    }
+		    http = Net::HTTP.new(url.host, url.port)
+		    http.use_ssl = true
+		    http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+		    req = Net::HTTP::Post.new(url, headers)
+		    req.set_form_data(queryparams, "&")
+		    response = http.request(req)
+				hash_response = JSON.parse(response.body)
+				if hash_response['access_token'].present? && hash_response['refresh_token'].present?
+					u.update_attributes(qb_token: hash_response['access_token'], refresh_token: hash_response['refresh_token'], token_generated_at: Time.now)
+					puts "Token Synced Successfully for User : #{u.email}"
+				else
+					puts "Token Not Received from QBO for User : #{u.email}"
+					SyncingError.create(user_id: u.id, error_type: SyncingError::SYNC_TOKENS_FROM_QBO, description: "Token Not Received from QBO for User : #{u.email}")
+				end
+	    rescue Exception => ex
+	    	puts "Exception : #{ex.inspect}"
+	    	SyncingError.create(user_id: u.id, error_type: SyncingError::SYNC_TOKENS_FROM_QBO, description: ex.message)
+	    end
+    end
+  end
+
   desc "Sync Items From QBO"
   task :sync_items => :environment do
     User.all.each do |u|
