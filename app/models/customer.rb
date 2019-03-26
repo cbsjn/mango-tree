@@ -94,7 +94,10 @@ class Customer < ApplicationRecord
 
   private
   def add_mailchimp_subscriber
-    client = Mailchimp::API.new(MAILCHIMP_API_KEY)
-    client.lists.subscribe(MAILCHIMP_LIST_ID, {email: self.email}, {'FNAME' => self.first_name, 'LNAME' => self.last_name})
+    mailchimp_api_key = self.user.mailchimp_api_key
+    mailchimp_list_id = self.user.mailchimp_list_id
+    return true unless mailchimp_api_key.present?
+    client = Mailchimp::API.new(mailchimp_api_key)
+    client.lists.subscribe(mailchimp_list_id, {email: self.email, status: 'subscribed'}, {'FNAME' => self.first_name, 'LNAME' => self.last_name})
   end
 end

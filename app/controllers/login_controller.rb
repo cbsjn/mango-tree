@@ -68,12 +68,14 @@ class LoginController < ApplicationController
     first_name = params[:user][:first_name]
     mobile = params[:user][:mobile]
     password = params[:user][:password]
+    mailchimp_api_key = params[:user][:mailchimp_api_key]
+    mailchimp_list_id = params[:user][:mailchimp_list_id]
     if first_name.present? && mobile.present? && password.present?
       name = first_name.split(' ')
       first_name = name[0]
       last_name = name[1..4].join(' ')
       encrypted_pwd = User.encrypt(password)
-      current_user.update_attributes(first_name: first_name, last_name: last_name, mobile: mobile, password: encrypted_pwd)
+      current_user.update_attributes(first_name: first_name, last_name: last_name, mobile: mobile, password: encrypted_pwd, mailchimp_api_key: mailchimp_api_key, mailchimp_list_id: mailchimp_list_id)
       flash[:notice] = 'User details have been updated successfully.'
     else
       flash[:warning] = 'Insufficient parameters'

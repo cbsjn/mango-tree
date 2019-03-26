@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190315113155) do
+ActiveRecord::Schema.define(version: 20190326102800) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -215,6 +215,8 @@ ActiveRecord::Schema.define(version: 20190315113155) do
     t.string   "cb_access_token"
     t.string   "cb_refresh_token"
     t.datetime "cb_token_generated_at",             default: '2019-01-22 12:09:31'
+    t.string   "mailchimp_api_key"
+    t.string   "mailchimp_list_id"
   end
 
 end

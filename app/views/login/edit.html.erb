@@ -23,6 +23,14 @@
                 </div>
 
                 <div class="form-group">
+                  <%= f.text_field :mailchimp_api_key,:value => @user.mailchimp_api_key,:class => 'form-control',:placeholder => "Enter Mailchimp APIKEY",:maxlength => 200, :required => true   %>
+                </div>
+
+                <div class="form-group">
+                  <%= f.text_field :mailchimp_list_id,:value => @user.mailchimp_list_id,:class => 'form-control',:placeholder => "Enter Mailchimp LIST ID",:maxlength => 150, :required => true   %>
+                </div>
+
+                <div class="form-group">
                   <%= f.password_field :password,:class => 'form-control',:placeholder => "Update Password",:maxlength => 150, :required => true 	%>
                 </div>
 
