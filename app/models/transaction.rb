@@ -4,7 +4,7 @@ class Transaction < ApplicationRecord
 	belongs_to :reservation
 
   def self.invoices(user, reservation_id)
-    self.where("user_id = ? and reservation_id = ? and transaction_type = 'debit'", user.id, reservation_id)
+    self.where("user_id = ? and reservation_id = '#{reservation_id}' and transaction_type = 'debit'", user.id)
   end
 
   def self.payments(user)

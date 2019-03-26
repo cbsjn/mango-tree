@@ -19,6 +19,7 @@ namespace :sync_to_qbo  do
     		end
 	    rescue Exception => ex
 	    	puts "Outer Loop Exception : #{ex.inspect}"
+        SyncingError.create(user_id: u.id, error_type: SyncingError::SYNC_CUSTOMER_TO_QBO, description: ex.inspect)
 	    end
     end
   end
@@ -43,6 +44,7 @@ namespace :sync_to_qbo  do
         end
       rescue Exception => ex
         puts "Outer Loop Exception : #{ex.inspect}"
+        SyncingError.create(user_id: u.id, error_type: SyncingError::SYNC_SALES_RECEIPT_TO_QBO, description: ex.inspect)
       end
     end
   end
@@ -70,6 +72,7 @@ namespace :sync_to_qbo  do
         end
       rescue Exception => ex
         puts "Outer Loop Exception : #{ex.inspect}"
+        SyncingError.create(user_id: u.id, error_type: SyncingError::SYNC_INVOICE_TO_QBO, description: ex.inspect)
       end
     end
   end
@@ -102,6 +105,7 @@ namespace :sync_to_qbo  do
         end
       rescue Exception => ex
         puts "Outer Loop Exception : #{ex.inspect}"
+        SyncingError.create(user_id: u.id, error_type: SyncingError::SYNC_PAYMENT_TO_QBO, description: ex.inspect)
       end
     end
   end
